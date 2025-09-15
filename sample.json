@@ -1,0 +1,1210 @@
+{
+	"context": {
+		"title": "qmulo-ai"
+	},
+	"items": [
+		{
+			"displayLink": "stackoverflow.com",
+			"formattedUrl": "https://stackoverflow.com/.../how-to-run-an-asynchronous-task-from-a-non...",
+			"htmlFormattedUrl": "https://stackoverflow.com/.../how-to-run-an-asynchronous-task-from-a-non...",
+			"htmlSnippet": "Apr 18, 2020 <b>...</b> The key piece is that you need to get a <b>Tokio</b> Handle . This is a reference to a Runtime and it allows you to spawn asynchronous tasks from&nbsp;...",
+			"htmlTitle": "<b>rust</b> - How to run an asynchronous task from a non-main <b>thread</b> in ...",
+			"kind": "customsearch#result",
+			"link": "https://stackoverflow.com/questions/61292425/how-to-run-an-asynchronous-task-from-a-non-main-thread-in-tokio",
+			"pagemap": {
+				"answer": [
+					{
+						"datecreated": "2020-11-24 18:23:02Z",
+						"text": "The key piece is that you need to get a Tokio Handle. This is a reference to a Runtime and it allows you to spawn asynchronous tasks from outside of the runtime. When using #[tokio::main],...",
+						"upvotecount": "27",
+						"url": "Share"
+					},
+					{
+						"datecreated": "2020-08-16 07:57:03Z",
+						"text": "I have a job processing app that exposes a web API to add jobs and process them but the API request should not wait for the job to finish (it could take a while). I use Server-Sent Events to...",
+						"upvotecount": "13",
+						"url": "Share"
+					}
+				],
+				"comment": [
+					{
+						"datepublished": "04/18/2020 16:47:27",
+						"text": "What is your actual goal here? Why are you trying to spawn that task on a different thread? I think the answer really depends on what you're wanting to do."
+					},
+					{
+						"datepublished": "04/18/2020 17:17:40",
+						"text": "@Frxstrem I need to start another thread from a non-main thread (t), and the thread (t) should continue on. Before that, I used a thread pool. Something like repl.it/repls/AssuredWellmadeParenthese..."
+					},
+					{
+						"datepublished": "04/19/2020 19:06:56",
+						"text": "The real question is: why are you mixing threads and tasks?"
+					},
+					{
+						"datepublished": "04/20/2020 09:56:52",
+						"text": "If you use tokio, it's better to use it everywhere. tasks are not threads, and cannot be spawned from anywhere, only from a thread managed by tokio. You might be able to use a tokio channel..."
+					},
+					{
+						"datepublished": "04/20/2020 17:12:49",
+						"text": "You need to get a handle to the runtime, which you can pass to the thread. You might have to manually create the runtime to be able to do this. The handle will then handle marshalling the task..."
+					}
+				],
+				"cse_image": [
+					{
+						"src": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+					}
+				],
+				"cse_thumbnail": [
+					{
+						"height": "225",
+						"src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYl7zuT3cw_BBRAyhdQEbQuBgqdNHXKHIYKL8S8ly8x9L_XA9sdwSmiHs&s",
+						"width": "225"
+					}
+				],
+				"metatags": [
+					{
+						"og:image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+						"og:site_name": "Stack Overflow",
+						"og:type": "website",
+						"og:url": "https://stackoverflow.com/questions/61292425/how-to-run-an-asynchronous-task-from-a-non-main-thread-in-tokio",
+						"twitter:card": "summary",
+						"twitter:description": "use std::thread;\nuse tokio::task; // 0.3.4\n\n#[tokio::main]\nasync fn main() {\n    thread::spawn(|| {\n        task::spawn(async {\n            println!(&quot;123&quot;);\n        });\n    })\n    .join()...",
+						"twitter:domain": "stackoverflow.com",
+						"twitter:title": "How to run an asynchronous task from a non-main thread in Tokio?",
+						"viewport": "width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0"
+					}
+				],
+				"person": [
+					{
+						"name": "ibse",
+						"url": "ibse"
+					},
+					{
+						"name": "Freyja",
+						"url": "Freyja"
+					},
+					{
+						"name": "ibse",
+						"url": "ibse"
+					},
+					{
+						"name": "mcarton",
+						"url": "mcarton"
+					},
+					{
+						"name": "Richard Matheson",
+						"url": "Richard Matheson"
+					},
+					{
+						"name": "user1937198",
+						"url": "user1937198"
+					},
+					{
+						"name": "Shepmaster",
+						"url": "Shepmaster"
+					},
+					{
+						"name": "evanxg852000",
+						"url": "evanxg852000"
+					}
+				],
+				"qapage": [
+					{
+						"description": "use std::thread; use tokio::task; // 0.3.4 #[tokio::main] async fn main() { thread::spawn(|| { task::spawn(async { println!(\"123\"); }); }) .join()...",
+						"image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+						"name": "How to run an asynchronous task from a non-main thread in Tokio?",
+						"primaryimageofpage": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+					}
+				],
+				"question": [
+					{
+						"answercount": "2",
+						"commentcount": "6",
+						"datecreated": "2020-04-18 16:20:35Z",
+						"image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a",
+						"name": "How to run an asynchronous task from a non-main thread in Tokio?",
+						"text": "use std::thread; use tokio::task; // 0.3.4 #[tokio::main] async fn main() { thread::spawn(|| { task::spawn(async { println!(\"123\"); }); }) .join(); } When compiling I get a warning: warning:...",
+						"upvotecount": "23",
+						"url": "Share"
+					}
+				]
+			},
+			"snippet": "Apr 18, 2020 ... The key piece is that you need to get a Tokio Handle . This is a reference to a Runtime and it allows you to spawn asynchronous tasks from ...",
+			"title": "rust - How to run an asynchronous task from a non-main thread in ..."
+		},
+		{
+			"displayLink": "stackoverflow.com",
+			"formattedUrl": "https://stackoverflow.com/.../how-to-create-a-dedicated-threadpool-for-cpu...",
+			"htmlFormattedUrl": "https://stackoverflow.com/.../how-to-create-a-dedicated-thread<b>pool</b>-for-cpu...",
+			"htmlSnippet": "May 12, 2020 <b>...</b> <b>Tokio</b> seems to support a separate blocking <b>thread pool</b>: pub fn max_blocking_threads(&amp;mut self, val: usize) -&gt; &amp;mut Self. Specifies the limit&nbsp;...",
+			"htmlTitle": "<b>rust</b> - How to create a dedicated threadpool for CPU-intensive work ...",
+			"kind": "customsearch#result",
+			"link": "https://stackoverflow.com/questions/61752896/how-to-create-a-dedicated-threadpool-for-cpu-intensive-work-in-tokio",
+			"pagemap": {
+				"answer": [
+					{
+						"commentcount": "3",
+						"datecreated": "2020-05-12 13:47:54Z",
+						"text": "While Tokio already has a threadpool, the documentation of Tokio advises: If your code is CPU-bound and you wish to limit the number of threads used to run it, you should run it on another...",
+						"upvotecount": "18",
+						"url": "Share"
+					},
+					{
+						"commentcount": "1",
+						"datecreated": "2020-05-12 22:23:56Z",
+						"text": "Tokio's error message was misleading. The problem was due to Runtime object being dropped in an async context. The workaround is to use Handle, not Runtime directly, for spawning tasks on the...",
+						"upvotecount": "8",
+						"url": "Share"
+					},
+					{
+						"commentcount": "3",
+						"datecreated": "2020-05-12 13:37:56Z",
+						"text": "Starting a Tokio runtime already creates a threadpool. The relevant options are Builder::core_threads (default in 0.2.20 is the number of CPU cores) Builder::max_threads (default in 0.2.20...",
+						"upvotecount": "6",
+						"url": "Share"
+					},
+					{
+						"datecreated": "2022-10-11 11:58:29Z",
+						"text": "One possibility not discussed here so far, is to create 2x threads in the main runtime, and use a semaphore for the CPU-bound tasks to ensure you don't start more than 1x CPU tasks concurrently....",
+						"upvotecount": "0",
+						"url": "Share"
+					}
+				],
+				"cse_image": [
+					{
+						"src": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+					}
+				],
+				"cse_thumbnail": [
+					{
+						"height": "225",
+						"src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYl7zuT3cw_BBRAyhdQEbQuBgqdNHXKHIYKL8S8ly8x9L_XA9sdwSmiHs&s",
+						"width": "225"
+					}
+				],
+				"metatags": [
+					{
+						"og:image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+						"og:site_name": "Stack Overflow",
+						"og:type": "website",
+						"og:url": "https://stackoverflow.com/questions/61752896/how-to-create-a-dedicated-threadpool-for-cpu-intensive-work-in-tokio",
+						"twitter:card": "summary",
+						"twitter:description": "I have a Rust async server based on the Tokio runtime. It has to process a mix of latency-sensitive I/O-bound requests, and heavy CPU-bound requests.\n\nI don't want to let the CPU-bound tasks monopo...",
+						"twitter:domain": "stackoverflow.com",
+						"twitter:title": "How to create a dedicated threadpool for CPU-intensive work in Tokio?",
+						"viewport": "width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0"
+					}
+				],
+				"person": [
+					{
+						"name": "Kornel"
+					},
+					{
+						"name": "Kornel",
+						"url": "Kornel"
+					},
+					{
+						"name": "Stargateur",
+						"url": "Stargateur"
+					},
+					{
+						"name": "Kornel",
+						"url": "Kornel"
+					},
+					{
+						"name": "Shepmaster",
+						"url": "Shepmaster"
+					},
+					{
+						"name": "Eloff",
+						"url": "Eloff"
+					}
+				],
+				"qapage": [
+					{
+						"description": "I have a Rust async server based on the Tokio runtime. It has to process a mix of latency-sensitive I/O-bound requests, and heavy CPU-bound requests. I don't want to let the CPU-bound tasks monopo...",
+						"image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+						"name": "How to create a dedicated threadpool for CPU-intensive work in Tokio?",
+						"primaryimageofpage": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+					}
+				],
+				"question": [
+					{
+						"answercount": "4",
+						"commentcount": "3",
+						"datecreated": "2020-05-12 13:25:03Z",
+						"image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a",
+						"name": "How to create a dedicated threadpool for CPU-intensive work in Tokio?",
+						"text": "I have a Rust async server based on the Tokio runtime. It has to process a mix of latency-sensitive I/O-bound requests, and heavy CPU-bound requests. I don't want to let the CPU-bound tasks...",
+						"upvotecount": "18",
+						"url": "Share"
+					}
+				]
+			},
+			"snippet": "May 12, 2020 ... Tokio seems to support a separate blocking thread pool: pub fn max_blocking_threads(&mut self, val: usize) -> &mut Self. Specifies the limit ...",
+			"title": "rust - How to create a dedicated threadpool for CPU-intensive work ..."
+		},
+		{
+			"displayLink": "stackoverflow.com",
+			"formattedUrl": "https://stackoverflow.com/.../tokio-runtime-worker-stack-overflow-in-hashi...",
+			"htmlFormattedUrl": "https://stackoverflow.com/.../<b>tokio</b>-runtime-<b>worker</b>-stack-overflow-in-hashi...",
+			"htmlSnippet": "Jun 30, 2024 <b>...</b> There isn&#39;t a portable way to increase the main <b>thread&#39;s</b> stack size (though it is possible with linker arguments), but for spawned threads, <b>Rust</b>&nbsp;...",
+			"htmlTitle": "multithreading - <b>tokio</b>-runtime-<b>worker</b> stack overflow in hashing ...",
+			"kind": "customsearch#result",
+			"link": "https://stackoverflow.com/questions/78688657/tokio-runtime-worker-stack-overflow-in-hashing-function",
+			"pagemap": {
+				"answer": [
+					{
+						"datecreated": "2024-07-01 16:52:22Z",
+						"text": "There isn't some unbounded stack usage in your code, it just needs a bigger stack. There isn't a portable way to increase the main thread's stack size (though it is possible with linker arguments),...",
+						"upvotecount": "2",
+						"url": "Share"
+					},
+					{
+						"datecreated": "2024-07-02 18:49:30Z",
+						"text": "Thanks again for all of the help and pointers above, as I mentioned the reason for doing it like this was to learn more Rust and I've certainly done that :-) I was initially confused as to...",
+						"upvotecount": "0",
+						"url": "Share"
+					}
+				],
+				"cse_image": [
+					{
+						"src": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+					}
+				],
+				"cse_thumbnail": [
+					{
+						"height": "225",
+						"src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYl7zuT3cw_BBRAyhdQEbQuBgqdNHXKHIYKL8S8ly8x9L_XA9sdwSmiHs&s",
+						"width": "225"
+					}
+				],
+				"metatags": [
+					{
+						"og:image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+						"og:site_name": "Stack Overflow",
+						"og:type": "website",
+						"og:url": "https://stackoverflow.com/questions/78688657/tokio-runtime-worker-stack-overflow-in-hashing-function",
+						"twitter:card": "summary",
+						"twitter:description": "I am writing a small app for rooting out duplicate files (and for practicing my Rust, which I am relatively new to!).\nAs part of the learning (and because I have a background in media management,",
+						"twitter:domain": "stackoverflow.com",
+						"twitter:title": "tokio-runtime-worker stack overflow in hashing function",
+						"viewport": "width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0"
+					}
+				],
+				"person": [
+					{
+						"name": "fredex42",
+						"url": "fredex42"
+					},
+					{
+						"name": "Chayim Friedman",
+						"url": "Chayim Friedman"
+					},
+					{
+						"name": "fredex42",
+						"url": "fredex42"
+					}
+				],
+				"qapage": [
+					{
+						"description": "I am writing a small app for rooting out duplicate files (and for practicing my Rust, which I am relatively new to!). As part of the learning (and because I have a background in media management,",
+						"image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+						"name": "tokio-runtime-worker stack overflow in hashing function",
+						"primaryimageofpage": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+					}
+				],
+				"question": [
+					{
+						"answercount": "2",
+						"commentcount": "11",
+						"datecreated": "2024-06-30 13:01:32Z",
+						"image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a",
+						"name": "tokio-runtime-worker stack overflow in hashing function",
+						"text": "I am writing a small app for rooting out duplicate files (and for practicing my Rust, which I am relatively new to!). As part of the learning (and because I have a background in media management,...",
+						"upvotecount": "0",
+						"url": "Share"
+					}
+				]
+			},
+			"snippet": "Jun 30, 2024 ... There isn't a portable way to increase the main thread's stack size (though it is possible with linker arguments), but for spawned threads, Rust ...",
+			"title": "multithreading - tokio-runtime-worker stack overflow in hashing ..."
+		},
+		{
+			"displayLink": "stackoverflow.com",
+			"formattedUrl": "https://stackoverflow.com/.../how-do-i-spawn-possibly-blocking-async-task...",
+			"htmlFormattedUrl": "https://stackoverflow.com/.../how-do-i-spawn-possibly-blocking-async-task...",
+			"htmlSnippet": "Aug 24, 2023 <b>...</b> The regular <b>Tokio worker thread pool</b>, and Rayon&#39;s <b>thread pool</b>, are both designed around the assumption that each task they run is either&nbsp;...",
+			"htmlTitle": "How do I spawn (possibly) blocking async tasks in <b>tokio</b>? - Stack ...",
+			"kind": "customsearch#result",
+			"link": "https://stackoverflow.com/questions/76965631/how-do-i-spawn-possibly-blocking-async-tasks-in-tokio",
+			"pagemap": {
+				"answer": [
+					{
+						"commentcount": "3",
+						"datecreated": "2023-08-24 02:21:33Z",
+						"text": "The regular Tokio worker thread pool, and Rayon's thread pool, are both designed around the assumption that each task they run is either busy using the CPU, or yielding. If you put blocking-on-netw...",
+						"upvotecount": "7",
+						"url": "Share"
+					},
+					{
+						"commentcount": "8",
+						"datecreated": "2023-08-24 04:15:30Z",
+						"text": "You can spawn() the whole thing, and spawn_blocking() for each blocking chunk: async fn handle_request(data: &Bytes) { let mut tasks = vec![]; for i in 0..1000 { tasks.push(tokio::spawn(async...",
+						"upvotecount": "1",
+						"url": "Share"
+					}
+				],
+				"cse_image": [
+					{
+						"src": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+					}
+				],
+				"cse_thumbnail": [
+					{
+						"height": "225",
+						"src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYl7zuT3cw_BBRAyhdQEbQuBgqdNHXKHIYKL8S8ly8x9L_XA9sdwSmiHs&s",
+						"width": "225"
+					}
+				],
+				"metatags": [
+					{
+						"og:image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+						"og:site_name": "Stack Overflow",
+						"og:type": "website",
+						"og:url": "https://stackoverflow.com/questions/76965631/how-do-i-spawn-possibly-blocking-async-tasks-in-tokio",
+						"twitter:card": "summary",
+						"twitter:description": "When a request comes in, I have to process data in a highly parallelizable way.  The processing is a mix of some CPU-intensive work (1ms bursts), and potentially needing a blocking web request (lib...",
+						"twitter:domain": "stackoverflow.com",
+						"twitter:title": "How do I spawn (possibly) blocking async tasks in tokio?",
+						"viewport": "width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0"
+					}
+				],
+				"person": [
+					{
+						"name": "theflash",
+						"url": "theflash"
+					},
+					{
+						"name": "Kevin Reid",
+						"url": "Kevin Reid"
+					},
+					{
+						"name": "Chayim Friedman",
+						"url": "Chayim Friedman"
+					}
+				],
+				"qapage": [
+					{
+						"description": "When a request comes in, I have to process data in a highly parallelizable way. The processing is a mix of some CPU-intensive work (1ms bursts), and potentially needing a blocking web request (lib...",
+						"image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+						"name": "How do I spawn (possibly) blocking async tasks in tokio?",
+						"primaryimageofpage": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+					}
+				],
+				"question": [
+					{
+						"answercount": "2",
+						"datecreated": "2023-08-24 00:41:54Z",
+						"image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a",
+						"name": "How do I spawn (possibly) blocking async tasks in tokio?",
+						"text": "When a request comes in, I have to process data in a highly parallelizable way. The processing is a mix of some CPU-intensive work (1ms bursts), and potentially needing a blocking web request...",
+						"upvotecount": "3",
+						"url": "Share"
+					}
+				]
+			},
+			"snippet": "Aug 24, 2023 ... The regular Tokio worker thread pool, and Rayon's thread pool, are both designed around the assumption that each task they run is either ...",
+			"title": "How do I spawn (possibly) blocking async tasks in tokio? - Stack ..."
+		},
+		{
+			"displayLink": "stackoverflow.com",
+			"formattedUrl": "https://stackoverflow.com/.../what-is-the-benefit-of-using-tokio-instead-of-...",
+			"htmlFormattedUrl": "https://stackoverflow.com/.../what-is-the-benefit-of-using-<b>tokio</b>-instead-of-...",
+			"htmlSnippet": "Mar 24, 2023 <b>...</b> ... <b>tokio</b> is able to &#39;automatically&#39; assign work to threads from a <b>pool</b> ... This leaves the <b>Tokio worker</b> threads free to handle other, shorter&nbsp;...",
+			"htmlTitle": "What is the benefit of using <b>tokio</b> instead of OS threads in <b>Rust</b> ...",
+			"kind": "customsearch#result",
+			"link": "https://stackoverflow.com/questions/75836002/what-is-the-benefit-of-using-tokio-instead-of-os-threads-in-rust",
+			"pagemap": {
+				"answer": [
+					{
+						"commentcount": "1",
+						"datecreated": "2023-03-25 08:01:00Z",
+						"text": "You are very close to understanding already. You are asking the right questions. Let me give you a short rundown of possible server implementations: Synchronous. One thread that does everything,...",
+						"upvotecount": "37",
+						"url": "Share"
+					}
+				],
+				"cse_image": [
+					{
+						"src": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+					}
+				],
+				"cse_thumbnail": [
+					{
+						"height": "225",
+						"src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYl7zuT3cw_BBRAyhdQEbQuBgqdNHXKHIYKL8S8ly8x9L_XA9sdwSmiHs&s",
+						"width": "225"
+					}
+				],
+				"metatags": [
+					{
+						"og:image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+						"og:site_name": "Stack Overflow",
+						"og:type": "website",
+						"og:url": "https://stackoverflow.com/questions/75836002/what-is-the-benefit-of-using-tokio-instead-of-os-threads-in-rust",
+						"twitter:card": "summary",
+						"twitter:description": "I am trying to make a multithreaded tcp communication program in rust\nthe idea is that there exists a listening socket on the main thread, and as connections come in the work is handled by worker t...",
+						"twitter:domain": "stackoverflow.com",
+						"twitter:title": "What is the benefit of using tokio instead of OS threads in Rust",
+						"viewport": "width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0"
+					}
+				],
+				"person": [
+					{
+						"name": "userh897",
+						"url": "userh897"
+					},
+					{
+						"name": "Finomnis",
+						"url": "Finomnis"
+					}
+				],
+				"qapage": [
+					{
+						"description": "I am trying to make a multithreaded tcp communication program in rust the idea is that there exists a listening socket on the main thread, and as connections come in the work is handled by worker t...",
+						"image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+						"name": "What is the benefit of using tokio instead of OS threads in Rust",
+						"primaryimageofpage": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+					}
+				],
+				"question": [
+					{
+						"answercount": "1",
+						"commentcount": "11",
+						"datecreated": "2023-03-24 16:16:36Z",
+						"image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a",
+						"name": "What is the benefit of using tokio instead of OS threads in Rust",
+						"text": "I am trying to make a multithreaded tcp communication program in rust the idea is that there exists a listening socket on the main thread, and as connections come in the work is handled by...",
+						"upvotecount": "21",
+						"url": "Share"
+					}
+				]
+			},
+			"snippet": "Mar 24, 2023 ... ... tokio is able to 'automatically' assign work to threads from a pool ... This leaves the Tokio worker threads free to handle other, shorter ...",
+			"title": "What is the benefit of using tokio instead of OS threads in Rust ..."
+		},
+		{
+			"displayLink": "stackoverflow.com",
+			"formattedUrl": "https://stackoverflow.com/.../what-is-the-correct-way-in-rust-to-create-a-tim...",
+			"htmlFormattedUrl": "https://stackoverflow.com/.../what-is-the-correct-way-in-<b>rust</b>-to-create-a-tim...",
+			"htmlSnippet": "Mar 23, 2016 <b>...</b> How do I create a situation where the <b>thread</b> will be terminated or killed if the connection didn&#39;t finish in N seconds? The reason for all of&nbsp;...",
+			"htmlTitle": "multithreading - What is the correct way in <b>Rust</b> to create a timeout ...",
+			"kind": "customsearch#result",
+			"link": "https://stackoverflow.com/questions/36181719/what-is-the-correct-way-in-rust-to-create-a-timeout-for-a-thread-or-a-function",
+			"pagemap": {
+				"answer": [
+					{
+						"datecreated": "2017-03-10 14:15:56Z",
+						"text": "The answer by @ker will always wait 5 seconds, even if the connection finishes more quickly. Here is a similar approach where the timeout and network request both happen on separate threads,...",
+						"upvotecount": "16",
+						"url": "Share"
+					},
+					{
+						"commentcount": "2",
+						"datecreated": "2016-03-23 15:30:08Z",
+						"text": "As @Shepmaster noted: it's a bad idea to terminate threads. What you can do instead is to give the thread a Sender through which it should notify you if it has successfully opened a connection...",
+						"upvotecount": "12",
+						"url": "Share"
+					},
+					{
+						"commentcount": "1",
+						"datecreated": "2022-10-28 10:47:53Z",
+						"text": "Here is an abstraction so you can run any function with a timeout use std::{ collections::HashMap, sync::mpsc::{self, RecvTimeoutError}, thread, time::Duration, }; #[derive(Debug)] struct TimeoutEr...",
+						"upvotecount": "3",
+						"url": "Share"
+					},
+					{
+						"datecreated": "2023-02-03 09:41:14Z",
+						"text": "You may use tokio. use std::net; use std::time::Duration; use tokio::time::error::Elapsed; async fn scan_port(host: &str, port: u16) -> Result<bool, Elapsed> { tokio::time::timeout(Duration::from_s...",
+						"upvotecount": "3",
+						"url": "Share"
+					}
+				],
+				"comment": [
+					{
+						"datepublished": "2016-03-23 15:09:26 +00:00",
+						"text": "It would probably be better if your sample code was more minimal, showing only the problem at hand instead of a page of command line argument parsing and option fiddling."
+					},
+					{
+						"datepublished": "2016-03-23 15:13:32 +00:00",
+						"text": "Terminating or killing a thread was a bad idea in the languages that added it. Rust won't be adding it."
+					},
+					{
+						"datepublished": "2016-03-23 15:21:59 +00:00",
+						"text": "@Ba7a7chy: I think @MikeCooper meant an MCVE, meaning something that doesn't even relate to tcp. Just a thread that does loop {} and your attempts at killing it."
+					},
+					{
+						"datepublished": "2016-03-23 15:28:13 +00:00",
+						"text": "@ker I have some hopes that maybe someone would see this example in Rust and will say \"oh, you can't set timeout but you can do x\" so I'll leave the specific tcp socket example in the hope..."
+					},
+					{
+						"datepublished": "2016-03-23 15:31:09 +00:00",
+						"text": "oh right, that makes sense. Still, the argparse crate import is not necessary"
+					},
+					{
+						"datepublished": "2016-03-23 15:43:38 +00:00",
+						"text": "I tried that now, it seems that Receiver blocks until it gets an answer, if that is really the case I'm in the same place when using Send\\Receive"
+					},
+					{
+						"datepublished": "2016-03-23 15:46:21 +00:00",
+						"text": "I updated with some code. You need to use try_recv, which is the non-blocking receiving method"
+					},
+					{
+						"datepublished": "2022-12-13 15:09:35 +00:00",
+						"text": "Please note that the timeout will not stop the running thread. If you want to cancel the job use tokio. an example can be found here: github.com/JadKHaddad/Run-With-Timeout"
+					}
+				],
+				"cse_image": [
+					{
+						"src": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+					}
+				],
+				"cse_thumbnail": [
+					{
+						"height": "225",
+						"src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYl7zuT3cw_BBRAyhdQEbQuBgqdNHXKHIYKL8S8ly8x9L_XA9sdwSmiHs&s",
+						"width": "225"
+					}
+				],
+				"metatags": [
+					{
+						"og:image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+						"og:site_name": "Stack Overflow",
+						"og:type": "website",
+						"og:url": "https://stackoverflow.com/questions/36181719/what-is-the-correct-way-in-rust-to-create-a-timeout-for-a-thread-or-a-function",
+						"twitter:card": "summary",
+						"twitter:description": "This is my code:\nuse std::net;\nuse std::thread;\n\nfn scan_port(host: &amp;str, port: u16) -&gt; bool {\n    let host = host.to_string();\n    let port = port;\n    let t = thread::spawn(move || net::",
+						"twitter:domain": "stackoverflow.com",
+						"twitter:title": "What is the correct way in Rust to create a timeout for a thread or a function?",
+						"viewport": "width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0"
+					}
+				],
+				"person": [
+					{
+						"name": "Ba7a7chy",
+						"url": "Ba7a7chy"
+					},
+					{
+						"name": "Mike Cooper",
+						"url": "Mike Cooper"
+					},
+					{
+						"name": "Shepmaster",
+						"url": "Shepmaster"
+					},
+					{
+						"name": "oli_obk",
+						"url": "oli_obk"
+					},
+					{
+						"name": "Ba7a7chy",
+						"url": "Ba7a7chy"
+					},
+					{
+						"name": "oli_obk",
+						"url": "oli_obk"
+					},
+					{
+						"name": "Paul A Jungwirth",
+						"url": "Paul A Jungwirth"
+					},
+					{
+						"name": "oli_obk",
+						"url": "oli_obk"
+					},
+					{
+						"name": "Ba7a7chy",
+						"url": "Ba7a7chy"
+					},
+					{
+						"name": "oli_obk",
+						"url": "oli_obk"
+					},
+					{
+						"name": "Jad Haddad",
+						"url": "Jad Haddad"
+					},
+					{
+						"name": "Jad Haddad",
+						"url": "Jad Haddad"
+					},
+					{
+						"name": "Yanni Wang",
+						"url": "Yanni Wang"
+					}
+				],
+				"qapage": [
+					{
+						"description": "This is my code: use std::net; use std::thread; fn scan_port(host: &str, port: u16) -> bool { let host = host.to_string(); let port = port; let t = thread::spawn(move || net::",
+						"image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+						"name": "What is the correct way in Rust to create a timeout for a thread or a function?",
+						"primaryimageofpage": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+					}
+				],
+				"question": [
+					{
+						"answercount": "4",
+						"commentcount": "6",
+						"datecreated": "2016-03-23 15:03:31Z",
+						"image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a",
+						"name": "What is the correct way in Rust to create a timeout for a thread or a function?",
+						"text": "This is my code: use std::net; use std::thread; fn scan_port(host: &str, port: u16) -> bool { let host = host.to_string(); let port = port; let t = thread::spawn(move || net::TcpStream::connect((ho...",
+						"upvotecount": "27",
+						"url": "Share"
+					}
+				]
+			},
+			"snippet": "Mar 23, 2016 ... How do I create a situation where the thread will be terminated or killed if the connection didn't finish in N seconds? The reason for all of ...",
+			"title": "multithreading - What is the correct way in Rust to create a timeout ..."
+		},
+		{
+			"displayLink": "stackoverflow.com",
+			"formattedUrl": "https://stackoverflow.com/.../when-should-you-use-tokios-spawn-blocking",
+			"htmlFormattedUrl": "https://stackoverflow.com/.../when-should-you-use-<b>tokio</b>s-spawn-blocking",
+			"htmlSnippet": "Nov 23, 2022 <b>...</b> design-<b>patterns</b>; text; django-rest-framework; visual-c++; cakephp ... <b>thread</b> to avoid taking one away from the <b>Tokio</b>/Rayon <b>pool</b>. Share.",
+			"htmlTitle": "<b>rust</b> - When should you use <b>Tokio&#39;s</b> `spawn_blocking`? - Stack ...",
+			"kind": "customsearch#result",
+			"link": "https://stackoverflow.com/questions/74547541/when-should-you-use-tokios-spawn-blocking",
+			"pagemap": {
+				"answer": [
+					{
+						"commentcount": "2",
+						"datecreated": "2022-11-23 13:49:09Z",
+						"text": "Alice Rhyl (one of the Tokio devs) has a good blog post on blocking in async code. One of the key parts for your question: To give a sense of scale of how much time is too much, a good rule...",
+						"upvotecount": "27",
+						"url": "Share"
+					}
+				],
+				"comment": [
+					{
+						"datepublished": "2022-11-23 13:46:55 +00:00",
+						"text": "Does this answer your question? Why does Future::select choose the future with a longer sleep period first?"
+					},
+					{
+						"datepublished": "2022-11-23 13:49:52 +00:00",
+						"text": "This might explain better: What is the best approach to encapsulate blocking I/O in future-rs?"
+					},
+					{
+						"datepublished": "2022-11-23 13:55:53 +00:00",
+						"text": "I'm not sure that I agree this is a duplicate of those questions - those questions are about how to handle blocking, but this question is more about \"what is blocking (and how much is too much)\"."
+					},
+					{
+						"datepublished": "2022-11-23 14:11:15 +00:00",
+						"text": "Thanks, these are both very helpful posts but not exactly what I was looking for."
+					},
+					{
+						"datepublished": "2022-11-23 14:09:56 +00:00",
+						"text": "Thank you! I remember reading that article a while back but didn't get a full grasp, will revisit. And in this case, since recovering signatures is CPU bound, isn't something like Rayon the..."
+					},
+					{
+						"datepublished": "2022-11-23 14:16:15 +00:00",
+						"text": "@boston: Ah, I thought the network IO you mentioned was the big factor, rather than the signature bit. In that case, Rayon could be worth looking into - that tends to be most effective when..."
+					}
+				],
+				"cse_image": [
+					{
+						"src": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+					}
+				],
+				"cse_thumbnail": [
+					{
+						"height": "225",
+						"src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYl7zuT3cw_BBRAyhdQEbQuBgqdNHXKHIYKL8S8ly8x9L_XA9sdwSmiHs&s",
+						"width": "225"
+					}
+				],
+				"metatags": [
+					{
+						"og:image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+						"og:site_name": "Stack Overflow",
+						"og:type": "website",
+						"og:url": "https://stackoverflow.com/questions/74547541/when-should-you-use-tokios-spawn-blocking",
+						"twitter:card": "summary",
+						"twitter:description": "In the task documentation, there's a section that talks about calling blocking code in async, and how that should be avoided as to not block the async thread too much (https://docs.rs/tokio/1.21.2/...",
+						"twitter:domain": "stackoverflow.com",
+						"twitter:title": "When should you use Tokio's `spawn_blocking`?",
+						"viewport": "width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0"
+					}
+				],
+				"person": [
+					{
+						"name": "boston",
+						"url": "boston"
+					},
+					{
+						"name": "Ömer Erden",
+						"url": "Ömer Erden"
+					},
+					{
+						"name": "Ömer Erden",
+						"url": "Ömer Erden"
+					},
+					{
+						"name": "Joe Clay",
+						"url": "Joe Clay"
+					},
+					{
+						"name": "boston",
+						"url": "boston"
+					},
+					{
+						"name": "Joe Clay",
+						"url": "Joe Clay"
+					},
+					{
+						"name": "boston",
+						"url": "boston"
+					},
+					{
+						"name": "Joe Clay",
+						"url": "Joe Clay"
+					}
+				],
+				"qapage": [
+					{
+						"description": "In the task documentation, there's a section that talks about calling blocking code in async, and how that should be avoided as to not block the async thread too much (https://docs.rs/tokio/1.21.2/...",
+						"image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+						"name": "When should you use Tokio's `spawn_blocking`?",
+						"primaryimageofpage": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+					}
+				],
+				"question": [
+					{
+						"answercount": "1",
+						"commentcount": "4",
+						"datecreated": "2022-11-23 13:26:13Z",
+						"image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a",
+						"name": "When should you use Tokio's `spawn_blocking`?",
+						"text": "In the task documentation, there's a section that talks about calling blocking code in async, and how that should be avoided as to not block the async thread too much (https://docs.rs/tokio/1.21.2/...",
+						"upvotecount": "13",
+						"url": "Share"
+					}
+				]
+			},
+			"snippet": "Nov 23, 2022 ... design-patterns; text; django-rest-framework; visual-c++; cakephp ... thread to avoid taking one away from the Tokio/Rayon pool. Share.",
+			"title": "rust - When should you use Tokio's `spawn_blocking`? - Stack ..."
+		},
+		{
+			"displayLink": "stackoverflow.com",
+			"formattedUrl": "https://stackoverflow.com/.../actix-web-integration-tests-reusing-the-main-t...",
+			"htmlFormattedUrl": "https://stackoverflow.com/.../actix-web-integration-tests-reusing-the-main-t...",
+			"htmlSnippet": "May 28, 2022 <b>...</b> This example uses a database <b>pool</b> as a state - your application ... Using Actix from a <b>Tokio</b> App: mixing actix_web::main and <b>tokio</b>::main?",
+			"htmlTitle": "<b>rust</b> - Actix-web integration tests: reusing the main <b>thread</b> application ...",
+			"kind": "customsearch#result",
+			"link": "https://stackoverflow.com/questions/72415245/actix-web-integration-tests-reusing-the-main-thread-application",
+			"pagemap": {
+				"answer": [
+					{
+						"commentcount": "1",
+						"datecreated": "2022-12-22 16:21:18Z",
+						"text": "I was struggling with the same issue using actix-web@4, but I came up with a possible solution. It may not be ideal, but it works for my needs. I needed to bring in actix-service@2.0.2 and...",
+						"upvotecount": "4",
+						"url": "Share"
+					},
+					{
+						"commentcount": "2",
+						"datecreated": "2024-03-23 23:39:53Z",
+						"text": "If anyone else has encountered the issue Ray discussed some time ago, you'll know it can be quite challenging. After spending some time struggling with this situation and experimenting with...",
+						"upvotecount": "2",
+						"url": "Share"
+					},
+					{
+						"datecreated": "2022-08-07 17:39:13Z",
+						"text": "Define a declarative macro app! that builds the App, but define the routes using the procedural API, not the Actix build-in macros such as #[get(\"/\")]. This example uses a database pool as...",
+						"upvotecount": "1",
+						"url": "Share"
+					}
+				],
+				"comment": [
+					{
+						"datepublished": "2022-06-13 09:46:40 +00:00",
+						"text": "Sorry for being that \"me too\" guy, but I'm literally struggling with the exact same mental model problem. My first instinct was to extract the app creation into its own method, but that return..."
+					},
+					{
+						"datepublished": "2022-06-13 12:27:45 +00:00",
+						"text": "The solution I landed on was to just spin up the whole app including the HTTP server as it is (so not just the app part) and then just run requests against it from within the tests (e. g. with..."
+					},
+					{
+						"datepublished": "2022-06-30 19:26:27 +00:00",
+						"text": "@Quasdunk nice, that's what one guy on reddit suggested as well. Haven't continued with that project so far. Thanks for sharing!"
+					},
+					{
+						"datepublished": "2023-04-26 09:33:08 +00:00",
+						"text": "Have you thought about a way to set the init fn as a static ref that way it only runs once, if so would you know a solution?"
+					},
+					{
+						"datepublished": "2024-03-23 23:47:50 +00:00",
+						"text": "Using a macro was already suggested by another answer so I'm not sure what value this adds to the question, unless you can highlight ways that your macro is superior."
+					},
+					{
+						"datepublished": "2024-03-26 18:15:10 +00:00",
+						"text": "The objective isn't necessarily to present a superior solution; rather, it's to illustrate an alternative method that focuses more directly on reuse app initialization for testing environments,..."
+					}
+				],
+				"cse_image": [
+					{
+						"src": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+					}
+				],
+				"cse_thumbnail": [
+					{
+						"height": "225",
+						"src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYl7zuT3cw_BBRAyhdQEbQuBgqdNHXKHIYKL8S8ly8x9L_XA9sdwSmiHs&s",
+						"width": "225"
+					}
+				],
+				"metatags": [
+					{
+						"og:image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+						"og:site_name": "Stack Overflow",
+						"og:type": "website",
+						"og:url": "https://stackoverflow.com/questions/72415245/actix-web-integration-tests-reusing-the-main-thread-application",
+						"twitter:card": "summary",
+						"twitter:description": "I am using actix-web to write a small service. I'm adding integration tests to assess the functionality and have noticed that on every test I have to repeat the same definitions that in my main App",
+						"twitter:domain": "stackoverflow.com",
+						"twitter:title": "Actix-web integration tests: reusing the main thread application",
+						"viewport": "width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0"
+					}
+				],
+				"person": [
+					{
+						"name": "Ray",
+						"url": "Ray"
+					},
+					{
+						"name": "Quasdunk",
+						"url": "Quasdunk"
+					},
+					{
+						"name": "Quasdunk",
+						"url": "Quasdunk"
+					},
+					{
+						"name": "Ray",
+						"url": "Ray"
+					},
+					{
+						"name": "Dylan M",
+						"url": "Dylan M"
+					},
+					{
+						"name": "wubalubadub",
+						"url": "wubalubadub"
+					},
+					{
+						"name": "Diego Flórez",
+						"url": "Diego Flórez"
+					},
+					{
+						"name": "kmdreko",
+						"url": "kmdreko"
+					},
+					{
+						"name": "Diego Flórez",
+						"url": "Diego Flórez"
+					},
+					{
+						"name": "Ovidiu Gheorghies",
+						"url": "Ovidiu Gheorghies"
+					}
+				],
+				"qapage": [
+					{
+						"description": "I am using actix-web to write a small service. I'm adding integration tests to assess the functionality and have noticed that on every test I have to repeat the same definitions that in my main App",
+						"image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+						"name": "Actix-web integration tests: reusing the main thread application",
+						"primaryimageofpage": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+					}
+				],
+				"question": [
+					{
+						"answercount": "3",
+						"commentcount": "3",
+						"datecreated": "2022-05-28 11:20:40Z",
+						"image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a",
+						"name": "Actix-web integration tests: reusing the main thread application",
+						"text": "I am using actix-web to write a small service. I'm adding integration tests to assess the functionality and have noticed that on every test I have to repeat the same definitions that in my...",
+						"upvotecount": "9",
+						"url": "Share"
+					}
+				]
+			},
+			"snippet": "May 28, 2022 ... This example uses a database pool as a state - your application ... Using Actix from a Tokio App: mixing actix_web::main and tokio::main?",
+			"title": "rust - Actix-web integration tests: reusing the main thread application ..."
+		},
+		{
+			"displayLink": "stackoverflow.com",
+			"formattedUrl": "https://stackoverflow.com/.../how-to-run-async-function-in-sync-in-tokio-r...",
+			"htmlFormattedUrl": "https://stackoverflow.com/.../how-to-run-async-function-in-sync-in-<b>tokio</b>-r...",
+			"htmlSnippet": "Apr 13, 2025 <b>...</b> <b>rust</b>-<b>tokio</b> &middot; sea-orm &middot; Share. Share a link to this question. Copy link. CC ... <b>worker pool</b> for instance using spawn_blocking() ? Svetlin Zarev.",
+			"htmlTitle": "asynchronous - How to run async function in sync in <b>tokio</b> runtime ...",
+			"kind": "customsearch#result",
+			"link": "https://stackoverflow.com/questions/79571546/how-to-run-async-function-in-sync-in-tokio-runtime",
+			"pagemap": {
+				"answer": [
+					{
+						"commentcount": "5",
+						"datecreated": "2025-04-13 15:24:16Z",
+						"text": "The only coherent way to block while executing code within a tokio executor thread, but not able to use await, is to call tokio::task::block_in_place(). This function will inform the executor...",
+						"upvotecount": "6",
+						"url": "Share"
+					}
+				],
+				"comment": [
+					{
+						"datepublished": "2025-04-13 16:30:28 +00:00",
+						"text": "I'm curious why you're going through this hassle instead of just making the method async... the only calling contexts you mention or show are async (#[tokio::main] and #[tokio::test])."
+					},
+					{
+						"datepublished": "2025-04-13 18:37:09 +00:00",
+						"text": "@kmdreko you are right, I just thought it can be done easily and I can remove async/await in many tests"
+					},
+					{
+						"datepublished": "2025-04-13 16:49:37 +00:00",
+						"text": "Should blocking operations, specifically working with SQLite (rusqlite) use block_in_place() or should they be offloaded to a worker pool for instance using spawn_blocking() ?"
+					},
+					{
+						"datepublished": "2025-04-14 02:07:58 +00:00",
+						"text": "@SvetlinZarev block_in_place is essentially never the best option, only a pragmatic one. I just realized that my answer might have been interpreted as recommending it, so I edited to clarify..."
+					},
+					{
+						"datepublished": "2025-04-14 11:58:28 +00:00",
+						"text": "What would be the reason to ever call block_in_place(x) instead of spawn_blocking(x).await.unwrap()? The only reason I see is to avoid the Send + 'static bound on the closure. (Another could..."
+					},
+					{
+						"datepublished": "2025-04-14 14:56:55 +00:00",
+						"text": "@user4815162342 If you can write spawn_blocking(x).await, you should. I regret that my answer was, apparently, so unclear, and I've further edited to clarify."
+					},
+					{
+						"datepublished": "2025-04-14 15:05:49 +00:00",
+						"text": "Thanks for the edit, it's a great explanation of when block_in_place() is needed beyond what I saw previously. I also missed that the OP's code is in a non-async function, so (in their current..."
+					}
+				],
+				"cse_image": [
+					{
+						"src": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+					}
+				],
+				"cse_thumbnail": [
+					{
+						"height": "225",
+						"src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYl7zuT3cw_BBRAyhdQEbQuBgqdNHXKHIYKL8S8ly8x9L_XA9sdwSmiHs&s",
+						"width": "225"
+					}
+				],
+				"metatags": [
+					{
+						"og:image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+						"og:site_name": "Stack Overflow",
+						"og:type": "website",
+						"og:url": "https://stackoverflow.com/questions/79571546/how-to-run-async-function-in-sync-in-tokio-runtime",
+						"twitter:card": "summary",
+						"twitter:description": "I would like to initialize SeaOrm database connection in sync for easier usage inside application and testing, but not sure how to do it without error. I'm fine with any type of blocking as this ha...",
+						"twitter:domain": "stackoverflow.com",
+						"twitter:title": "How to run async function in sync in tokio runtime?",
+						"viewport": "width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0"
+					}
+				],
+				"person": [
+					{
+						"name": "ZiiMakc"
+					},
+					{
+						"name": "ZiiMakc",
+						"url": "ZiiMakc"
+					},
+					{
+						"name": "kmdreko",
+						"url": "kmdreko"
+					},
+					{
+						"name": "ZiiMakc",
+						"url": "ZiiMakc"
+					},
+					{
+						"name": "Kevin Reid",
+						"url": "Kevin Reid"
+					},
+					{
+						"name": "Svetlin Zarev",
+						"url": "Svetlin Zarev"
+					},
+					{
+						"name": "Kevin Reid",
+						"url": "Kevin Reid"
+					},
+					{
+						"name": "user4815162342",
+						"url": "user4815162342"
+					},
+					{
+						"name": "Kevin Reid",
+						"url": "Kevin Reid"
+					},
+					{
+						"name": "user4815162342",
+						"url": "user4815162342"
+					}
+				],
+				"qapage": [
+					{
+						"description": "I would like to initialize SeaOrm database connection in sync for easier usage inside application and testing, but not sure how to do it without error. I'm fine with any type of blocking as this ha...",
+						"image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+						"name": "How to run async function in sync in tokio runtime?",
+						"primaryimageofpage": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+					}
+				],
+				"question": [
+					{
+						"answercount": "1",
+						"commentcount": "2",
+						"datecreated": "2025-04-13 12:38:56Z",
+						"image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a",
+						"name": "How to run async function in sync in tokio runtime?",
+						"text": "I would like to initialize SeaOrm database connection in sync for easier usage inside application and testing, but not sure how to do it without error. I'm fine with any type of blocking as...",
+						"upvotecount": "2",
+						"url": "Share"
+					}
+				]
+			},
+			"snippet": "Apr 13, 2025 ... rust-tokio · sea-orm · Share. Share a link to this question. Copy link. CC ... worker pool for instance using spawn_blocking() ? Svetlin Zarev.",
+			"title": "asynchronous - How to run async function in sync in tokio runtime ..."
+		},
+		{
+			"displayLink": "stackoverflow.com",
+			"formattedUrl": "https://stackoverflow.com/.../how-can-i-create-a-tokio-runtime-inside-anoth...",
+			"htmlFormattedUrl": "https://stackoverflow.com/.../how-can-i-create-a-<b>tokio</b>-runtime-inside-anoth...",
+			"htmlSnippet": "Jun 23, 2020 <b>...</b> design-<b>patterns</b>; text; django-rest-framework; visual-c++; cakephp ... <b>Tokio</b> runtime on a completely independent <b>thread</b>. The easiest way to&nbsp;...",
+			"htmlTitle": "<b>rust</b> - How can I create a <b>Tokio</b> runtime inside another <b>Tokio</b> runtime ...",
+			"kind": "customsearch#result",
+			"link": "https://stackoverflow.com/questions/62536566/how-can-i-create-a-tokio-runtime-inside-another-tokio-runtime-without-getting-th",
+			"pagemap": {
+				"answer": [
+					{
+						"commentcount": "13",
+						"datecreated": "2020-06-23 14:12:37Z",
+						"text": "Solving the problem This is a reduced example: use tokio; // 1.0.2 #[tokio::main] async fn inner_example() {} #[tokio::main] async fn main() { inner_example(); } thread 'main' panicked at 'Cannot...",
+						"upvotecount": "67",
+						"url": "Share"
+					},
+					{
+						"datecreated": "2020-12-25 22:16:25Z",
+						"text": "I had a similar issue using the QA Model while loading it into warp (a tokio runtime), sequential runtimes still weren't working for me, but I found my solution in the github issues of rust-bert....",
+						"upvotecount": "6",
+						"url": "Share"
+					}
+				],
+				"cse_image": [
+					{
+						"src": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+					}
+				],
+				"cse_thumbnail": [
+					{
+						"height": "225",
+						"src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYl7zuT3cw_BBRAyhdQEbQuBgqdNHXKHIYKL8S8ly8x9L_XA9sdwSmiHs&s",
+						"width": "225"
+					}
+				],
+				"metatags": [
+					{
+						"og:image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+						"og:site_name": "Stack Overflow",
+						"og:type": "website",
+						"og:url": "https://stackoverflow.com/questions/62536566/how-can-i-create-a-tokio-runtime-inside-another-tokio-runtime-without-getting-th",
+						"twitter:card": "summary",
+						"twitter:description": "I'm using rust_bert for summarising text. I need to set a model with rust_bert::pipelines::summarization::SummarizationModel::new, which fetches the model from the internet. It does this asynchrono...",
+						"twitter:domain": "stackoverflow.com",
+						"twitter:title": "How can I create a Tokio runtime inside another Tokio runtime without getting the error \"Cannot start a runtime from within a runtime\"?",
+						"viewport": "width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0"
+					}
+				],
+				"person": [
+					{
+						"name": "Mib",
+						"url": "Mib"
+					},
+					{
+						"name": "Shepmaster",
+						"url": "Shepmaster"
+					},
+					{
+						"name": "Alex Moore-Niemi",
+						"url": "Alex Moore-Niemi"
+					}
+				],
+				"qapage": [
+					{
+						"description": "I'm using rust_bert for summarising text. I need to set a model with rust_bert::pipelines::summarization::SummarizationModel::new, which fetches the model from the internet. It does this asynchrono...",
+						"image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+						"name": "How can I create a Tokio runtime inside another Tokio runtime without getting the error \"Cannot start a runtime from within a runtime\"?",
+						"primaryimageofpage": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+					}
+				],
+				"question": [
+					{
+						"answercount": "2",
+						"commentcount": "3",
+						"datecreated": "2020-06-23 14:02:06Z",
+						"image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a",
+						"name": "How can I create a Tokio runtime inside another Tokio runtime without getting the error \"Cannot start a runtime from within a runtime\"?",
+						"text": "I'm using rust_bert for summarising text. I need to set a model with rust_bert::pipelines::summarization::SummarizationModel::new, which fetches the model from the internet. It does this asynchrono...",
+						"upvotecount": "32",
+						"url": "Share"
+					}
+				]
+			},
+			"snippet": "Jun 23, 2020 ... design-patterns; text; django-rest-framework; visual-c++; cakephp ... Tokio runtime on a completely independent thread. The easiest way to ...",
+			"title": "rust - How can I create a Tokio runtime inside another Tokio runtime ..."
+		}
+	],
+	"kind": "customsearch#search",
+	"queries": {
+		"nextPage": [
+			{
+				"count": 10,
+				"cx": "f535a39ffc8e742ad",
+				"inputEncoding": "utf8",
+				"outputEncoding": "utf8",
+				"safe": "off",
+				"searchTerms": "rust tokio worker pool patterns",
+				"startIndex": 11,
+				"title": "Google Custom Search - rust tokio worker pool patterns",
+				"totalResults": "245"
+			}
+		],
+		"request": [
+			{
+				"count": 10,
+				"cx": "f535a39ffc8e742ad",
+				"inputEncoding": "utf8",
+				"outputEncoding": "utf8",
+				"safe": "off",
+				"searchTerms": "rust tokio worker pool patterns",
+				"startIndex": 1,
+				"title": "Google Custom Search - rust tokio worker pool patterns",
+				"totalResults": "245"
+			}
+		]
+	},
+	"searchInformation": {
+		"formattedSearchTime": "0.21",
+		"formattedTotalResults": "245",
+		"searchTime": 0.212051,
+		"totalResults": "245"
+	},
+	"url": {
+		"template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json",
+		"type": "application/json"
+	}
+}
