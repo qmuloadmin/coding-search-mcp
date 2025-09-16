@@ -41,6 +41,9 @@ You will need to:
 1. Clone the submodule for MDN docs, or provide it in a different location.
 2. Create a [Programmable Search Engine](https://developers.google.com/custom-search/docs/tutorial/creatingcse) in Google.
   -  This is free for some (fairly large) number of queries a day.
+  -  Limit the sites searched to supported tools. Otherwise results will contain files that can't be retrieved.
+  -  <img width="649" height="222" alt="image" src="https://github.com/user-attachments/assets/86d8d4d2-63c4-4120-9d73-cd335c8c7809" />
+
 3. Optionally create a Stack Exchange API Key. This will enable more queries per day. It's also free.
 
 After the above prerequisites are met, install rust (using rustup is the recommended route) and then:
