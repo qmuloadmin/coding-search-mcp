@@ -1,0 +1,27 @@
+{
+	"items": [
+		{
+			"owner": {
+				"account_id": 879267,
+				"reputation": 437779,
+				"user_id": 155423,
+				"user_type": "registered",
+				"accept_rate": 90,
+				"profile_image": "https://i.sstatic.net/hjwrE.png?s=256",
+				"display_name": "Shepmaster",
+				"link": "https://stackoverflow.com/users/155423/shepmaster"
+			},
+			"is_accepted": false,
+			"score": 28,
+			"last_activity_date": 1597756001,
+			"creation_date": 1597756001,
+			"answer_id": 63469312,
+			"question_id": 63463579,
+			"content_license": "CC BY-SA 4.0",
+			"body": "<p>For two futures, like you have, use <a href=\"https://docs.rs/futures/0.3.5/futures/future/fn.join.html\" rel=\"noreferrer\"><code>future::join</code></a></p>\n<pre><code>use futures::{executor, future}; // 0.3.5\n\nasync fn speak() {\n    let (_s, _g) = future::join(say(), greet()).await;\n}\n</code></pre>\n<p>There are variants for three, four, and five input futures: <a href=\"https://docs.rs/futures/0.3.5/futures/future/fn.join3.html\" rel=\"noreferrer\"><code>join3</code></a>, <a href=\"https://docs.rs/futures/0.3.5/futures/future/fn.join4.html\" rel=\"noreferrer\"><code>join4</code></a>, <a href=\"https://docs.rs/futures/0.3.5/futures/future/fn.join5.html\" rel=\"noreferrer\"><code>join5</code></a>.</p>\n<p>There is also <a href=\"https://docs.rs/futures/0.3.5/futures/future/fn.try_join.html\" rel=\"noreferrer\"><code>try_join</code></a> (and <a href=\"https://docs.rs/futures/0.3.5/futures/future/fn.try_join3.html\" rel=\"noreferrer\"><code>try_join3</code></a>, <a href=\"https://docs.rs/futures/0.3.5/futures/future/fn.try_join4.html\" rel=\"noreferrer\"><code>try_join4</code></a>, <a href=\"https://docs.rs/futures/0.3.5/futures/future/fn.try_join5.html\" rel=\"noreferrer\"><code>try_join5</code></a>) for when your future returns a <code>Result</code>.</p>\n<p>The macro <a href=\"https://docs.rs/futures/0.3.5/futures/macro.join.html\" rel=\"noreferrer\"><code>join</code></a> is another way to handle a static number of futures to join.</p>\n<p>If you need to support a dynamic number of futures, you can use <a href=\"https://docs.rs/futures/0.3.5/futures/future/fn.join_all.html\" rel=\"noreferrer\"><code>future::join_all</code></a> (or <a href=\"https://docs.rs/futures/0.3.5/futures/future/fn.try_join_all.html\" rel=\"noreferrer\"><code>try_join_all</code></a>), but you have to have a vector of all one kind. This is easiest via <a href=\"https://docs.rs/futures/0.3.5/futures/future/trait.FutureExt.html#method.boxed\" rel=\"noreferrer\"><code>FutureExt::boxed</code></a> (or <a href=\"https://docs.rs/futures/0.3.5/futures/future/trait.FutureExt.html#method.boxed_local\" rel=\"noreferrer\"><code>FutureExt::boxed_local</code></a>):</p>\n<pre><code>use futures::{executor, future, FutureExt}; // 0.3.5\n\nasync fn speak() {\n    let futures = vec![say().boxed(), greet().boxed()];\n    let _results = future::join_all(futures).await;\n}\n</code></pre>\n<p>Note that this code can run the futures concurrently but will not run them in parallel. For parallel execution, you need to introduce some kind of tasks.</p>\n<p>See also:</p>\n<ul>\n<li><a href=\"https://stackoverflow.com/q/61481079/155423\">How can I join all the futures in a vector without cancelling on failure like join_all does?</a></li>\n<li><a href=\"https://stackoverflow.com/q/43247212/155423\">Join futures with limited concurrency</a></li>\n<li><a href=\"https://stackoverflow.com/q/51044467/155423\">How can I perform parallel asynchronous HTTP GET requests with reqwest?</a></li>\n<li><a href=\"https://stackoverflow.com/q/27957103/155423\">How do I create a heterogeneous collection of objects?</a></li>\n<li><a href=\"https://stackoverflow.com/q/52835725/155423\">What is the purpose of async/await in Rust?</a></li>\n<li><a href=\"https://stackoverflow.com/q/1050222/155423\">What is the difference between concurrency and parallelism?</a></li>\n</ul>\n"
+		}
+	],
+	"has_more": false,
+	"quota_max": 300,
+	"quota_remaining": 297
+}

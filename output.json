@@ -1,0 +1,336 @@
+{
+	"items": [
+		{
+			"snippet": "May 2, 2025 ... The mouseover event is fired at an Element when a pointing device (such as a mouse or trackpad) is used to move the cursor onto the element ...",
+			"title": "Element: mouseover event - Web APIs | MDN",
+			"link": "https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseover_event",
+			"pagemap": {
+				"metatags": [
+					{
+						"og:description": "The mouseover event is fired at an Element when a pointing device (such as a mouse or trackpad) is used to move the cursor onto the element or one of its child elements."
+					}
+				]
+			}
+		},
+		{
+			"snippet": "Nov 29, 2011 ... You will need to setup a similar event to handle mouseout . Inside the mouseout event function, you can change the color back to the ...",
+			"title": "dom - Javascript addEventListener - using to create a mouseover ...",
+			"link": "https://stackoverflow.com/questions/8318591/javascript-addeventlistener-using-to-create-a-mouseover-effect",
+			"pagemap": {
+				"question": [
+					{
+						"upvotecount": "35",
+						"name": "Javascript addEventListener - using to create a mouseover effect?",
+						"text": "I have a div with an id of \"button\". I am trying to change its background to become blue when I hover (without using the CSS hover selector). var item = document.getElementById(\"button\"); item.addE..."
+					}
+				],
+				"answer": [
+					{
+						"upvotecount": "60",
+						"text": "You will need to setup a similar event to handle mouseout. Inside the mouseout event function, you can change the color back to the original color. var item = document.getElementById(\"button\");..."
+					},
+					{
+						"upvotecount": "3",
+						"text": "Have you tried mouseout? (Unfortunately the event \"mouseover\" was poorly named - it would've been better if it had been called \"mousein\" so that it was more obviously and intuitively the opposite..."
+					}
+				]
+			}
+		},
+		{
+			"snippet": "Aug 20, 2015 ... As you can see there is no hover event, because browsers do not define a hover event natively. You will want to add handlers for onMouseEnter ...",
+			"title": "How can I access a hover state in reactjs? - Stack Overflow",
+			"link": "https://stackoverflow.com/questions/32125708/how-can-i-access-a-hover-state-in-reactjs",
+			"pagemap": {
+				"question": [
+					{
+						"upvotecount": "201",
+						"name": "How can I access a hover state in reactjs?",
+						"text": "I have a sidenav with a bunch of basketball teams. So I would like to display something different for each team when one of them is being hovered over. Also, I am using Reactjs so if I could..."
+					}
+				],
+				"answer": [
+					{
+						"upvotecount": "323",
+						"text": "React components expose all the standard Javascript mouse events in their top-level interface. Of course, you can still use :hover in your CSS, and that may be adequate for some of your needs,..."
+					},
+					{
+						"upvotecount": "47",
+						"text": "ReactJs defines the following synthetic events for mouse events: onClick onContextMenu onDoubleClick onDrag onDragEnd onDragEnter onDragExit onDragLeave onDragOver onDragStart onDrop onMouseDown..."
+					},
+					{
+						"upvotecount": "19",
+						"text": "For having hover effect you can simply try this code import React from \"react\"; import \"./styles.css\"; export default function App() { function MouseOver(event) { event.target.style.background..."
+					},
+					{
+						"upvotecount": "4",
+						"text": "I know the accepted answer is great but for anyone who is looking for a hover like feel you can use setTimeout on mouseover and save the handle in a map (of let's say list ids to setTimeout..."
+					},
+					{
+						"upvotecount": "2",
+						"text": "This won't work for OP because they wanted a variable but for those who just want a UI hover effect it's usually easier to stick with CSS. Below example will reveal a delete button when an..."
+					},
+					{
+						"upvotecount": "2",
+						"text": "Using useState, import React, { useState } from \"react\"; function App() { const [ishover,sethover]=useState(false); function MouseOver() { sethover(true); } function MouseOut() { sethover(false);..."
+					},
+					{
+						"upvotecount": "0",
+						"text": "You can implement your own component logics using those events which stolli and BentOnCoding suggested above, or use the module named react-hover if I could have a variable that I could pass..."
+					},
+					{
+						"upvotecount": "0",
+						"text": "If you are using React and Material-ui, you can inject css with the sx Props: const HoverTable = () => { return ( <Box sx={{ '&:hover .hoverChild': { opacity: 1 } }}> <Grid container> <Grid..."
+					},
+					{
+						"upvotecount": "0",
+						"text": "When hovering over the link, the img element will appear function Link({ text, url, blank }) { const [hover, setHover] = useState(false) return ( <a className=\"inline\" href={url} target={blank..."
+					},
+					{
+						"upvotecount": "-2",
+						"text": "You can try to implement below code. Hover functionality can be acheived with Tooltip. Please refer below code and link for clarity https://mui.com/material-ui/react-tooltip/ import * as React..."
+					}
+				]
+			}
+		},
+		{
+			"snippet": "Jun 18, 2015 ... For prototyping on the other hand, I find it useful to not have to define data properties or event handlers within the script. Here's an example ...",
+			"title": "javascript - Mouseover or hover vue.js - Stack Overflow",
+			"link": "https://stackoverflow.com/questions/30911933/mouseover-or-hover-vue-js",
+			"pagemap": {
+				"question": [
+					{
+						"upvotecount": "191",
+						"name": "Mouseover or hover vue.js",
+						"text": "I would like to show a div when hovering over an element in vue.js. But I can't seem to get it working. It looks like there is no event for hover or mouseover in vue.js. Is this really true?..."
+					}
+				],
+				"answer": [
+					{
+						"upvotecount": "287",
+						"text": "i feel above logics for hover is incorrect. it just inverse when mouse hovers. i have used below code. it seems to work perfectly alright. <div @mouseover=\"upHere = true\" @mouseleave=\"upHere..."
+					},
+					{
+						"upvotecount": "134",
+						"text": "Here is a working example of what I think you are asking for. https://jsfiddle.net/m2w6egn9/ <div id=\"demo\"> <div v-show=\"active\">Show</div> <div @mouseover=\"mouseOver\">Hover over me!</div>..."
+					},
+					{
+						"upvotecount": "88",
+						"text": "There's no need for a method here. HTML <div v-if=\"active\"> <h2>Hello World!</h2> </div> <div v-on:mouseover=\"active = !active\"> <h1>Hover me!</h1> </div> JS new Vue({ el: 'body', data: { active:..."
+					},
+					{
+						"upvotecount": "28",
+						"text": "To show child or sibling elements it's possible with CSS only. If you use :hover before combinators (+, ~, >, space). Then the style applies not to hovered element. HTML <body> <div class=\"trigger\"..."
+					},
+					{
+						"upvotecount": "21",
+						"text": "With mouseover and mouseleave events you can define a toggle function that implements this logic and react on the value in the rendering. Check this example: var vm = new Vue({ el: '#app',..."
+					},
+					{
+						"upvotecount": "14",
+						"text": "I think what you want to achieve is with the combination of @mouseover, @mouseout, @mouseenter and @mouseleave So the two best combinations are \"@mouseover and @mouseout\" or \"@mouseenter and..."
+					},
+					{
+						"upvotecount": "10",
+						"text": "Though I would give an update using the new composition api. Component <template> <div @mouseenter=\"hovering = true\" @mouseleave=\"hovering = false\"> {{ hovering }} </div> </template> <script>..."
+					},
+					{
+						"upvotecount": "8",
+						"text": "It's possible to toggle a class on hover strictly within a component's template, however, it's not a practical solution for obvious reasons. For prototyping on the other hand, I find it useful..."
+					},
+					{
+						"upvotecount": "7",
+						"text": "With mouseover only the element stays visible when mouse leaves the hovered element, so I added this: @mouseover=\"active = !active\" @mouseout=\"active = !active\" <script> export default { data(){..."
+					},
+					{
+						"upvotecount": "2",
+						"text": "I came up with the same problem, and I work it out ! <img :src='book.images.small' v-on:mouseenter=\"hoverImg\"> Run code snippetEdit code snippet Hide Results Copy Expand"
+					},
+					{
+						"upvotecount": "2",
+						"text": "There is a correct working JSFiddle: http://jsfiddle.net/1cekfnqw/176/ <p v-on:mouseover=\"mouseOver\" v-bind:class=\"{on: active, 'off': !active}\">Hover over me!</p>"
+					},
+					{
+						"upvotecount": "2",
+						"text": "Please take a look at the vue-mouseover package if you are not satisfied with how does this code look: <div @mouseover=\"isMouseover = true\" @mouseleave=\"isMouseover = false\" /> vue-mouseover..."
+					},
+					{
+						"upvotecount": "0",
+						"text": "Here is a very simple example for MouseOver and MouseOut: <div id=\"app\"> <div :style = \"styleobj\" @mouseover = \"changebgcolor\" @mouseout = \"originalcolor\"> </div> </div> new Vue({ el:\"#app\",..."
+					},
+					{
+						"upvotecount": "0",
+						"text": "This worked for me for nuxt <template> <span v-if=\"item\" class=\"primary-navigation-list-dropdown\" @mouseover=\"isTouchscreenDevice ? null : openDropdownMenu()\" @mouseleave=\"isTouchscreenDevice..."
+					},
+					{
+						"upvotecount": "0",
+						"text": "You can also use VueUse composables. This is for mouse hover <script setup> import { useElementHover } from '@vueuse/core' const myHoverableElement = ref() const isHovered = useElementHover(myHover..."
+					}
+				]
+			}
+		},
+		{
+			"snippet": "Dec 8, 2020 ... Implement rules for classes .suggestions and suggestionMouseOver with .sugestions and the :hover pseudo class selector in CSS.",
+			"title": "How to replace inline event handlers (onmousedown, onmouseover ...",
+			"link": "https://stackoverflow.com/questions/65208124/how-to-replace-inline-event-handlers-onmousedown-onmouseover-onmouseout",
+			"pagemap": {
+				"question": [
+					{
+						"upvotecount": "0",
+						"name": "How to replace inline event handlers (onmousedown, onmouseover, onmouseout,...) containing parameters to comply with CSP rules?",
+						"text": "I have been trying all day & searched everywhere for a solution. It hasn't been really successful, and honestly after years browsing stackoverflow that's the first time I post looking for help...."
+					}
+				],
+				"answer": [
+					{
+						"upvotecount": "1",
+						"text": "Soem quick ideas to refactor the code: Implement rules for classes .suggestions and suggestionMouseOver with .sugestions and the :hover pseudo class selector in CSS: .suggestions { ... rules..."
+					},
+					{
+						"upvotecount": "0",
+						"text": "Thanks to @traktor53 good advices, this is what I came up with. Note for futures researchers on stackoverflow : the goal is to replace the javascript inline event handlers containing an argument..."
+					}
+				]
+			}
+		},
+		{
+			"snippet": "Feb 9, 2016 ... 4. You could try assigning the same event handler to all panels and cast the sender (object sender, EventArgs e) to determine which panel is ...",
+			"title": "winforms - C# Mouse Hover Event for Background Panel - Stack ...",
+			"link": "https://stackoverflow.com/questions/35304033/c-sharp-mouse-hover-event-for-background-panel",
+			"pagemap": {
+				"question": [
+					{
+						"upvotecount": "3",
+						"name": "C# Mouse Hover Event for Background Panel",
+						"text": "I am making a Windows Form and I am having trouble getting a Mouse Hover Event to work the way I want to. I have 50 little panels grouped together inside 1 big panel. I want to make info popup..."
+					}
+				],
+				"answer": [
+					{
+						"upvotecount": "2",
+						"text": "Cleanest solution would be to implement your own LittlePanel control: public class LittlePanel : Panel { public class HoverEventArgs { public bool Active { get; set; } public HoverEventArgs(bool..."
+					},
+					{
+						"upvotecount": "1",
+						"text": "I ended up going with what S. Brentson suggested. I made my own custom event handler called GridMouseHover in my Form.cs file. private void GridMouseHover(object sender, EventArgs e) { } I..."
+					},
+					{
+						"upvotecount": "1",
+						"text": "try this on your single event e.g hope this will help you private void Panaal_MouseMove(object sender, MouseEventArgs e) { Control ctr = sender as Control; if (ctr.Name.Equals(\"Panel Name\"))..."
+					},
+					{
+						"upvotecount": "0",
+						"text": "If you want to make the top control to be transparent to Mouse Events you can use this code: protected override void WndProc(ref Message m) { const int WM_NCHITTEST = 0x0084; const int HTTRANSPAREN..."
+					}
+				]
+			}
+		},
+		{
+			"snippet": "May 2, 2025 ... The mousemove event is fired at an element when a pointing device (usually a mouse) is moved while the cursor's hotspot is inside it.",
+			"title": "Element: mousemove event - Web APIs | MDN",
+			"link": "https://developer.mozilla.org/en-US/docs/Web/API/Element/mousemove_event",
+			"pagemap": {
+				"metatags": [
+					{
+						"og:description": "The mousemove event is fired at an element when a pointing device (usually a mouse) is moved while the cursor's hotspot is inside it."
+					}
+				]
+			}
+		},
+		{
+			"snippet": "Nov 20, 2013 ... I have a leaflet map where I'm dynamically adding markers. I want to call the popup for a marker when I hover over it in addition to when I click the marker.",
+			"title": "javascript - Leaflet Mouseout called on MouseOver event - Stack ...",
+			"link": "https://stackoverflow.com/questions/20109336/leaflet-mouseout-called-on-mouseover-event",
+			"pagemap": {
+				"question": [
+					{
+						"upvotecount": "18",
+						"name": "Leaflet Mouseout called on MouseOver event",
+						"text": "I have a leaflet map where I'm dynamically adding markers. I want to call the popup for a marker when I hover over it in addition to when I click the marker. My code is: function makeMarker(){..."
+					}
+				],
+				"answer": [
+					{
+						"upvotecount": "18",
+						"text": "I know it's an old thread but I've just came across this issue and I thought that I can share my solution. Instead of offsetting the popup, I am preventing the popup from stealing the mouse..."
+					},
+					{
+						"upvotecount": "16",
+						"text": "The popup is actually loading underneath the cursor and 'stealing' the mouse from the Marker, triggering the Marker.mouseout() event, which causes the popup to close and re-triggers the Marker.mous..."
+					},
+					{
+						"upvotecount": "0",
+						"text": "I also recently came across this problem again too. In case this helps anyone: As of Leaflet 1.0, you can use L.Tooltip instead of popups with mouseover or other mouse-related events. I've..."
+					}
+				]
+			}
+		},
+		{
+			"snippet": "Nov 30, 2009 ... Some method of triggering those event handlers is what is desired. I can definitely see a use for them in \"hint\" text appearing above items.",
+			"title": "javascript - How to trigger Mouse-Over on iPhone? - Stack Overflow",
+			"link": "https://stackoverflow.com/questions/1823218/how-to-trigger-mouse-over-on-iphone",
+			"pagemap": {
+				"question": [
+					{
+						"upvotecount": "11",
+						"name": "How to trigger Mouse-Over on iPhone?",
+						"text": "This might seem like a really dumb question, but I am writing an application and I have come across where my mouse-over, mouse-click and mouse-hover need different events bound to them. Now..."
+					}
+				],
+				"answer": [
+					{
+						"upvotecount": "30",
+						"text": "The answer is in the documentation that Remus posted. If you add an onclick = \"void(0)\" declaration, you will instruct Mobile Safari that the element is clickable, and you will gain access..."
+					},
+					{
+						"upvotecount": "15",
+						"text": "I think you need to reconsider your design for the iPhone (and any mobile for that matter). iPhone web interfaces shouldn't depend on mouse-overs and hovers, as they just complicate the interface..."
+					},
+					{
+						"upvotecount": "5",
+						"text": "Mobile Safari has no mouse and hover events (at least not in the usual accepted sense), they are explicitly called out in Creating Compatible Web Content Unsupported iPhone OS Technologies:..."
+					},
+					{
+						"upvotecount": "2",
+						"text": "Yeah...I don't think anyone posing the question actually expected the device to \"sense\" a hover or mouseover. Actually you'd have to be pretty arrogant to assume someone actually meant that...."
+					},
+					{
+						"upvotecount": "1",
+						"text": "Congratulations on discovering the first thing about touch screen UI design. The bad news, is that what you want just is not going to happen. The good news is that this will force you to make..."
+					},
+					{
+						"upvotecount": "0",
+						"text": "You simply cannot have a mouseover or hover functionality on touch screen devices, unless you can move a virtual pointer (though no touch UI offer that kind of functionality), but that would..."
+					},
+					{
+						"upvotecount": "-1",
+						"text": "Writing a mousehandler in javascript seems fairly straightforward, although I can imagine it being easy to get a lot of edge cases wrong. The good news is, someone wrote a javascript mouse-handler/..."
+					}
+				]
+			}
+		},
+		{
+			"snippet": "Aug 5, 2020 ... I have an issue with nested divs both having onmouseover/onmouseout event. I have a nav menu which pops open from the side of the screen triggered by an ...",
+			"title": "Blazor 3.1 nested onmouseover events - Stack Overflow",
+			"link": "https://stackoverflow.com/questions/63265941/blazor-3-1-nested-onmouseover-events",
+			"pagemap": {
+				"question": [
+					{
+						"upvotecount": "10",
+						"name": "Blazor 3.1 nested onmouseover events",
+						"text": "I have an issue with nested divs both having onmouseover/onmouseout event. I have a nav menu which pops open from the side of the screen triggered by an onmouseover event. Inside this nav menu,..."
+					}
+				],
+				"answer": [
+					{
+						"upvotecount": "27",
+						"text": "A bit late to the party but after trawling the web for a solution I finally found one. In the top level of your Blazor app create the file EventHandlers.cs and populate it with the following..."
+					},
+					{
+						"upvotecount": "-1",
+						"text": "In blazor .net6 you have the following events on div: @onmouseout=\"MouseOut\" @onmouseover=\"MouseOver\" @code { void MouseOut() => Console.WriteLine(\"MouseOut\"); void MouseOver() => Console.WriteLine..."
+					}
+				]
+			}
+		}
+	]
+}

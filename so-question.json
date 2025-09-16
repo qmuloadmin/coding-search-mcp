@@ -1,0 +1,35 @@
+{
+	"items": [
+		{
+			"tags": [
+				"rust",
+				"async-await",
+				"rust-tokio"
+			],
+			"owner": {
+				"account_id": 12674584,
+				"reputation": 269,
+				"user_id": 9210871,
+				"user_type": "registered",
+				"profile_image": "https://i.sstatic.net/vJp8a.png?s=256",
+				"display_name": "Alexei Kitaev",
+				"link": "https://stackoverflow.com/users/9210871/alexei-kitaev"
+			},
+			"is_answered": true,
+			"view_count": 14608,
+			"answer_count": 1,
+			"score": 16,
+			"last_activity_date": 1597756001,
+			"creation_date": 1597734892,
+			"last_edit_date": 1597755017,
+			"question_id": 63463579,
+			"content_license": "CC BY-SA 4.0",
+			"link": "https://stackoverflow.com/questions/63463579/how-to-execute-multiple-async-functions-at-once-and-get-the-results",
+			"title": "How to execute multiple async functions at once and get the results?",
+			"body": "<p>I have tried Tokio tasks, but there are no working examples to execute multiple tasks at once. What is wrong with this code?</p>\n<pre class=\"lang-rust prettyprint-override\"><code>fn main() {\n    block_on(speak());\n}\n\nasync fn speak() {\n    let hold = vec![say(), greet()];\n    let results = join_all(hold).await;\n}\n\nasync fn say() {\n    println!(&quot;hello&quot;);\n}\n\nasync fn greet() {\n    println!(&quot;world&quot;);\n}\n</code></pre>\n<p>here is the compiler output</p>\n<pre class=\"lang-none prettyprint-override\"><code>error[E0308]: mismatched types\n  --&gt; sync\\src\\main.rs:14:27\n   |\n14 |     let hold = vec![say(),greet()];\n   |                           ^^^^^^^ expected opaque type, found a different opaque type\n...\n23 | async fn greet(){\n   |                 - the `Output` of this `async fn`'s found opaque type\n   |\n   = note:     expected type `impl core::future::future::Future` (opaque type at &lt;sync\\src\\main.rs:19:15&gt;)\n           found opaque type `impl core::future::future::Future` (opaque type at &lt;sync\\src\\main.rs:23:17&gt;)\n   = note: distinct uses of `impl Trait` result in different opaque types\n</code></pre>\n"
+		}
+	],
+	"has_more": false,
+	"quota_max": 300,
+	"quota_remaining": 298
+}
