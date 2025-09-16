@@ -25,11 +25,11 @@ Options:
       --google-search-engine-id <GOOGLE_SEARCH_ENGINE_ID>
           The search engine ID, generated when a new custom search is created in Google [env: GOOGLE_SEARCH_ENGINE_ID=f535a39ffc8e742ad]
       --google-search-api-key <GOOGLE_SEARCH_API_KEY>
-          An API key in Google APIs that has access to the Google Custom Search [env: GOOGLE_SEARCH_API_KEY=AIzaSyBdGMgNVTTWvj4gXvQvuDjhqL00RKHjKcc]
+          An API key in Google APIs that has access to the Google Custom Search [env: GOOGLE_SEARCH_API_KEY=AI...dsf]
       --stack-overflow-api-prefix <STACK_OVERFLOW_API_PREFIX>
           The prefix, e.g. the API host and version of the Stack Exchange API [env: STACK_OVERFLOW_API_PREFIX=https://api.stackexchange.com/2.3]
       --stack-overflow-api-key <STACK_OVERFLOW_API_KEY>
-          [env: STACK_OVERFLOW_API_KEY=rl_WJWTaq39kG3KHa6PzjBzwfGP3]
+          [env: STACK_OVERFLOW_API_KEY=rl_...asdv32]
       --mdn-base-path <MDN_BASE_PATH>
           The path where the MDN content github project lives, up to the leading "files" directory [env: MDN_BASE_PATH=mdn/files]
   -h, --help
