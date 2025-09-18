@@ -366,7 +366,7 @@ struct GoogleSearchResult {
 #[derive(Deserialize, Serialize)]
 #[serde(rename_all = "camelCase")]
 struct GoogleSearchQueryData {
-    next_page: GoogleSearchPage,
+    next_page: Vec<GoogleSearchPage>,
 }
 
 #[derive(Deserialize, Serialize)]
@@ -486,6 +486,13 @@ mod test {
         // Now sample2
 
         let mut data_file = File::open("sample2.json").unwrap();
+        let mut data = String::new();
+        data_file.read_to_string(&mut data).unwrap();
+        let response: GoogleSearchResults = serde_json::from_str(&data)
+            .expect("should be able to deserialize from sample response");
+        assert_eq!(response.items.len(), 10);
+
+		let mut data_file = File::open("sample3.json").unwrap();
         let mut data = String::new();
         data_file.read_to_string(&mut data).unwrap();
         let response: GoogleSearchResults = serde_json::from_str(&data)
