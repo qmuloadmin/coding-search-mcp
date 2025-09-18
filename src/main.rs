@@ -1,4 +1,4 @@
-use std::{fs::File, io::Read, str::FromStr};
+use std::{collections::HashMap, fs::File, io::Read, str::FromStr};
 
 use anyhow::{Context, anyhow};
 use clap::Parser;
@@ -11,6 +11,11 @@ use rmcp::{
     schemars::JsonSchema,
     tool, tool_handler, tool_router,
     transport::stdio,
+};
+use roux::{
+    MaybeReplies, Replies,
+    comment::CommentData,
+    response::{BasicThing, Listing},
 };
 use serde::{Deserialize, Serialize};
 use std::sync::LazyLock;
@@ -42,6 +47,11 @@ struct Config {
     #[arg(long, env)]
     /// The reddit client secret for reddit APIs
     reddit_client_secret: String,
+    #[arg(long, env)]
+    /// The reddit username (required for Reddit oauth scripts). May create burner account
+    reddit_username: String,
+    #[arg(long, env)]
+    reddit_password: String,
 }
 
 #[derive(Deserialize, Default, JsonSchema)]
@@ -169,18 +179,20 @@ impl Tools {
         Ok(TEMPLATE_RE.replace_all(&contents, "").to_string())
     }
 
-    async fn fetch_reddit_page(&self, submission_id: &str) -> Result<Vec<String>, anyhow::Error> {
+    async fn fetch_reddit_page(
+        &self,
+        raw_submission_id: &str,
+    ) -> Result<Vec<String>, anyhow::Error> {
+        let submission_id = format!("t3_{}", raw_submission_id);
         let session = self
             .reddit_client
             .clone()
+            .username(&self.config.reddit_username)
+            .password(&self.config.reddit_password)
             .login()
-            .await
-            .context("logging into reddit")?;
-        let mut submission = session
-            .get_submissions(submission_id)
-            .await
-            .context("getting submission")?;
-		let submission = submission.data.children.swap_remove(0);
+            .await?;
+        let mut submission = session.get_submissions(&submission_id).await?;
+        let submission = submission.data.children.swap_remove(0);
         let title = submission.data.title;
         let contents = submission.data.selftext;
         let likes = submission.data.score;
@@ -193,27 +205,55 @@ impl Tools {
         thread.push(sub);
         let comment_client = roux::Subreddit::new_oauth(&subreddit, &session.client);
         let comments = comment_client
-            .article_comments(submission_id, Some(2), Some(3))
+            .article_comments(&raw_submission_id, Some(3), Some(20))
             .await
             .context("fetching submission comments")?;
+        // use shorter ID names for relationships among comments in this thread
+        // this will help smaller models maintain coherence
+        let mut contextual_id_map = HashMap::new();
+        contextual_id_map.insert(submission_id, 0);
         // TODO make sure the snippet returned from google search is in returned comments
-		// TODO build graph of replies
-        for comment in comments.data.children.into_iter() {
+		Self::process_reddit_children(&mut contextual_id_map, &mut thread, comments)?;
+        Ok(thread)
+    }
+
+    fn process_reddit_children(
+        contextual_id_map: &mut HashMap<String, usize>,
+        thread: &mut Vec<String>,
+        comments: BasicThing<Listing<BasicThing<CommentData>>>,
+    ) -> Result<(), anyhow::Error> {
+		for comment in comments.data.children.into_iter() {
+            let id = comment.data.name.unwrap(); // How could this be null?
+            contextual_id_map.insert(id.clone(), contextual_id_map.len());
             if let Some(body) = comment.data.body {
+                let id = contextual_id_map.get(&id).unwrap();
                 let user = comment.data.author.unwrap_or("unknown redditor".into());
-                let id = comment.data.name.unwrap(); // How could this be null?
-				let response_to = if let Some(parent) = comment.data.parent_id {
-					format!(" In response to: {}", parent)
-				} else {
-					format!("")
-				};
+                let link = if let Some(link) = comment.data.permalink {
+                    format!("<a href='{}'>Comment Permalink</a>", link)
+                } else {
+                    format!("")
+                };
+                let response_to = if let Some(parent) = comment.data.parent_id {
+                    let parent = contextual_id_map.get(&parent).unwrap_or(&0);
+                    format!(" In response to: {}", parent)
+                } else {
+                    format!("")
+                };
                 thread.push(format!(
-                    "<h1>Comment: {} from {}{}</h1><p>{}</p>",
-                    id, user, response_to, body
+                    "<h1>Comment: #{} from {}{}</h1>{}<p>{}</p>",
+                    id, user, response_to, link, body
                 ))
             }
+            if let Some(replies) = comment.data.replies {
+                match replies {
+                    MaybeReplies::Reply(replies) => {
+                        Self::process_reddit_children(contextual_id_map, thread, replies)?;
+                    }
+                    _ => {}
+                }
+            }
         }
-        Ok(thread)
+		Ok(())
     }
 
     async fn fetch_so_page(&self, question_id: &str) -> Result<Vec<String>, anyhow::Error> {
@@ -318,12 +358,14 @@ impl Tools {
                             .await
                             .map_err(|err| ErrorData::internal_error(format!("{}", err), None))?,
                     )])),
-					"www.reddit.com" => {
-						let submissision_id = parsed.path_segments().unwrap().nth(3).ok_or(ErrorData::invalid_params(
-							"invalid reddit URL: missing comment/submission id in path",
-							None
-						))?;
-						Ok(CallToolResult::success(
+                    "www.reddit.com" => {
+                        let submissision_id = parsed.path_segments().unwrap().nth(3).ok_or(
+                            ErrorData::invalid_params(
+                                "invalid reddit URL: missing comment/submission id in path",
+                                None,
+                            ),
+                        )?;
+                        Ok(CallToolResult::success(
                             self.fetch_reddit_page(submissision_id)
                                 .await
                                 .map_err(|err| ErrorData::internal_error(format!("{}", err), None))?
@@ -331,7 +373,7 @@ impl Tools {
                                 .map(|comment| Content::text(comment))
                                 .collect(),
                         ))
-					}
+                    }
                     _ => Err(ErrorData::invalid_params(
                         format!(
                             "invalid host: {}. Must be from provided search results",
@@ -492,7 +534,7 @@ mod test {
             .expect("should be able to deserialize from sample response");
         assert_eq!(response.items.len(), 10);
 
-		let mut data_file = File::open("sample3.json").unwrap();
+        let mut data_file = File::open("sample3.json").unwrap();
         let mut data = String::new();
         data_file.read_to_string(&mut data).unwrap();
         let response: GoogleSearchResults = serde_json::from_str(&data)
