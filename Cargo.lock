@@ -253,6 +253,7 @@ dependencies = [
  "regex",
  "reqwest",
  "rmcp",
+ "roux",
  "schemars",
  "serde",
  "serde_json",
@@ -949,6 +950,17 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "34080505efa8e45a4b816c349525ebe327ceaa8559756f0356cba97ef3bf7432"
 
 [[package]]
+name = "maybe-async"
+version = "0.2.10"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5cf92c10c7e361d6b99666ec1c6f9805b0bea2c3bd8c78dc6fe98ac5bd78db11"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
 name = "memchr"
 version = "2.7.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1316,6 +1328,18 @@ dependencies = [
  "quote",
  "serde_json",
  "syn",
+]
+
+[[package]]
+name = "roux"
+version = "2.2.15"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "37957f7ca03809c9f866fe115e4c07a230945bf02a06ef7c572801f5e491f399"
+dependencies = [
+ "maybe-async",
+ "reqwest",
+ "serde",
+ "serde_json",
 ]
 
 [[package]]

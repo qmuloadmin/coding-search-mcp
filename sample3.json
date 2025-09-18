@@ -1,0 +1,521 @@
+{
+  "kind": "customsearch#search",
+  "url": {
+    "type": "application/json",
+    "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+  },
+  "queries": {
+    "request": [
+      {
+        "title": "Google Custom Search - rust tokio process vector of futures in parallel",
+        "totalResults": "2540",
+        "searchTerms": "rust tokio process vector of futures in parallel",
+        "count": 10,
+        "startIndex": 1,
+        "inputEncoding": "utf8",
+        "outputEncoding": "utf8",
+        "safe": "off",
+        "cx": "f535a39ffc8e742ad"
+      }
+    ],
+    "nextPage": [
+      {
+        "title": "Google Custom Search - rust tokio process vector of futures in parallel",
+        "totalResults": "2540",
+        "searchTerms": "rust tokio process vector of futures in parallel",
+        "count": 10,
+        "startIndex": 11,
+        "inputEncoding": "utf8",
+        "outputEncoding": "utf8",
+        "safe": "off",
+        "cx": "f535a39ffc8e742ad"
+      }
+    ]
+  },
+  "context": {
+    "title": "qmulo-ai"
+  },
+  "searchInformation": {
+    "searchTime": 0.465241,
+    "formattedSearchTime": "0.47",
+    "totalResults": "2540",
+    "formattedTotalResults": "2,540"
+  },
+  "items": [
+    {
+      "kind": "customsearch#result",
+      "title": "Confused about how to use tokio to process a vector in parallel : r/rust",
+      "htmlTitle": "Confused about how to use \u003cb\u003etokio\u003c/b\u003e to \u003cb\u003eprocess\u003c/b\u003e a \u003cb\u003evector\u003c/b\u003e in \u003cb\u003eparallel\u003c/b\u003e : r/\u003cb\u003erust\u003c/b\u003e",
+      "link": "https://www.reddit.com/r/rust/comments/ueyt1d/confused_about_how_to_use_tokio_to_process_a/",
+      "displayLink": "www.reddit.com",
+      "snippet": "Apr 29, 2022 ... You can use Streams, which are the async version of Iterators; They aren't stable yet, so you'll have to use a crate such as futures. Example.",
+      "htmlSnippet": "Apr 29, 2022 \u003cb\u003e...\u003c/b\u003e You can use Streams, which are the async version of Iterators; They aren&#39;t stable yet, so you&#39;ll have to use a crate such as \u003cb\u003efutures\u003c/b\u003e. Example.",
+      "formattedUrl": "https://www.reddit.com/.../rust/.../confused_about_how_to_use_tokio_to_p...",
+      "htmlFormattedUrl": "https://www.reddit.com/.../\u003cb\u003erust\u003c/b\u003e/.../confused_about_how_to_use_\u003cb\u003etokio\u003c/b\u003e_to_\u003cb\u003ep\u003c/b\u003e...",
+      "pagemap": {
+        "metatags": [
+          {
+            "og:image": "https://share.redd.it/preview/post/ueyt1d",
+            "theme-color": "#000000",
+            "og:image:width": "1200",
+            "og:type": "website",
+            "og:image:alt": "An image containing a preview of the post",
+            "twitter:card": "summary_large_image",
+            "twitter:title": "r/rust on Reddit: Confused about how to use tokio to process a vector in parallel",
+            "og:site_name": "Reddit",
+            "og:title": "r/rust on Reddit: Confused about how to use tokio to process a vector in parallel",
+            "og:image:height": "630",
+            "msapplication-navbutton-color": "#000000",
+            "og:description": "Posted by u/SantyClause - 5 votes and 11 comments",
+            "twitter:image": "https://share.redd.it/preview/post/ueyt1d",
+            "apple-mobile-web-app-status-bar-style": "black",
+            "twitter:site": "@reddit",
+            "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
+            "apple-mobile-web-app-capable": "yes",
+            "og:ttl": "600",
+            "og:url": "https://www.reddit.com/r/rust/comments/ueyt1d/confused_about_how_to_use_tokio_to_process_a/?seeker-session=true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Collecting Futures in a Vec asynchronously with tokio : r/rust",
+      "htmlTitle": "Collecting \u003cb\u003eFutures\u003c/b\u003e in a Vec asynchronously with \u003cb\u003etokio\u003c/b\u003e : r/\u003cb\u003erust\u003c/b\u003e",
+      "link": "https://www.reddit.com/r/rust/comments/afxd29/collecting_futures_in_a_vec_asynchronously_with/",
+      "displayLink": "www.reddit.com",
+      "snippet": "Jan 14, 2019 ... ... futures in parallel. u/barskern avatar · barskern. • 7y ago ... Confused about how to use tokio to process a vector in parallel. 5 ...",
+      "htmlSnippet": "Jan 14, 2019 \u003cb\u003e...\u003c/b\u003e ... \u003cb\u003efutures in parallel\u003c/b\u003e. u/barskern avatar &middot; barskern. • 7y ago ... Confused about how to use \u003cb\u003etokio\u003c/b\u003e to \u003cb\u003eprocess\u003c/b\u003e a \u003cb\u003evector\u003c/b\u003e in \u003cb\u003eparallel\u003c/b\u003e. 5&nbsp;...",
+      "formattedUrl": "https://www.reddit.com/.../rust/.../collecting_futures_in_a_vec_asynchrono...",
+      "htmlFormattedUrl": "https://www.reddit.com/.../\u003cb\u003erust\u003c/b\u003e/.../collecting_\u003cb\u003efutures\u003c/b\u003e_in_a_vec_asynchrono...",
+      "pagemap": {
+        "metatags": [
+          {
+            "og:image": "https://share.redd.it/preview/post/afxd29",
+            "theme-color": "#000000",
+            "og:image:width": "1200",
+            "og:type": "website",
+            "og:image:alt": "An image containing a preview of the post",
+            "twitter:card": "summary_large_image",
+            "twitter:title": "r/rust on Reddit: Collecting Futures in a Vec asynchronously with tokio",
+            "og:site_name": "Reddit",
+            "og:title": "r/rust on Reddit: Collecting Futures in a Vec asynchronously with tokio",
+            "og:image:height": "630",
+            "msapplication-navbutton-color": "#000000",
+            "og:description": "Posted by u/icew4ll - 0 votes and 7 comments",
+            "twitter:image": "https://share.redd.it/preview/post/afxd29",
+            "apple-mobile-web-app-status-bar-style": "black",
+            "twitter:site": "@reddit",
+            "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
+            "apple-mobile-web-app-capable": "yes",
+            "og:ttl": "600",
+            "og:url": "https://www.reddit.com/r/rust/comments/afxd29/collecting_futures_in_a_vec_asynchronously_with/?seeker-session=true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "How to handle Vec of Futures of Results : r/rust",
+      "htmlTitle": "How to handle Vec of \u003cb\u003eFutures\u003c/b\u003e of Results : r/\u003cb\u003erust\u003c/b\u003e",
+      "link": "https://www.reddit.com/r/rust/comments/fr858z/how_to_handle_vec_of_futures_of_results/",
+      "displayLink": "www.reddit.com",
+      "snippet": "Mar 29, 2020 ... rust vector of clojure futures. dochtman. • 6y ago ... Confused about how to use tokio to process a vector in parallel. 5 ...",
+      "htmlSnippet": "Mar 29, 2020 \u003cb\u003e...\u003c/b\u003e \u003cb\u003erust vector\u003c/b\u003e of clojure \u003cb\u003efutures\u003c/b\u003e. dochtman. • 6y ago ... Confused about how to use \u003cb\u003etokio\u003c/b\u003e to \u003cb\u003eprocess\u003c/b\u003e a \u003cb\u003evector\u003c/b\u003e in \u003cb\u003eparallel\u003c/b\u003e. 5&nbsp;...",
+      "formattedUrl": "https://www.reddit.com/r/rust/.../how_to_handle_vec_of_futures_of_results...",
+      "htmlFormattedUrl": "https://www.reddit.com/r/\u003cb\u003erust\u003c/b\u003e/.../how_to_handle_vec_of_\u003cb\u003efutures\u003c/b\u003e_of_results...",
+      "pagemap": {
+        "metatags": [
+          {
+            "og:image": "https://share.redd.it/preview/post/fr858z",
+            "theme-color": "#000000",
+            "og:image:width": "1200",
+            "og:type": "website",
+            "og:image:alt": "An image containing a preview of the post",
+            "twitter:card": "summary_large_image",
+            "twitter:title": "r/rust on Reddit: How to handle Vec of Futures of Results",
+            "og:site_name": "Reddit",
+            "og:title": "r/rust on Reddit: How to handle Vec of Futures of Results",
+            "og:image:height": "630",
+            "msapplication-navbutton-color": "#000000",
+            "og:description": "Posted by u/Nikota - 17 votes and 11 comments",
+            "twitter:image": "https://share.redd.it/preview/post/fr858z",
+            "apple-mobile-web-app-status-bar-style": "black",
+            "twitter:site": "@reddit",
+            "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
+            "apple-mobile-web-app-capable": "yes",
+            "og:ttl": "600",
+            "og:url": "https://www.reddit.com/r/rust/comments/fr858z/how_to_handle_vec_of_futures_of_results/?seeker-session=true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "How to run futures concurrently? : r/rust",
+      "htmlTitle": "How to run \u003cb\u003efutures\u003c/b\u003e concurrently? : r/\u003cb\u003erust\u003c/b\u003e",
+      "link": "https://www.reddit.com/r/rust/comments/egkegk/how_to_run_futures_concurrently/",
+      "displayLink": "www.reddit.com",
+      "snippet": "Dec 28, 2019 ... ... tokio::spawn on every future in the vector. That future will then be ... Joined futures will run concurrently, NOT in parallel. 52 ...",
+      "htmlSnippet": "Dec 28, 2019 \u003cb\u003e...\u003c/b\u003e ... \u003cb\u003etokio\u003c/b\u003e::spawn on every \u003cb\u003efuture\u003c/b\u003e in the \u003cb\u003evector\u003c/b\u003e. That \u003cb\u003efuture\u003c/b\u003e will then be ... Joined \u003cb\u003efutures\u003c/b\u003e will run concurrently, NOT in \u003cb\u003eparallel\u003c/b\u003e. 52&nbsp;...",
+      "formattedUrl": "https://www.reddit.com/r/rust/comments/.../how_to_run_futures_concurrent...",
+      "htmlFormattedUrl": "https://www.reddit.com/r/\u003cb\u003erust\u003c/b\u003e/comments/.../how_to_run_\u003cb\u003efutures\u003c/b\u003e_concurrent...",
+      "pagemap": {
+        "metatags": [
+          {
+            "og:image": "https://share.redd.it/preview/post/egkegk",
+            "theme-color": "#000000",
+            "og:image:width": "1200",
+            "og:type": "website",
+            "og:image:alt": "An image containing a preview of the post",
+            "twitter:card": "summary_large_image",
+            "twitter:title": "r/rust on Reddit: How to run futures concurrently?",
+            "og:site_name": "Reddit",
+            "og:title": "r/rust on Reddit: How to run futures concurrently?",
+            "og:image:height": "630",
+            "msapplication-navbutton-color": "#000000",
+            "og:description": "Posted by u/ConfuciusBateman - 6 votes and 5 comments",
+            "twitter:image": "https://share.redd.it/preview/post/egkegk",
+            "apple-mobile-web-app-status-bar-style": "black",
+            "twitter:site": "@reddit",
+            "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
+            "apple-mobile-web-app-capable": "yes",
+            "og:ttl": "600",
+            "og:url": "https://www.reddit.com/r/rust/comments/egkegk/how_to_run_futures_concurrently/?seeker-session=true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "async and parallel concepts : r/learnrust",
+      "htmlTitle": "async and \u003cb\u003eparallel\u003c/b\u003e concepts : r/\u003cb\u003elearnrust\u003c/b\u003e",
+      "link": "https://www.reddit.com/r/learnrust/comments/1c1bnzg/async_and_parallel_concepts/",
+      "displayLink": "www.reddit.com",
+      "snippet": "Apr 11, 2024 ... There is one major difference between FuturesUnordered and JoinSet. A join set will spawn a tokio task while the futures unordered will not.",
+      "htmlSnippet": "Apr 11, 2024 \u003cb\u003e...\u003c/b\u003e There is one major difference between \u003cb\u003eFuturesUnordered\u003c/b\u003e and JoinSet. A join set will spawn a \u003cb\u003etokio\u003c/b\u003e task while the \u003cb\u003efutures\u003c/b\u003e unordered will not.",
+      "formattedUrl": "https://www.reddit.com/r/learnrust/comments/.../async_and_parallel_concep...",
+      "htmlFormattedUrl": "https://www.reddit.com/r/learn\u003cb\u003erust\u003c/b\u003e/comments/.../async_and_\u003cb\u003eparallel\u003c/b\u003e_concep...",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1NXYBDSq4zgQm-Ko9EYuqO9SxhfATacEtjHepyv7F6w&s",
+            "width": "225",
+            "height": "225"
+          }
+        ],
+        "metatags": [
+          {
+            "og:image": "https://share.redd.it/preview/post/1c1bnzg",
+            "theme-color": "#000000",
+            "og:image:width": "1200",
+            "og:type": "website",
+            "og:image:alt": "An image containing a preview of the post",
+            "twitter:card": "summary_large_image",
+            "twitter:title": "r/learnrust on Reddit: async and parallel concepts",
+            "og:site_name": "Reddit",
+            "og:title": "r/learnrust on Reddit: async and parallel concepts",
+            "og:image:height": "630",
+            "msapplication-navbutton-color": "#000000",
+            "og:description": "Posted by u/DonHugo - 3 votes and 4 comments",
+            "twitter:image": "https://share.redd.it/preview/post/1c1bnzg",
+            "apple-mobile-web-app-status-bar-style": "black",
+            "twitter:site": "@reddit",
+            "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
+            "apple-mobile-web-app-capable": "yes",
+            "og:ttl": "600",
+            "og:url": "https://www.reddit.com/r/learnrust/comments/1c1bnzg/async_and_parallel_concepts/?seeker-session=true"
+          }
+        ],
+        "cse_image": [
+          {}
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "rust - How to tokio::join multiple tasks? - Stack Overflow",
+      "htmlTitle": "\u003cb\u003erust\u003c/b\u003e - How to \u003cb\u003etokio\u003c/b\u003e::join multiple tasks? - Stack Overflow",
+      "link": "https://stackoverflow.com/questions/63589668/how-to-tokiojoin-multiple-tasks",
+      "displayLink": "stackoverflow.com",
+      "snippet": "Aug 26, 2020 ... push(future_1); // directly or indirectly you push many futures to the vector v.push(future_N); // to join these futures concurrently one ...",
+      "htmlSnippet": "Aug 26, 2020 \u003cb\u003e...\u003c/b\u003e push(future_1); // directly or indirectly you push many \u003cb\u003efutures\u003c/b\u003e to the \u003cb\u003evector\u003c/b\u003e v.push(future_N); // to join these \u003cb\u003efutures\u003c/b\u003e concurrently one&nbsp;...",
+      "formattedUrl": "https://stackoverflow.com/questions/.../how-to-tokiojoin-multiple-tasks",
+      "htmlFormattedUrl": "https://stackoverflow.com/questions/.../how-to-\u003cb\u003etokio\u003c/b\u003ejoin-multiple-tasks",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYl7zuT3cw_BBRAyhdQEbQuBgqdNHXKHIYKL8S8ly8x9L_XA9sdwSmiHs&s",
+            "width": "225",
+            "height": "225"
+          }
+        ],
+        "qapage": [
+          {
+            "image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "primaryimageofpage": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "name": "How to tokio::join multiple tasks?",
+            "description": "Imagine that some futures are stored in a Vec whose length are runtime-determined, you are supposed to join these futures concurrently, what should you do? Obviously, by the example in the document..."
+          }
+        ],
+        "question": [
+          {
+            "image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a",
+            "upvotecount": "36",
+            "commentcount": "4",
+            "answercount": "3",
+            "name": "How to tokio::join multiple tasks?",
+            "datecreated": "2020-08-26 02:34:19Z",
+            "text": "Imagine that some futures are stored in a Vec whose length are runtime-determined, you are supposed to join these futures concurrently, what should you do? Obviously, by the example in the...",
+            "url": "Share"
+          }
+        ],
+        "answer": [
+          {
+            "upvotecount": "54",
+            "text": "join_all and try_join_all, as well as more versatile FuturesOrdered and FuturesUnordered utilities from the same crate futures, are polled as a single combined future. This is probably fine...",
+            "datecreated": "2021-10-03 11:51:08Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "31",
+            "commentcount": "2",
+            "text": "You can use futures::future::join_all to \"merge\" your collection of futures together into a single future, that resolves when all of the subfutures resolve.",
+            "datecreated": "2020-08-26 04:10:02Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "13",
+            "text": "A full example: #[tokio::main] async fn main() { let tasks: JoinSet\u003c_\u003e = (0..5).map(|i| async move { sleep(Duration::from_secs(i)).await; // simulate some work i * 2 }).collect(); let result...",
+            "datecreated": "2022-08-12 15:13:04Z",
+            "url": "Share"
+          }
+        ],
+        "person": [
+          {
+            "name": "bruceyuan",
+            "url": "bruceyuan"
+          },
+          {
+            "name": "mzabaluev",
+            "url": "mzabaluev"
+          },
+          {
+            "name": "Colonel Thirty Two",
+            "url": "Colonel Thirty Two"
+          },
+          {
+            "name": "aedm",
+            "url": "aedm"
+          }
+        ],
+        "metatags": [
+          {
+            "og:image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "og:type": "website",
+            "twitter:card": "summary",
+            "twitter:title": "How to tokio::join multiple tasks?",
+            "og:site_name": "Stack Overflow",
+            "twitter:domain": "stackoverflow.com",
+            "viewport": "width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0",
+            "twitter:description": "Imagine that some futures are stored in a Vec whose length are runtime-determined, you are supposed to join these futures concurrently, what should you do?\nObviously, by the example in the document...",
+            "og:url": "https://stackoverflow.com/questions/63589668/how-to-tokiojoin-multiple-tasks"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Parallel tokio : r/rust",
+      "htmlTitle": "\u003cb\u003eParallel tokio\u003c/b\u003e : r/\u003cb\u003erust\u003c/b\u003e",
+      "link": "https://www.reddit.com/r/rust/comments/13j7g0u/parallel_tokio/",
+      "displayLink": "www.reddit.com",
+      "snippet": "May 16, 2023 ... I get that tokio can't be parallel by default because not all futures ... Confused about how to use tokio to process a vector in parallel. 5 ...",
+      "htmlSnippet": "May 16, 2023 \u003cb\u003e...\u003c/b\u003e I get that \u003cb\u003etokio\u003c/b\u003e can&#39;t be \u003cb\u003eparallel\u003c/b\u003e by default because not all \u003cb\u003efutures\u003c/b\u003e ... Confused about how to use \u003cb\u003etokio\u003c/b\u003e to \u003cb\u003eprocess\u003c/b\u003e a \u003cb\u003evector\u003c/b\u003e in \u003cb\u003eparallel\u003c/b\u003e. 5&nbsp;...",
+      "formattedUrl": "https://www.reddit.com/r/rust/comments/13j7g0u/parallel_tokio/",
+      "htmlFormattedUrl": "https://www.reddit.com/r/\u003cb\u003erust\u003c/b\u003e/comments/13j7g0u/\u003cb\u003eparallel\u003c/b\u003e_\u003cb\u003etokio\u003c/b\u003e/",
+      "pagemap": {
+        "metatags": [
+          {
+            "og:image": "https://share.redd.it/preview/post/13j7g0u",
+            "theme-color": "#000000",
+            "og:image:width": "1200",
+            "og:type": "website",
+            "og:image:alt": "An image containing a preview of the post",
+            "twitter:card": "summary_large_image",
+            "twitter:title": "r/rust on Reddit: Parallel tokio",
+            "og:site_name": "Reddit",
+            "og:title": "r/rust on Reddit: Parallel tokio",
+            "og:image:height": "630",
+            "msapplication-navbutton-color": "#000000",
+            "og:description": "Posted by u/MengerianMango - 2 votes and 26 comments",
+            "twitter:image": "https://share.redd.it/preview/post/13j7g0u",
+            "apple-mobile-web-app-status-bar-style": "black",
+            "twitter:site": "@reddit",
+            "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
+            "apple-mobile-web-app-capable": "yes",
+            "og:ttl": "600",
+            "og:url": "https://www.reddit.com/r/rust/comments/13j7g0u/parallel_tokio/?seeker-session=true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Why is this code not actually executing in parallel with Tokio? : r ...",
+      "htmlTitle": "Why is this code not actually executing in \u003cb\u003eparallel\u003c/b\u003e with \u003cb\u003eTokio\u003c/b\u003e? : r ...",
+      "link": "https://www.reddit.com/r/learnrust/comments/1ge2040/why_is_this_code_not_actually_executing_in/",
+      "displayLink": "www.reddit.com",
+      "snippet": "Oct 28, 2024 ... Confused about how to use tokio to process a vector in parallel. 5 ... r/rust - How to Build a Web Application using Rust — tokio and the.",
+      "htmlSnippet": "Oct 28, 2024 \u003cb\u003e...\u003c/b\u003e Confused about how to use \u003cb\u003etokio\u003c/b\u003e to \u003cb\u003eprocess\u003c/b\u003e a \u003cb\u003evector\u003c/b\u003e in \u003cb\u003eparallel\u003c/b\u003e. 5 ... r/\u003cb\u003erust\u003c/b\u003e - How to Build a Web Application using \u003cb\u003eRust\u003c/b\u003e — \u003cb\u003etokio\u003c/b\u003e and the.",
+      "formattedUrl": "https://www.reddit.com/.../learnrust/.../why_is_this_code_not_actually_exec...",
+      "htmlFormattedUrl": "https://www.reddit.com/.../learn\u003cb\u003erust\u003c/b\u003e/.../why_is_this_code_not_actually_exec...",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1NXYBDSq4zgQm-Ko9EYuqO9SxhfATacEtjHepyv7F6w&s",
+            "width": "225",
+            "height": "225"
+          }
+        ],
+        "metatags": [
+          {
+            "og:image": "https://share.redd.it/preview/post/1ge2040",
+            "theme-color": "#000000",
+            "og:image:width": "1200",
+            "og:type": "website",
+            "og:image:alt": "An image containing a preview of the post",
+            "twitter:card": "summary_large_image",
+            "twitter:title": "r/learnrust on Reddit: Why is this code not actually executing in parallel with Tokio?",
+            "og:site_name": "Reddit",
+            "og:title": "r/learnrust on Reddit: Why is this code not actually executing in parallel with Tokio?",
+            "og:image:height": "630",
+            "msapplication-navbutton-color": "#000000",
+            "og:description": "Posted by u/koenigsbier - 4 votes and 16 comments",
+            "twitter:image": "https://share.redd.it/preview/post/1ge2040",
+            "apple-mobile-web-app-status-bar-style": "black",
+            "twitter:site": "@reddit",
+            "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
+            "apple-mobile-web-app-capable": "yes",
+            "og:ttl": "600",
+            "og:url": "https://www.reddit.com/r/learnrust/comments/1ge2040/why_is_this_code_not_actually_executing_in/?seeker-session=true"
+          }
+        ],
+        "cse_image": [
+          {}
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "What's the idea way to poll a vector of future? : r/rust",
+      "htmlTitle": "What&#39;s the idea way to poll a \u003cb\u003evector of future\u003c/b\u003e? : r/\u003cb\u003erust\u003c/b\u003e",
+      "link": "https://www.reddit.com/r/rust/comments/1i8vria/whats_the_idea_way_to_poll_a_vector_of_future/",
+      "displayLink": "www.reddit.com",
+      "snippet": "Jan 24, 2025 ... I use join_all everytime I need to execute multiple async functions in parallel. ... Yes this will work if the process has to wait for all futures ...",
+      "htmlSnippet": "Jan 24, 2025 \u003cb\u003e...\u003c/b\u003e I use join_all everytime I need to execute multiple async functions in \u003cb\u003eparallel\u003c/b\u003e. ... Yes this will work if the \u003cb\u003eprocess\u003c/b\u003e has to wait for all \u003cb\u003efutures\u003c/b\u003e&nbsp;...",
+      "formattedUrl": "https://www.reddit.com/.../rust/.../whats_the_idea_way_to_poll_a_vector_o...",
+      "htmlFormattedUrl": "https://www.reddit.com/.../\u003cb\u003erust\u003c/b\u003e/.../whats_the_idea_way_to_poll_a_\u003cb\u003evector\u003c/b\u003e_o...",
+      "pagemap": {
+        "metatags": [
+          {
+            "og:image": "https://share.redd.it/preview/post/1i8vria",
+            "theme-color": "#000000",
+            "og:image:width": "1200",
+            "og:type": "website",
+            "og:image:alt": "An image containing a preview of the post",
+            "twitter:card": "summary_large_image",
+            "twitter:title": "r/rust on Reddit: What's the idea way to poll a vector of future?",
+            "og:site_name": "Reddit",
+            "og:title": "r/rust on Reddit: What's the idea way to poll a vector of future?",
+            "og:image:height": "630",
+            "msapplication-navbutton-color": "#000000",
+            "og:description": "Posted by u/zplCoder - 19 votes and 21 comments",
+            "twitter:image": "https://share.redd.it/preview/post/1i8vria",
+            "apple-mobile-web-app-status-bar-style": "black",
+            "twitter:site": "@reddit",
+            "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
+            "apple-mobile-web-app-capable": "yes",
+            "og:ttl": "600",
+            "og:url": "https://www.reddit.com/r/rust/comments/1i8vria/whats_the_idea_way_to_poll_a_vector_of_future/?seeker-session=true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "rust - How to process a vector as an asynchronous stream? - Stack ...",
+      "htmlTitle": "\u003cb\u003erust\u003c/b\u003e - How to \u003cb\u003eprocess\u003c/b\u003e a \u003cb\u003evector\u003c/b\u003e as an asynchronous stream? - Stack ...",
+      "link": "https://stackoverflow.com/questions/59237895/how-to-process-a-vector-as-an-asynchronous-stream",
+      "displayLink": "stackoverflow.com",
+      "snippet": "Dec 8, 2019 ... ... i've understood. Now it will be good to have these futures run parallel. – Riduidel. Commented Dec 10, 2019 at 20:58. Add a comment |. Your ...",
+      "htmlSnippet": "Dec 8, 2019 \u003cb\u003e...\u003c/b\u003e ... i&#39;ve understood. Now it will be good to have these \u003cb\u003efutures\u003c/b\u003e run \u003cb\u003eparallel\u003c/b\u003e. – Riduidel. Commented Dec 10, 2019 at 20:58. Add a comment |. Your&nbsp;...",
+      "formattedUrl": "https://stackoverflow.com/.../how-to-process-a-vector-as-an-asynchronous-s...",
+      "htmlFormattedUrl": "https://stackoverflow.com/.../how-to-\u003cb\u003eprocess\u003c/b\u003e-a-\u003cb\u003evector\u003c/b\u003e-as-an-asynchronous-s...",
+      "pagemap": {
+        "qapage": [
+          {
+            "image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "primaryimageofpage": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "name": "How to process a vector as an asynchronous stream?",
+            "description": "In my RSS reader project, I want to read my RSS feeds asynchronously. Currently, they're read synchronously thanks to this code block self.feeds = self .feeds .iter() .map(|f| f.read(&"
+          }
+        ],
+        "question": [
+          {
+            "image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a",
+            "upvotecount": "6",
+            "commentcount": "1",
+            "answercount": "1",
+            "name": "How to process a vector as an asynchronous stream?",
+            "datecreated": "2019-12-08 17:19:15Z",
+            "text": "In my RSS reader project, I want to read my RSS feeds asynchronously. Currently, they're read synchronously thanks to this code block self.feeds = self .feeds .iter() .map(|f| f.read(&self.settings...",
+            "url": "Share"
+          }
+        ],
+        "answer": [
+          {
+            "upvotecount": "7",
+            "commentcount": "3",
+            "text": "How to execute that stream? I was thinking about using task::spawn but it doesn't seems to work In the async/await world, asynchronous code is meant to be executed by an executor, which is...",
+            "datecreated": "2019-12-09 08:00:18Z",
+            "url": "Share"
+          }
+        ],
+        "person": [
+          {
+            "name": "Riduidel",
+            "url": "Riduidel"
+          },
+          {
+            "name": "edwardw",
+            "url": "edwardw"
+          }
+        ],
+        "metatags": [
+          {
+            "og:image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "og:type": "website",
+            "twitter:card": "summary",
+            "twitter:title": "How to process a vector as an asynchronous stream?",
+            "og:site_name": "Stack Overflow",
+            "twitter:domain": "stackoverflow.com",
+            "viewport": "width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0",
+            "twitter:description": "In my RSS reader project, I want to read my RSS feeds asynchronously. Currently, they're read synchronously thanks to this code block\nself.feeds = self\n    .feeds\n    .iter()\n    .map(|f| f.read(&amp;",
+            "og:url": "https://stackoverflow.com/questions/59237895/how-to-process-a-vector-as-an-asynchronous-stream"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+          }
+        ]
+      }
+    }
+]
+}
