@@ -13,7 +13,7 @@ use rmcp::{
     transport::stdio,
 };
 use roux::{
-    MaybeReplies, Replies,
+    MaybeReplies,
     comment::CommentData,
     response::{BasicThing, Listing},
 };
@@ -52,14 +52,22 @@ struct Config {
     reddit_username: String,
     #[arg(long, env)]
     reddit_password: String,
+    #[arg(short = 's', long)]
+    /// When set, enable Scrapper, the playwright and readability.js based web scraper to fetch
+    /// pages without a more specific handler. Set to the host and port of the running Scrapper
+    /// server
+    /// Warning: Servers may reject traffic or have a CAPTCHA
+    scrapper_host: Option<String>,
 }
 
 #[derive(Deserialize, Default, JsonSchema)]
 #[serde(rename_all = "snake_case")]
 struct GoogleSearchParams {
     /// a list of words that _all_ must match _exactly_ as a space separated string
+    /// generally this should be provided to ensure accurate and on-topic results
     exact_terms: Option<String>,
     /// a list of terms the _must not_ exist in the results as a space separated string
+    /// used to filter out unwanted noise that matches the query but isn't relevant
     exclude_terms: Option<String>,
     // max len is 100 results, so no possible need for more than 255
     /// when viewing multiple pages, the offset, or index of the first result
@@ -213,7 +221,7 @@ impl Tools {
         let mut contextual_id_map = HashMap::new();
         contextual_id_map.insert(submission_id, 0);
         // TODO make sure the snippet returned from google search is in returned comments
-		Self::process_reddit_children(&mut contextual_id_map, &mut thread, comments)?;
+        Self::process_reddit_children(&mut contextual_id_map, &mut thread, comments)?;
         Ok(thread)
     }
 
@@ -222,7 +230,7 @@ impl Tools {
         thread: &mut Vec<String>,
         comments: BasicThing<Listing<BasicThing<CommentData>>>,
     ) -> Result<(), anyhow::Error> {
-		for comment in comments.data.children.into_iter() {
+        for comment in comments.data.children.into_iter() {
             let id = comment.data.name.unwrap(); // How could this be null?
             contextual_id_map.insert(id.clone(), contextual_id_map.len());
             if let Some(body) = comment.data.body {
@@ -253,7 +261,22 @@ impl Tools {
                 }
             }
         }
-		Ok(())
+        Ok(())
+    }
+
+    async fn scrape_other_page(&self, url: &Url) -> Result<String, anyhow::Error> {
+        let client = self.get_http_client();
+        let article_path = format!(
+            "{}/api/article",
+            self.config.scrapper_host.as_ref().unwrap()
+        );
+        let res = client
+            .get(article_path)
+            .query(&[("url", url.to_string()), ("timeout", "10000".to_string())])
+            .send()
+            .await?;
+        let article: ScrapperArticle = res.json().await?;
+        Ok(article.text_content)
     }
 
     async fn fetch_so_page(&self, question_id: &str) -> Result<Vec<String>, anyhow::Error> {
@@ -325,9 +348,9 @@ impl Tools {
     }
 
     #[tool(
-        description = "Retrieve the primary contents of a supported webpage, as reterned in a link in a previous search if the snippet from search is insufficient."
+        description = "Retrieve the primary contents of a webpage via its URL, as reterned in a link in a previous search, or from some other source (e.g. user or docs)."
     )]
-    async fn fetch_result_page(
+    async fn fetch_web_page(
         &self,
         params: Parameters<FetchPageParams>,
     ) -> Result<CallToolResult, ErrorData> {
@@ -373,6 +396,13 @@ impl Tools {
                                 .map(|comment| Content::text(comment))
                                 .collect(),
                         ))
+                    }
+                    _ if self.config.scrapper_host.is_some() => {
+                        Ok(CallToolResult::success(vec![Content::text(
+                            self.scrape_other_page(&parsed).await.map_err(|err| {
+                                ErrorData::internal_error(format!("{}", err), None)
+                            })?,
+                        )]))
                     }
                     _ => Err(ErrorData::invalid_params(
                         format!(
@@ -508,6 +538,16 @@ enum StackExchangeItem {
 #[derive(Serialize, Deserialize)]
 struct StackExchangeResponse {
     items: Vec<StackExchangeItem>,
+}
+
+#[derive(Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
+struct ScrapperArticle {
+    text_content: String,
+    content: String,
+    url: String,
+    date: String,
+    excerpt: String,
 }
 
 #[cfg(test)]
