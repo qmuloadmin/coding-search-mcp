@@ -1,0 +1,796 @@
+{
+  "kind": "customsearch#search",
+  "url": {
+    "type": "application/json",
+    "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+  },
+  "queries": {
+    "request": [
+      {
+        "title": "Google Custom Search - serde_json Value const static",
+        "totalResults": "2310",
+        "searchTerms": "serde_json Value const static",
+        "count": 10,
+        "startIndex": 1,
+        "inputEncoding": "utf8",
+        "outputEncoding": "utf8",
+        "safe": "off",
+        "cx": "f535a39ffc8e742ad"
+      }
+    ],
+    "nextPage": [
+      {
+        "title": "Google Custom Search - serde_json Value const static",
+        "totalResults": "2310",
+        "searchTerms": "serde_json Value const static",
+        "count": 10,
+        "startIndex": 11,
+        "inputEncoding": "utf8",
+        "outputEncoding": "utf8",
+        "safe": "off",
+        "cx": "f535a39ffc8e742ad"
+      }
+    ]
+  },
+  "context": {
+    "title": "qmulo-ai"
+  },
+  "searchInformation": {
+    "searchTime": 0.212559,
+    "formattedSearchTime": "0.21",
+    "totalResults": "2310",
+    "formattedTotalResults": "2,310"
+  },
+  "items": [
+    {
+      "kind": "customsearch#result",
+      "title": "Efficiently embedding large static JSON data - help - The Rust ...",
+      "htmlTitle": "Efficiently embedding large \u003cb\u003estatic\u003c/b\u003e JSON data - help - The Rust ...",
+      "link": "https://users.rust-lang.org/t/efficiently-embedding-large-static-json-data/116722",
+      "displayLink": "users.rust-lang.org",
+      "snippet": "Aug 28, 2024 ... Have it in a proper typed form, i.e. hand-written struct s; not something like serde_json::Value . ... Not equally, since values in a const can be ...",
+      "htmlSnippet": "Aug 28, 2024 \u003cb\u003e...\u003c/b\u003e Have it in a proper typed form, i.e. hand-written struct s; not something like \u003cb\u003eserde_json\u003c/b\u003e::\u003cb\u003eValue\u003c/b\u003e . ... Not equally, since \u003cb\u003evalues\u003c/b\u003e in a \u003cb\u003econst\u003c/b\u003e can be&nbsp;...",
+      "formattedUrl": "https://users.rust-lang.org/t/efficiently-embedding-large-static.../116722",
+      "htmlFormattedUrl": "https://users.rust-lang.org/t/efficiently-embedding-large-\u003cb\u003estatic\u003c/b\u003e.../116722",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3eqrJ1RPx2Y--7-MTkj4PMH8LmBYv4CBxIUTu91_I7Mze-5Iukz52Gu7f&s",
+            "width": "144",
+            "height": "144"
+          }
+        ],
+        "imageobject": [
+          {
+            "url": "https://us1.discourse-cdn.com/flex019/uploads/rust_lang/original/2X/e/e260a60b8dca4dae6ce7db98c45bb5008e6fdc62.png"
+          }
+        ],
+        "person": [
+          {
+            "name": "Timmmm",
+            "url": "Timmmm"
+          },
+          {
+            "name": "erelde",
+            "url": "erelde"
+          },
+          {
+            "name": "drewtato",
+            "url": "drewtato"
+          },
+          {
+            "name": "Timmmm",
+            "url": "Timmmm"
+          },
+          {
+            "name": "paramagnetic",
+            "url": "paramagnetic"
+          },
+          {
+            "name": "ZiCog",
+            "url": "ZiCog"
+          },
+          {
+            "name": "erelde",
+            "url": "erelde"
+          },
+          {
+            "name": "theemathas",
+            "url": "theemathas"
+          },
+          {
+            "name": "paramagnetic",
+            "url": "paramagnetic"
+          },
+          {
+            "name": "ZiCog",
+            "url": "ZiCog"
+          },
+          {
+            "name": "Timmmm",
+            "url": "Timmmm"
+          },
+          {
+            "name": "paramagnetic",
+            "url": "paramagnetic"
+          },
+          {
+            "name": "Timmmm",
+            "url": "Timmmm"
+          },
+          {
+            "name": "paramagnetic",
+            "url": "paramagnetic"
+          },
+          {
+            "name": "theemathas",
+            "url": "theemathas"
+          },
+          {
+            "name": "drewtato",
+            "url": "drewtato"
+          },
+          {
+            "name": "system",
+            "url": "system"
+          }
+        ],
+        "organization": [
+          {
+            "name": "The Rust Programming Language Forum"
+          }
+        ],
+        "interactioncounter": [
+          {
+            "userinteractioncount": "0",
+            "interactiontype": "http://schema.org/LikeAction"
+          },
+          {
+            "userinteractioncount": "2",
+            "interactiontype": "http://schema.org/LikeAction"
+          },
+          {
+            "userinteractioncount": "0",
+            "interactiontype": "http://schema.org/LikeAction"
+          },
+          {
+            "userinteractioncount": "0",
+            "interactiontype": "http://schema.org/LikeAction"
+          },
+          {
+            "userinteractioncount": "0",
+            "interactiontype": "http://schema.org/LikeAction"
+          },
+          {
+            "userinteractioncount": "0",
+            "interactiontype": "http://schema.org/LikeAction"
+          },
+          {
+            "userinteractioncount": "0",
+            "interactiontype": "http://schema.org/LikeAction"
+          },
+          {
+            "userinteractioncount": "0",
+            "interactiontype": "http://schema.org/LikeAction"
+          },
+          {
+            "userinteractioncount": "1",
+            "interactiontype": "http://schema.org/LikeAction"
+          },
+          {
+            "userinteractioncount": "1",
+            "interactiontype": "http://schema.org/LikeAction"
+          },
+          {
+            "userinteractioncount": "0",
+            "interactiontype": "http://schema.org/LikeAction"
+          },
+          {
+            "userinteractioncount": "0",
+            "interactiontype": "http://schema.org/LikeAction"
+          },
+          {
+            "userinteractioncount": "0",
+            "interactiontype": "http://schema.org/LikeAction"
+          },
+          {
+            "userinteractioncount": "0",
+            "interactiontype": "http://schema.org/LikeAction"
+          },
+          {
+            "userinteractioncount": "0",
+            "interactiontype": "http://schema.org/LikeAction"
+          },
+          {
+            "userinteractioncount": "2",
+            "interactiontype": "http://schema.org/LikeAction"
+          },
+          {
+            "userinteractioncount": "0",
+            "interactiontype": "http://schema.org/LikeAction"
+          }
+        ],
+        "metatags": [
+          {
+            "og:image": "https://us1.discourse-cdn.com/flex019/uploads/rust_lang/original/2X/8/83e41956eccfd67ad6ff76f15a2c22e58db31d4f.svg",
+            "theme-color": "#fff",
+            "og:type": "website",
+            "twitter:card": "summary_large_image",
+            "twitter:title": "Efficiently embedding large static JSON data",
+            "article:published_time": "2024-08-28T20:55:57+00:00",
+            "og:site_name": "The Rust Programming Language Forum",
+            "twitter:url": "https://users.rust-lang.org/t/efficiently-embedding-large-static-json-data/116722",
+            "og:title": "Efficiently embedding large static JSON data",
+            "color-scheme": "light",
+            "og:description": "Suppose I have a large JSON file with a fairly simple schema that I could easily write down by hand in #[derive(Deserialize)] form.  The file is static and I want to embed it in my app. What's the best way to do this? I would like to:   Avoid having to parse it at runtime. Avoid large compile times. Have it in a proper typed form, i.e. hand-written structs; not something like serde_json::Value.  I don't mind if I need to manually convert the JSON file to some other format once.  I guess the obvi...",
+            "twitter:image": "https://us1.discourse-cdn.com/flex019/uploads/rust_lang/original/3X/1/6/164564abf1e54ded47686b0637e20442a8368551.png",
+            "og:ignore_canonical": "true",
+            "viewport": "width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover",
+            "twitter:description": "Suppose I have a large JSON file with a fairly simple schema that I could easily write down by hand in #[derive(Deserialize)] form.  The file is static and I want to embed it in my app. What's the best way to do this? I would like to:   Avoid having to parse it at runtime. Avoid large compile times. Have it in a proper typed form, i.e. hand-written structs; not something like serde_json::Value.  I don't mind if I need to manually convert the JSON file to some other format once.  I guess the obvi...",
+            "og:article:section": "help",
+            "og:url": "https://users.rust-lang.org/t/efficiently-embedding-large-static-json-data/116722",
+            "og:article:section:color": "F7941D"
+          }
+        ],
+        "discussionforumposting": [
+          {
+            "datemodified": "2024-08-28T20:55:57Z",
+            "articlesection": "help",
+            "position": "1",
+            "text": "Suppose I have a large JSON file with a fairly simple schema that I could easily write down by hand in #[derive(Deserialize)] form. The file is static and I want to embed it in my app. What's...",
+            "headline": "Efficiently embedding large static JSON data",
+            "url": "https://users.rust-lang.org/t/efficiently-embedding-large-static-json-data/116722",
+            "datepublished": "2024-08-28T20:55:57Z",
+            "mainentityofpage": "https://users.rust-lang.org/t/efficiently-embedding-large-static-json-data/116722"
+          }
+        ],
+        "comment": [
+          {
+            "datemodified": "2024-08-28T21:27:01Z",
+            "position": "2",
+            "text": "Personally I would use something like: use std::sync::LazyLock; static DATA: LazyLock\u003cData\u003e = LazyLock::new(|| serde_json::from_str(include_str!(\"path\")).unwrap()); Maybe one day we'll get...",
+            "datepublished": "2024-08-28T21:21:01Z"
+          },
+          {
+            "datemodified": "2024-08-29T00:02:10Z",
+            "position": "3",
+            "text": "It's not too complex to generate the struct(s) and a const representing your JSON with a build script, but it's a lot of boilerplate and I couldn't find a crate that already does it. You can...",
+            "datepublished": "2024-08-29T00:02:10Z"
+          },
+          {
+            "datemodified": "2024-08-29T10:55:28Z",
+            "position": "4",
+            "text": "Yeah but won't that generate an enormous file that takes ages to compile?",
+            "datepublished": "2024-08-29T10:55:28Z"
+          },
+          {
+            "datemodified": "2024-08-29T11:05:21Z",
+            "position": "5",
+            "text": "I checked that JSON and it's like 3 MB with some 1200 elements. It's probably going to be fine.",
+            "datepublished": "2024-08-29T11:05:21Z"
+          },
+          {
+            "datemodified": "2024-08-29T11:23:49Z",
+            "position": "6",
+            "text": "That is what I would do. As a first attempt anyway. Surely that does not take so long to compile. But why the need for static data and lazy lock? Isn't that an unstable feature anyway? Just...",
+            "datepublished": "2024-08-29T11:23:49Z"
+          },
+          {
+            "datemodified": "2024-08-29T11:56:28Z",
+            "position": "7",
+            "text": "It's been stabilized in 1.80 actually I assumed OP wanted that configuration data globally. (I also assumed it was a set of compile time configuration)",
+            "datepublished": "2024-08-29T11:43:39Z"
+          },
+          {
+            "datemodified": "2024-08-29T11:44:26Z",
+            "position": "8",
+            "text": "You could consider changing to a different format for your file instead of json. In increasing order of potential complexity and efficiency: messagepack, bincode, rkyv.",
+            "datepublished": "2024-08-29T11:44:26Z"
+          },
+          {
+            "datemodified": "2024-08-29T12:40:52Z",
+            "position": "9",
+            "text": "I just wrote this Python script to generate a module that has all the data hard-coded as Rust structs and string/number literals: outpath = sys.argv[1] insns = json.load(urlopen('https://raw.github...",
+            "datepublished": "2024-08-29T12:21:20Z"
+          },
+          {
+            "datemodified": "2024-08-29T13:09:47Z",
+            "position": "10",
+            "text": "erelde: It's been stabilized in 1.80 actually Damn it. On my MacBook M1 I have been doing rustup update and have it tell me 1.80 was installed. But it was running rustc and cargo from 1.79....",
+            "datepublished": "2024-08-29T12:55:19Z"
+          },
+          {
+            "datemodified": "2024-08-29T20:27:10Z",
+            "position": "11",
+            "text": "less than half a second That's still a fair bit IMO, however... I can't complain about the simplicity, and you having done all the work for me! Thanks very much!",
+            "datepublished": "2024-08-29T20:27:10Z"
+          },
+          {
+            "datemodified": "2024-08-29T20:39:26Z",
+            "position": "12",
+            "text": "Timmmm: That's still a fair bit IMO, however. How so? I'm quite frankly surprised by that judgement. It's not rare for a medium-sized Rust project to take several dozens of seconds to build....",
+            "datepublished": "2024-08-29T20:39:26Z"
+          },
+          {
+            "datemodified": "2024-08-29T20:43:20Z",
+            "position": "13",
+            "text": "How so? I'm quite frankly surprised by that judgement. It's not rare for a medium-sized Rust project to take several dozens of seconds to build. Half a second is nothing compared to that. I...",
+            "datepublished": "2024-08-29T20:43:20Z"
+          },
+          {
+            "datemodified": "2024-08-29T20:44:02Z",
+            "position": "14",
+            "text": "Timmmm: if I have that attitude everywhere it will quickly add up. But you don't have that everywhere. Or are all of your statics 3 MB in size?",
+            "datepublished": "2024-08-29T20:44:02Z"
+          },
+          {
+            "datemodified": "2024-08-30T00:45:19Z",
+            "position": "15",
+            "text": "The rkyv approach will probably be faster to compile, and equally efficient, I think.",
+            "datepublished": "2024-08-30T00:45:19Z"
+          },
+          {
+            "datemodified": "2024-08-30T02:22:28Z",
+            "position": "16",
+            "text": "Not equally, since values in a const can be inlined, while rkyv cannot. And if this is the only thing that needs rkyv, the struct is definitely faster to compile than all of rkyv.",
+            "datepublished": "2024-08-30T02:22:28Z"
+          },
+          {
+            "datemodified": "2024-11-28T02:23:08Z",
+            "position": "17",
+            "text": "This topic was automatically closed 90 days after the last reply. We invite you to open a new topic if you have further questions or comments.",
+            "datepublished": "2024-11-28T02:23:08Z"
+          }
+        ],
+        "itemlist": [
+          {
+            "itemlistorder": "http://schema.org/ItemListOrderDescending"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://us1.discourse-cdn.com/flex019/uploads/rust_lang/original/2X/8/83e41956eccfd67ad6ff76f15a2c22e58db31d4f.svg"
+          }
+        ],
+        "sitenavigationelement": [
+          {
+            "name": "Home",
+            "url": "Home"
+          },
+          {
+            "name": "Categories",
+            "url": "Categories"
+          },
+          {
+            "name": "Guidelines",
+            "url": "Guidelines"
+          },
+          {
+            "name": "Terms of Service",
+            "url": "Terms of Service"
+          }
+        ],
+        "listitem": [
+          {
+            "item": "help",
+            "name": "help",
+            "position": "1"
+          },
+          {
+            "position": "1",
+            "url": "Generate const struct from json file"
+          },
+          {
+            "position": "2",
+            "url": "Best practice for storing large data structures known at compile time"
+          },
+          {
+            "position": "3",
+            "url": "How to store file contents for global access"
+          },
+          {
+            "position": "4",
+            "url": "Recommendation for JSON crate"
+          },
+          {
+            "position": "5",
+            "url": "How to save Rust data created during runtime to be loaded at compile time?"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "serde_json with Generic Const Expressions : r/rust",
+      "htmlTitle": "\u003cb\u003eserde_json\u003c/b\u003e with Generic \u003cb\u003eConst\u003c/b\u003e Expressions : r/rust",
+      "link": "https://www.reddit.com/r/rust/comments/15xv6de/serde_json_with_generic_const_expressions/",
+      "displayLink": "www.reddit.com",
+      "snippet": "Aug 22, 2023 ... ... you don't borrow value, it means it you borrow data it must be static, so the deserializer must be static, that's where the error is coming from.",
+      "htmlSnippet": "Aug 22, 2023 \u003cb\u003e...\u003c/b\u003e ... you don&#39;t borrow \u003cb\u003evalue\u003c/b\u003e, it means it you borrow data it must be \u003cb\u003estatic\u003c/b\u003e, so the deserializer must be \u003cb\u003estatic\u003c/b\u003e, that&#39;s where the error is coming from.",
+      "formattedUrl": "https://www.reddit.com/r/rust/.../serde_json_with_generic_const_expression...",
+      "htmlFormattedUrl": "https://www.reddit.com/r/rust/.../\u003cb\u003eserde_json\u003c/b\u003e_with_generic_\u003cb\u003econst\u003c/b\u003e_expression...",
+      "pagemap": {
+        "metatags": [
+          {
+            "theme-color": "#000000",
+            "apple-mobile-web-app-status-bar-style": "black",
+            "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
+            "apple-mobile-web-app-capable": "yes",
+            "msapplication-navbutton-color": "#000000"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "wasmcp - crates.io: Rust Package Registry",
+      "htmlTitle": "wasmcp - crates.io: Rust Package Registry",
+      "link": "https://crates.io/crates/wasmcp",
+      "displayLink": "crates.io",
+      "snippet": "Aug 25, 2025 ... ... serde_json::Value { serde_json::json!({ \"type\": \"object ... Const metadata: All strings are &'static str; Compile-time dispatch ...",
+      "htmlSnippet": "Aug 25, 2025 \u003cb\u003e...\u003c/b\u003e ... \u003cb\u003eserde_json\u003c/b\u003e::\u003cb\u003eValue\u003c/b\u003e { \u003cb\u003eserde_json\u003c/b\u003e::json!({ &quot;type&quot;: &quot;object ... \u003cb\u003eConst\u003c/b\u003e metadata: All strings are &amp;&#39;\u003cb\u003estatic\u003c/b\u003e str; Compile-time dispatch&nbsp;...",
+      "formattedUrl": "https://crates.io/crates/wasmcp",
+      "htmlFormattedUrl": "https://crates.io/crates/wasmcp",
+      "pagemap": {
+        "metatags": [
+          {
+            "msapplication-config": "/browserconfig.xml",
+            "og:image": "https://static.crates.io/og-images/wasmcp.png",
+            "twitter:card": "summary_large_image",
+            "theme-color": "var(--header-bg-color)",
+            "apple-mobile-web-app-status-bar-style": "default",
+            "viewport": "width=device-width, initial-scale=1",
+            "apple-mobile-web-app-capable": "yes",
+            "apple-mobile-web-app-title": "crates.io: Rust Package Registry",
+            "crates-io/config/environment": "%7B%22modulePrefix%22%3A%22crates-io%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22%2F%22%2C%22locationType%22%3A%22history%22%2C%22historySupportMiddleware%22%3Atrue%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Atrue%2C%22_JQUERY_INTEGRATION%22%3Afalse%2C%22_NO_IMPLICIT_ROUTE_MODEL%22%3Atrue%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%7D%2C%22APP%22%3A%7B%7D%2C%22ember-cli-notifications%22%3A%7B%22autoClear%22%3Atrue%2C%22clearDuration%22%3A10000%7D%2C%22%40sentry%2Fember%22%3A%7B%22disablePerformance%22%3Atrue%7D%2C%22sentry%22%3A%7B%22release%22%3A%2255ecaad%22%7D%7D",
+            "google": "notranslate"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://static.crates.io/og-images/wasmcp.png"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "rust - Deserialize file using serde_json at compile time - Stack ...",
+      "htmlTitle": "rust - Deserialize file using \u003cb\u003eserde_json\u003c/b\u003e at compile time - Stack ...",
+      "link": "https://stackoverflow.com/questions/58359340/deserialize-file-using-serde-json-at-compile-time",
+      "displayLink": "stackoverflow.com",
+      "snippet": "Oct 12, 2019 ... to generate a static ref to our JSON Value (or whatever it may be that you decide to go for) for every part of the program to use. In your ...",
+      "htmlSnippet": "Oct 12, 2019 \u003cb\u003e...\u003c/b\u003e to generate a \u003cb\u003estatic\u003c/b\u003e ref to our JSON \u003cb\u003eValue\u003c/b\u003e (or whatever it may be that you decide to go for) for every part of the program to use. In your&nbsp;...",
+      "formattedUrl": "https://stackoverflow.com/.../deserialize-file-using-serde-json-at-compile-ti...",
+      "htmlFormattedUrl": "https://stackoverflow.com/.../deserialize-file-using-serde-json-at-compile-ti...",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYl7zuT3cw_BBRAyhdQEbQuBgqdNHXKHIYKL8S8ly8x9L_XA9sdwSmiHs&s",
+            "width": "225",
+            "height": "225"
+          }
+        ],
+        "qapage": [
+          {
+            "image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "primaryimageofpage": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "name": "Deserialize file using serde_json at compile time",
+            "description": "At the beginning of my program, I read data from a file: let file = std::fs::File::open(\"data/games.json\").unwrap(); let data: Games = serde_json::from_reader(file).unwrap(); I would like to know ..."
+          }
+        ],
+        "question": [
+          {
+            "image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a",
+            "upvotecount": "17",
+            "commentcount": "4",
+            "answercount": "2",
+            "name": "Deserialize file using serde_json at compile time",
+            "datecreated": "2019-10-12 23:13:05Z",
+            "text": "At the beginning of my program, I read data from a file: let file = std::fs::File::open(\"data/games.json\").unwrap(); let data: Games = serde_json::from_reader(file).unwrap(); I would like to...",
+            "url": "Share"
+          }
+        ],
+        "answer": [
+          {
+            "upvotecount": "8",
+            "text": "This is straightforward, but leads to some potential issues. First, we need to deal with something: do we want to load the tree of objects from a file, or parse that at runtime? 99% of the...",
+            "datecreated": "2019-10-12 23:41:01Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "8",
+            "text": "When you are deserializing something at runtime, you're essentially building some representation in program memory from another representation on disk. But at compile-time, there's no notion...",
+            "datecreated": "2020-05-01 13:51:08Z",
+            "url": "Share"
+          }
+        ],
+        "person": [
+          {
+            "name": "Nils André",
+            "url": "Nils André"
+          },
+          {
+            "name": "Asya Corbeau",
+            "url": "Asya Corbeau"
+          },
+          {
+            "name": "Nils André",
+            "url": "Nils André"
+          },
+          {
+            "name": "Sébastien Renauld",
+            "url": "Sébastien Renauld"
+          },
+          {
+            "name": "Asya Corbeau",
+            "url": "Asya Corbeau"
+          },
+          {
+            "name": "Sébastien Renauld",
+            "url": "Sébastien Renauld"
+          },
+          {
+            "name": "Nils André",
+            "url": "Nils André"
+          },
+          {
+            "name": "Sébastien Renauld",
+            "url": "Sébastien Renauld"
+          },
+          {
+            "name": "Sébastien Renauld",
+            "url": "Sébastien Renauld"
+          },
+          {
+            "name": "Shepmaster",
+            "url": "Shepmaster"
+          },
+          {
+            "name": "Cerberus",
+            "url": "Cerberus"
+          },
+          {
+            "name": "binarycat",
+            "url": "binarycat"
+          },
+          {
+            "name": "binarycat",
+            "url": "binarycat"
+          },
+          {
+            "name": "binarycat",
+            "url": "binarycat"
+          },
+          {
+            "name": "Nikolai K.",
+            "url": "Nikolai K."
+          },
+          {
+            "name": "binarycat",
+            "url": "binarycat"
+          }
+        ],
+        "metatags": [
+          {
+            "og:image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "og:type": "website",
+            "twitter:card": "summary",
+            "twitter:title": "Deserialize file using serde_json at compile time",
+            "og:site_name": "Stack Overflow",
+            "twitter:domain": "stackoverflow.com",
+            "viewport": "width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0",
+            "twitter:description": "At the beginning of my program, I read data from a file:\n\nlet file = std::fs::File::open(\"data/games.json\").unwrap();\nlet data: Games = serde_json::from_reader(file).unwrap();\nI would like to know ...",
+            "og:url": "https://stackoverflow.com/questions/58359340/deserialize-file-using-serde-json-at-compile-time"
+          }
+        ],
+        "comment": [
+          {
+            "text": "1- I dont think deserialization performance will be an issue (for huge data set faster serialization methode can be used like bincode) 2 - For portability use include_bytes, then you can deserializ...",
+            "datepublished": "2019-10-12 23:47:55 +00:00"
+          },
+          {
+            "text": "@AsyaCorbeau is there any reason to use include_bytes! over include_str!?",
+            "datepublished": "2019-10-13 11:16:29 +00:00"
+          },
+          {
+            "text": "@NilsAndré none, as JSON implies valid utf8, which is the only requirement separating an array of bytes from a string in rust.",
+            "datepublished": "2019-10-13 16:44:30 +00:00"
+          },
+          {
+            "text": "True but as i said with binary encoding the executable size will be decreased (without any compression overhead), JSON is useless when its not readed by humans/there is no encoding limitations...",
+            "datepublished": "2019-10-15 18:59:52 +00:00"
+          },
+          {
+            "text": "For compile time generation of objects, would I use serde or have to do my own parser?",
+            "datepublished": "2019-10-13T17:15:05.343Z+00:00"
+          },
+          {
+            "text": "@NilsAndré The option is yours on that one. The last time I had to do this, I had the advantage of being able to transform the structure into something that both took less space and killed...",
+            "datepublished": "2019-10-13T18:25:53.51Z+00:00"
+          },
+          {
+            "text": "@NilsAndré to reiterate: what you \"gain\" in not having a JSON parsing step on bootup of your application, you lose massively by having a defined-by-you parsing step, because the data will...",
+            "datepublished": "2019-10-13T18:26:48.44Z+00:00"
+          },
+          {
+            "text": "A build script would accomplish the same as your procedural macro and be simpler.",
+            "datepublished": "2019-11-18T19:53:52.057Z+00:00"
+          },
+          {
+            "text": "using uneval to try to build a slice results in a vec!, and also from_tuple is not const fn. this means that it will be completely impossible to use the generated code as a constant initializer,...",
+            "datepublished": "2024-05-26T18:26:48.687Z+00:00"
+          },
+          {
+            "text": "depending on the complexity of your data, you can actually just use the Debug trait to turn it back into a constant expression. i can confirm this works on primitive integers, strings, tuples,...",
+            "datepublished": "2024-05-26T18:52:47.833Z+00:00"
+          },
+          {
+            "text": "there's also the databake crate that does the same thing, but a bit more robust.",
+            "datepublished": "2024-05-26T23:57:58.6Z+00:00"
+          },
+          {
+            "text": "@binarycat I can't find the original repo, and the crate points to a wrong place. doesn't inspire trust",
+            "datepublished": "2024-08-25T18:19:57.783Z+00:00"
+          },
+          {
+            "text": "also, that repo is managed by the unicode consortium, the organization that assigned codepoints to textual characters. the ICU is used on just about every device, here's an explanation of it...",
+            "datepublished": "2024-08-25T22:03:55.387Z+00:00"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "wasmcp - crates.io: Rust Package Registry",
+      "htmlTitle": "wasmcp - crates.io: Rust Package Registry",
+      "link": "https://crates.io/crates/wasmcp/0.2.1",
+      "displayLink": "crates.io",
+      "snippet": "Aug 25, 2025 ... const NAME: &'static str = \"hello\"; const DESCRIPTION: &'static str = \"Says hello to someone\"; fn input_schema() -\u003e serde_json::Value { json ...",
+      "htmlSnippet": "Aug 25, 2025 \u003cb\u003e...\u003c/b\u003e \u003cb\u003econst\u003c/b\u003e NAME: &amp;&#39;\u003cb\u003estatic\u003c/b\u003e str = &quot;hello&quot;; \u003cb\u003econst\u003c/b\u003e DESCRIPTION: &amp;&#39;\u003cb\u003estatic\u003c/b\u003e str = &quot;Says hello to someone&quot;; fn input_schema() -&gt; \u003cb\u003eserde_json\u003c/b\u003e::\u003cb\u003eValue\u003c/b\u003e { json&nbsp;...",
+      "formattedUrl": "https://crates.io/crates/wasmcp/0.2.1",
+      "htmlFormattedUrl": "https://crates.io/crates/wasmcp/0.2.1",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQf8lxi_EvFUeVPxAzsMJTOksTp-aLzcQPAJeBx0lGnOexKH5YrLVK5so&s",
+            "width": "310",
+            "height": "163"
+          }
+        ],
+        "metatags": [
+          {
+            "msapplication-config": "/browserconfig.xml",
+            "og:image": "https://static.crates.io/og-images/wasmcp.png",
+            "twitter:card": "summary_large_image",
+            "theme-color": "var(--header-bg-color)",
+            "apple-mobile-web-app-status-bar-style": "default",
+            "viewport": "width=device-width, initial-scale=1",
+            "apple-mobile-web-app-capable": "yes",
+            "apple-mobile-web-app-title": "crates.io: Rust Package Registry",
+            "crates-io/config/environment": "%7B%22modulePrefix%22%3A%22crates-io%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22%2F%22%2C%22locationType%22%3A%22history%22%2C%22historySupportMiddleware%22%3Atrue%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Atrue%2C%22_JQUERY_INTEGRATION%22%3Afalse%2C%22_NO_IMPLICIT_ROUTE_MODEL%22%3Atrue%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%7D%2C%22APP%22%3A%7B%7D%2C%22ember-cli-notifications%22%3A%7B%22autoClear%22%3Atrue%2C%22clearDuration%22%3A10000%7D%2C%22%40sentry%2Fember%22%3A%7B%22disablePerformance%22%3Atrue%7D%2C%22sentry%22%3A%7B%22release%22%3A%2255ecaad%22%7D%7D",
+            "google": "notranslate"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://static.crates.io/og-images/wasmcp.png"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "LateStaticRef in abi_stable::sabi_types - Rust",
+      "htmlTitle": "\u003cb\u003eLateStaticRef\u003c/b\u003e in abi_stable::sabi_types - Rust",
+      "link": "https://docs.rs/abi_stable/latest/abi_stable/sabi_types/struct.LateStaticRef.html",
+      "displayLink": "docs.rs",
+      "snippet": "... serde_json::from_str::\u003cConfig\u003e(&file).map_err(RBoxError::new)?; Ok ... pub const fn from_ref(value: &'static T) -\u003e Self. Constructs LateStaticRef ...",
+      "htmlSnippet": "... \u003cb\u003eserde_json\u003c/b\u003e::from_str::&lt;Config&gt;(&amp;file).map_err(RBoxError::new)?; Ok ... pub \u003cb\u003econst\u003c/b\u003e fn from_ref(\u003cb\u003evalue\u003c/b\u003e: &amp;&#39;\u003cb\u003estatic\u003c/b\u003e T) -&gt; Self. Constructs \u003cb\u003eLateStaticRef\u003c/b\u003e&nbsp;...",
+      "formattedUrl": "https://docs.rs/abi_stable/latest/abi_stable/sabi.../struct.LateStaticRef.html",
+      "htmlFormattedUrl": "https://docs.rs/abi_stable/latest/abi_stable/sabi.../struct.Late\u003cb\u003eStatic\u003c/b\u003eRef.html",
+      "pagemap": {
+        "metatags": [
+          {
+            "viewport": "width=device-width, initial-scale=1.0"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "HeaderValue in http::header - Rust",
+      "htmlTitle": "HeaderValue in http::header - Rust",
+      "link": "https://docs.rs/http/latest/http/header/struct.HeaderValue.html",
+      "displayLink": "docs.rs",
+      "snippet": "However, the HTTP spec allows for a header value to contain opaque bytes as well. ... pub const fn from_static(src: &'static str) -\u003e HeaderValue. Convert a static ...",
+      "htmlSnippet": "However, the HTTP spec allows for a header \u003cb\u003evalue\u003c/b\u003e to contain opaque bytes as well. ... pub \u003cb\u003econst\u003c/b\u003e fn \u003cb\u003efrom_static\u003c/b\u003e(src: &amp;&#39;\u003cb\u003estatic\u003c/b\u003e str) -&gt; HeaderValue. Convert a \u003cb\u003estatic\u003c/b\u003e&nbsp;...",
+      "formattedUrl": "https://docs.rs/http/latest/http/header/struct.HeaderValue.html",
+      "htmlFormattedUrl": "https://docs.rs/http/latest/http/header/struct.Header\u003cb\u003eValue\u003c/b\u003e.html",
+      "pagemap": {
+        "metatags": [
+          {
+            "viewport": "width=device-width, initial-scale=1.0"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "mockall - Rust",
+      "htmlTitle": "mockall - Rust",
+      "link": "https://docs.rs/mockall",
+      "displayLink": "docs.rs",
+      "snippet": "Methods that return 'static references work just like methods that return any other 'static value. ... const THING: Thing = Thing(42); let mut mock ...",
+      "htmlSnippet": "Methods that return &#39;\u003cb\u003estatic\u003c/b\u003e references work just like methods that return any other &#39;\u003cb\u003estatic value\u003c/b\u003e. ... \u003cb\u003econst\u003c/b\u003e THING: Thing = Thing(42); let mut mock&nbsp;...",
+      "formattedUrl": "https://docs.rs/mockall",
+      "htmlFormattedUrl": "https://docs.rs/mockall",
+      "pagemap": {
+        "metatags": [
+          {
+            "viewport": "width=device-width, initial-scale=1.0"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "RawValue in serde_json::value - Rust",
+      "htmlTitle": "RawValue in \u003cb\u003eserde_json\u003c/b\u003e::\u003cb\u003evalue\u003c/b\u003e - Rust",
+      "link": "https://docs.rs/serde_json/latest/serde_json/value/struct.RawValue.html",
+      "displayLink": "docs.rs",
+      "snippet": "pub const FALSE: &'static RawValue. A constant RawValue with the JSON value false . Source. pub fn from_string(json: String) ...",
+      "htmlSnippet": "pub \u003cb\u003econst\u003c/b\u003e FALSE: &amp;&#39;\u003cb\u003estatic\u003c/b\u003e RawValue. A constant RawValue with the JSON \u003cb\u003evalue\u003c/b\u003e false . Source. pub fn from_string(json: String)&nbsp;...",
+      "formattedUrl": "https://docs.rs/serde_json/latest/serde_json/value/struct.RawValue.html",
+      "htmlFormattedUrl": "https://docs.rs/\u003cb\u003eserde_json\u003c/b\u003e/latest/\u003cb\u003eserde_json\u003c/b\u003e/\u003cb\u003evalue\u003c/b\u003e/struct.Raw\u003cb\u003eValue\u003c/b\u003e.html",
+      "pagemap": {
+        "metatags": [
+          {
+            "viewport": "width=device-width, initial-scale=1.0"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "ijson: like serde_json::Value but uses less memory : r/rust",
+      "htmlTitle": "ijson: like \u003cb\u003eserde_json\u003c/b\u003e::\u003cb\u003eValue\u003c/b\u003e but uses less memory : r/rust",
+      "link": "https://www.reddit.com/r/rust/comments/jygbav/ijson_like_serde_jsonvalue_but_uses_less_memory/",
+      "displayLink": "www.reddit.com",
+      "snippet": "Nov 21, 2020 ... 384 are all represented by constant values or static addresses, and so do not require any allocation. See the README for comparison graphs ...",
+      "htmlSnippet": "Nov 21, 2020 \u003cb\u003e...\u003c/b\u003e 384 are all represented by constant \u003cb\u003evalues\u003c/b\u003e or \u003cb\u003estatic\u003c/b\u003e addresses, and so do not require any allocation. See the README for comparison graphs&nbsp;...",
+      "formattedUrl": "https://www.reddit.com/.../ijson_like_serde_jsonvalue_but_uses_less_memo...",
+      "htmlFormattedUrl": "https://www.reddit.com/.../ijson_like_\u003cb\u003eserde_jsonvalue\u003c/b\u003e_but_uses_less_memo...",
+      "pagemap": {
+        "metatags": [
+          {
+            "og:image": "https://share.redd.it/preview/post/jygbav",
+            "theme-color": "#000000",
+            "og:image:width": "1200",
+            "og:type": "website",
+            "og:image:alt": "An image containing a preview of the post",
+            "twitter:card": "summary_large_image",
+            "twitter:title": "r/rust on Reddit: ijson: like serde_json::Value but uses less memory",
+            "og:site_name": "Reddit",
+            "og:title": "r/rust on Reddit: ijson: like serde_json::Value but uses less memory",
+            "og:image:height": "630",
+            "msapplication-navbutton-color": "#000000",
+            "og:description": "Posted by u/Diggsey - 47 votes and 11 comments",
+            "twitter:image": "https://share.redd.it/preview/post/jygbav",
+            "apple-mobile-web-app-status-bar-style": "black",
+            "twitter:site": "@reddit",
+            "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
+            "apple-mobile-web-app-capable": "yes",
+            "og:ttl": "600",
+            "og:url": "https://www.reddit.com/r/rust/comments/jygbav/ijson_like_serde_jsonvalue_but_uses_less_memory/?seeker-session=true"
+          }
+        ]
+      }
+    }
+]
+}

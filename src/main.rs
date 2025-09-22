@@ -18,6 +18,7 @@ use roux::{
     response::{BasicThing, Listing},
 };
 use serde::{Deserialize, Serialize};
+use serde_json::Value;
 use std::sync::LazyLock;
 use url::Url;
 
@@ -422,8 +423,10 @@ impl Tools {
 }
 
 #[derive(Deserialize, Serialize)]
+#[serde(rename_all = "camelCase")]
 struct GoogleSearchResults {
-    items: Vec<GoogleSearchResult>,
+    items: Option<Vec<GoogleSearchResult>>,
+    search_information: GoogleSearchInformation,
     queries: GoogleSearchQueryData,
 }
 
@@ -438,7 +441,13 @@ struct GoogleSearchResult {
 #[derive(Deserialize, Serialize)]
 #[serde(rename_all = "camelCase")]
 struct GoogleSearchQueryData {
-    next_page: Vec<GoogleSearchPage>,
+    next_page: Option<Vec<GoogleSearchPage>>,
+}
+
+#[derive(Deserialize, Serialize)]
+#[serde(rename_all = "camelCase")]
+struct GoogleSearchInformation {
+    total_results: String,
 }
 
 #[derive(Deserialize, Serialize)]
@@ -450,14 +459,22 @@ struct GoogleSearchPage {
     start_index: usize,
 }
 
-#[derive(Deserialize, Serialize)]
+#[derive(Deserialize, Serialize, Debug)]
 #[serde(untagged)]
 enum PageMap {
-    MDN(MDNPageMap),
+    ForumPost(ForumPageMap),
     StackOverflow(StackOverflowPageMap),
+    MDN(MDNPageMap),
+    Unknown(UnknownPageMap),
 }
 
-#[derive(Deserialize, Serialize)]
+/// a place holder for when there isn't even a description field in meta
+#[derive(Deserialize, Serialize, Debug)]
+struct UnknownPageMap {
+    metatags: Vec<Value>,
+}
+
+#[derive(Deserialize, Serialize, Debug)]
 // Encapsulates general, not-customized responses. Works for MDN, Reddit, etc.
 struct MDNMeta {
     #[serde(rename = "og:description")]
@@ -466,18 +483,37 @@ struct MDNMeta {
     title: String,
 }
 
-#[derive(Deserialize, Serialize)]
+#[derive(Deserialize, Serialize, Debug)]
 struct MDNPageMap {
     metatags: Vec<MDNMeta>,
 }
 
-#[derive(Deserialize, Serialize)]
+#[derive(Deserialize, Serialize, Debug)]
+/// A PageMap that should extract most useful info from forum pages
+/// Currently tested on rust user form but hopefully is generic
+struct ForumPageMap {
+    metatags: Vec<MDNMeta>,
+    #[serde(rename = "discussionforumposting")]
+    forum_post: Vec<ForumPosting>,
+    comment: Option<Vec<ForumPosting>>,
+}
+
+#[derive(Deserialize, Serialize, Debug)]
+struct ForumPosting {
+    #[serde(rename = "articlesection")]
+    article_section: Option<String>,
+    text: String,
+    #[serde(rename = "datepublished")]
+    date_published: String,
+}
+
+#[derive(Deserialize, Serialize, Debug)]
 struct StackOverflowPageMap {
     question: Vec<StackOverflowQuestion>,
     answer: Vec<StackOverflowAnswer>,
 }
 
-#[derive(Deserialize, Serialize)]
+#[derive(Deserialize, Serialize, Debug)]
 /// Represents the StackOverflow Answer in Google Search PageMap
 struct StackOverflowAnswer {
     #[serde(rename = "upvotecount")]
@@ -485,7 +521,7 @@ struct StackOverflowAnswer {
     text: String,
 }
 
-#[derive(Deserialize, Serialize)]
+#[derive(Deserialize, Serialize, Debug)]
 /// Represents the StackOverflow Question in Google Search PageMap
 struct StackOverflowQuestion {
     #[serde(rename = "upvotecount")]
@@ -558,33 +594,66 @@ mod test {
 
     #[test]
     fn test_deserialization() {
-        let mut data_file = File::open("sample.json").unwrap();
+        let mut data_file = File::open("testdata/sample.json").unwrap();
         let mut data = String::new();
         data_file.read_to_string(&mut data).unwrap();
         let response: GoogleSearchResults = serde_json::from_str(&data)
             .expect("should be able to deserialize from sample response");
-        assert_eq!(response.items.len(), 10);
+        assert_eq!(response.items.as_ref().unwrap().len(), 10);
+        assert!(matches!(
+            response.items.unwrap()[0].pagemap,
+            PageMap::StackOverflow { .. }
+        ));
 
         // Now sample2
 
-        let mut data_file = File::open("sample2.json").unwrap();
+        let mut data_file = File::open("testdata/sample2.json").unwrap();
         let mut data = String::new();
         data_file.read_to_string(&mut data).unwrap();
         let response: GoogleSearchResults = serde_json::from_str(&data)
             .expect("should be able to deserialize from sample response");
-        assert_eq!(response.items.len(), 10);
+        assert_eq!(response.items.as_ref().unwrap().len(), 10);
+        assert!(matches!(
+            response.items.unwrap()[0].pagemap,
+            PageMap::MDN { .. }
+        ));
 
-        let mut data_file = File::open("sample3.json").unwrap();
+        let mut data_file = File::open("testdata/sample3.json").unwrap();
         let mut data = String::new();
         data_file.read_to_string(&mut data).unwrap();
         let response: GoogleSearchResults = serde_json::from_str(&data)
             .expect("should be able to deserialize from sample response");
-        assert_eq!(response.items.len(), 10)
+        assert_eq!(response.items.as_ref().unwrap().len(), 10);
+        assert_eq!(
+            response.items.as_ref().unwrap()[0].link,
+            "https://www.reddit.com/r/rust/comments/ueyt1d/confused_about_how_to_use_tokio_to_process_a/"
+        );
+        assert!(matches!(
+            response.items.unwrap()[0].pagemap,
+            PageMap::MDN { .. }
+        ));
+
+        let mut data_file = File::open("testdata/sample4.json").unwrap();
+        let mut data = String::new();
+        data_file.read_to_string(&mut data).unwrap();
+        let response: GoogleSearchResults = serde_json::from_str(&data)
+            .expect("should be able to deserialize from sample response");
+        assert_eq!(response.items.as_ref().unwrap().len(), 10);
+        // rust user forum
+        assert!(matches!(
+            response.items.as_ref().unwrap()[0].pagemap,
+            PageMap::ForumPost { .. }
+        ));
+        // crates.io
+        assert!(matches!(
+            response.items.unwrap()[1].pagemap,
+            PageMap::Unknown { .. }
+        ));
     }
 
     #[test]
     fn test_so_question() {
-        let mut data_file = File::open("so-question.json").unwrap();
+        let mut data_file = File::open("testdata/so-question.json").unwrap();
         let mut data = String::new();
         data_file.read_to_string(&mut data).unwrap();
         let response: StackExchangeResponse = serde_json::from_str(&data)
@@ -594,7 +663,7 @@ mod test {
 
     #[test]
     fn test_so_answer() {
-        let mut data_file = File::open("so-answer.json").unwrap();
+        let mut data_file = File::open("testdata/so-answer.json").unwrap();
         let mut data = String::new();
         data_file.read_to_string(&mut data).unwrap();
         let response: StackExchangeResponse =
