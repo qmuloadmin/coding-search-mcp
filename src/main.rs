@@ -126,7 +126,7 @@ impl Tools {
     }
 
     #[tool(
-        description = "Search a subset of sites in Google for a list of matching web pages with snippets of information"
+        description = "Search the web for a given topic, using Google. Results may be filtered to certain sites. Results will contain snippets of matching content, as well as URLs that can be retrieved in full"
     )]
     async fn query_google_search(
         &self,
@@ -349,7 +349,7 @@ impl Tools {
     }
 
     #[tool(
-        description = "Retrieve the primary contents of a webpage via its URL, as reterned in a link in a previous search, or from some other source (e.g. user or docs)."
+        description = "Retrieve the primary contents of a webpage via its URL. May be used to retrieve more information about a search result. Results may be restricted to certain sites."
     )]
     async fn fetch_web_page(
         &self,
@@ -435,7 +435,9 @@ struct GoogleSearchResult {
     snippet: String,
     title: String,
     link: String,
-    pagemap: PageMap,
+    // Some sites are so basic they don't have a pagemap
+    // e.g. cppreference
+    pagemap: Option<PageMap>,
 }
 
 #[derive(Deserialize, Serialize)]
@@ -602,7 +604,7 @@ mod test {
         assert_eq!(response.items.as_ref().unwrap().len(), 10);
         assert!(matches!(
             response.items.unwrap()[0].pagemap,
-            PageMap::StackOverflow { .. }
+            Some(PageMap::StackOverflow { .. })
         ));
 
         // Now sample2
@@ -615,7 +617,7 @@ mod test {
         assert_eq!(response.items.as_ref().unwrap().len(), 10);
         assert!(matches!(
             response.items.unwrap()[0].pagemap,
-            PageMap::MDN { .. }
+            Some(PageMap::MDN { .. })
         ));
 
         let mut data_file = File::open("testdata/sample3.json").unwrap();
@@ -630,7 +632,7 @@ mod test {
         );
         assert!(matches!(
             response.items.unwrap()[0].pagemap,
-            PageMap::MDN { .. }
+            Some(PageMap::MDN { .. })
         ));
 
         let mut data_file = File::open("testdata/sample4.json").unwrap();
@@ -642,13 +644,19 @@ mod test {
         // rust user forum
         assert!(matches!(
             response.items.as_ref().unwrap()[0].pagemap,
-            PageMap::ForumPost { .. }
+            Some(PageMap::ForumPost { .. })
         ));
         // crates.io
         assert!(matches!(
             response.items.unwrap()[1].pagemap,
-            PageMap::Unknown { .. }
+            Some(PageMap::Unknown { .. })
         ));
+
+        let mut data_file = File::open("testdata/sample5.json").unwrap();
+        let mut data = String::new();
+        data_file.read_to_string(&mut data).unwrap();
+        let response: GoogleSearchResults = serde_json::from_str(&data)
+            .expect("should be able to deserialize from sample response");
     }
 
     #[test]

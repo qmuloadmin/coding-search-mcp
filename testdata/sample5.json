@@ -1,0 +1,2151 @@
+{
+  "kind": "customsearch#search",
+  "url": {
+    "type": "application/json",
+    "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+  },
+  "queries": {
+    "request": [
+      {
+        "title": "Google Custom Search - C++ string join path",
+        "totalResults": "22800000",
+        "searchTerms": "C++ string join path",
+        "count": 10,
+        "startIndex": 1,
+        "inputEncoding": "utf8",
+        "outputEncoding": "utf8",
+        "safe": "off",
+        "cx": "f535a39ffc8e742ad"
+      }
+    ],
+    "nextPage": [
+      {
+        "title": "Google Custom Search - C++ string join path",
+        "totalResults": "22800000",
+        "searchTerms": "C++ string join path",
+        "count": 10,
+        "startIndex": 11,
+        "inputEncoding": "utf8",
+        "outputEncoding": "utf8",
+        "safe": "off",
+        "cx": "f535a39ffc8e742ad"
+      }
+    ]
+  },
+  "context": {
+    "title": "qmulo-ai"
+  },
+  "searchInformation": {
+    "searchTime": 0.290117,
+    "formattedSearchTime": "0.29",
+    "totalResults": "22800000",
+    "formattedTotalResults": "22,800,000"
+  },
+  "items": [
+    {
+      "kind": "customsearch#result",
+      "title": "c++ - How to build a full path string (safely) from separate strings ...",
+      "htmlTitle": "\u003cb\u003ec++\u003c/b\u003e - How to build a full \u003cb\u003epath string\u003c/b\u003e (safely) from separate \u003cb\u003estrings\u003c/b\u003e ...",
+      "link": "https://stackoverflow.com/questions/6297738/how-to-build-a-full-path-string-safely-from-separate-strings",
+      "displayLink": "stackoverflow.com",
+      "snippet": "Jun 9, 2011 ... join ? Basically, I'm looking for something that combines two (or more) parts of a file path so that you don't have to worry about ...",
+      "htmlSnippet": "Jun 9, 2011 \u003cb\u003e...\u003c/b\u003e \u003cb\u003ejoin\u003c/b\u003e ? Basically, I&#39;m looking for something that combines two (or more) parts of a file \u003cb\u003epath\u003c/b\u003e so that you don&#39;t have to worry about&nbsp;...",
+      "formattedUrl": "https://stackoverflow.com/.../how-to-build-a-full-path-string-safely-from-se...",
+      "htmlFormattedUrl": "https://stackoverflow.com/.../how-to-build-a-full-\u003cb\u003epath\u003c/b\u003e-\u003cb\u003estring\u003c/b\u003e-safely-from-se...",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYl7zuT3cw_BBRAyhdQEbQuBgqdNHXKHIYKL8S8ly8x9L_XA9sdwSmiHs&s",
+            "width": "225",
+            "height": "225"
+          }
+        ],
+        "qapage": [
+          {
+            "image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "primaryimageofpage": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "name": "How to build a full path string (safely) from separate strings?",
+            "description": "Does C++ have any equivalent to python's function os.path.join? Basically, I'm looking for something that combines two (or more) parts of a file path so that you don't have to worry about making su..."
+          }
+        ],
+        "question": [
+          {
+            "image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a",
+            "upvotecount": "122",
+            "commentcount": "1",
+            "answercount": "8",
+            "name": "How to build a full path string (safely) from separate strings?",
+            "datecreated": "2011-06-09 18:50:52Z",
+            "text": "Does C++ have any equivalent to python's function os.path.join? Basically, I'm looking for something that combines two (or more) parts of a file path so that you don't have to worry about making...",
+            "url": "Share"
+          }
+        ],
+        "answer": [
+          {
+            "upvotecount": "117",
+            "text": "Only as part of boost::filesystem library. Here is an example: #include \u003ciostream\u003e #include \u003cboost/filesystem.hpp\u003e namespace fs = boost::filesystem; int main () { fs::path dir (\"/tmp\"); fs::path...",
+            "datecreated": "2011-06-09 18:57:14Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "77",
+            "text": "Similar to this answer (but not using boost), this functionality is available as part of std::filesystem. The following code compiles using Homebrew GCC 9.2.0_1 and using the flag --std=c++17:...",
+            "datecreated": "2016-04-25 18:26:51Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "54",
+            "text": "Since the question mentions Qt, check out QDir for that: QString path = QDir(dirPath).filePath(fileName);",
+            "datecreated": "2011-06-09 19:08:30Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "9",
+            "text": "At least in Unix / Linux, it's always safe to join parts of a path by /, even if some parts of the path already end in /, i.e. root/path is equivalent to root//path. In this case, all you really...",
+            "datecreated": "2011-06-09 19:11:45Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "7",
+            "text": "If you want to do this with Qt, you can use QFileInfo constructor: QFileInfo fi( QDir(\"/tmp\"), \"file\" ); QString path = fi.absoluteFilePath();",
+            "datecreated": "2011-06-09 19:04:33Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "5",
+            "text": "With C++11 and Qt you can do this: QString join(const QString& v) { return v; } template\u003ctypename... Args\u003e QString join(const QString& first, Args... args) { return QDir(first).filePath(join(args.....",
+            "datecreated": "2016-07-23 19:19:10Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "4",
+            "text": "In Qt, just use / in code when using Qt API (QFile, QFileInfo). It will do the right thing on all platforms. If you have to pass a path to a non-Qt function, or want to format it for displaying...",
+            "datecreated": "2011-06-09 20:02:43Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "2",
+            "text": "Here is a very simple C++11 friendly alternative for the people who have neither Boost, Qt nor C++17 (taken from here). std::string pathJoin(const std::string& p1, const std::string& p2) {...",
+            "datecreated": "2023-02-08 13:47:15Z",
+            "url": "Share"
+          }
+        ],
+        "person": [
+          {
+            "name": "sas4740",
+            "url": "sas4740"
+          },
+          {
+            "name": "Lightness Races in Orbit",
+            "url": "Lightness Races in Orbit"
+          },
+          {
+            "name": "user405725"
+          },
+          {
+            "name": "ildjarn",
+            "url": "ildjarn"
+          },
+          {
+            "name": "ildjarn",
+            "url": "ildjarn"
+          },
+          {
+            "name": "Fred Nurk",
+            "url": "Fred Nurk"
+          },
+          {
+            "name": "ildjarn",
+            "url": "ildjarn"
+          },
+          {
+            "name": "Richard",
+            "url": "Richard"
+          },
+          {
+            "name": "Shawn Blakesley",
+            "url": "Shawn Blakesley"
+          },
+          {
+            "name": "Eli_B",
+            "url": "Eli_B"
+          },
+          {
+            "name": "n0ne",
+            "url": "n0ne"
+          },
+          {
+            "name": "frakod",
+            "url": "frakod"
+          },
+          {
+            "name": "Kevin Chan",
+            "url": "Kevin Chan"
+          },
+          {
+            "name": "frakod",
+            "url": "frakod"
+          },
+          {
+            "name": "Stephen Chu",
+            "url": "Stephen Chu"
+          },
+          {
+            "name": "rustyx",
+            "url": "rustyx"
+          },
+          {
+            "name": "Pa_",
+            "url": "Pa_"
+          },
+          {
+            "name": "jerrylogansquare",
+            "url": "jerrylogansquare"
+          },
+          {
+            "name": "frankc",
+            "url": "frankc"
+          },
+          {
+            "name": "LoSciamano",
+            "url": "LoSciamano"
+          },
+          {
+            "name": "LoSciamano",
+            "url": "LoSciamano"
+          },
+          {
+            "name": "kainjow",
+            "url": "kainjow"
+          },
+          {
+            "name": "Frank Osterfeld",
+            "url": "Frank Osterfeld"
+          },
+          {
+            "name": "Honza Vojtěch",
+            "url": "Honza Vojtěch"
+          },
+          {
+            "name": "Rotem",
+            "url": "Rotem"
+          },
+          {
+            "name": "Honza Vojtěch",
+            "url": "Honza Vojtěch"
+          }
+        ],
+        "metatags": [
+          {
+            "og:image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "og:type": "website",
+            "twitter:card": "summary",
+            "twitter:title": "How to build a full path string (safely) from separate strings?",
+            "og:site_name": "Stack Overflow",
+            "twitter:domain": "stackoverflow.com",
+            "viewport": "width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0",
+            "twitter:description": "Does C++ have any equivalent to python's function os.path.join? Basically, I'm looking for something that combines two (or more) parts of a file path so that you don't have to worry about making su...",
+            "og:url": "https://stackoverflow.com/questions/6297738/how-to-build-a-full-path-string-safely-from-separate-strings"
+          }
+        ],
+        "comment": [
+          {
+            "text": "Possibly distantly related: stackoverflow.com/questions/5772992/… (specifically, related to that question is boost's complete)",
+            "datepublished": "2011-06-09 18:53:33 +00:00"
+          },
+          {
+            "text": "This is also in TR2, which is likely to start shipping with compilers next year.",
+            "datepublished": "2011-06-09T19:01:05.793Z+00:00"
+          },
+          {
+            "text": "@Vlad : Yeah, it's not easily discoverable, but I hate clicking on Boost doc links and belatedly realizing I'm looking at an old version, so I edit people's version-specific links when I come...",
+            "datepublished": "2011-06-09T19:12:54.62Z+00:00"
+          },
+          {
+            "text": "@ildjarn: Which seems to work great now... but wait until they change something about the site or the docs for the given library. It is worse than leaving the version-specific link from then on.",
+            "datepublished": "2011-06-09T19:44:34.037Z+00:00"
+          },
+          {
+            "text": "@Fred : Obviously if the functionality or question happens to be version-specific, I don't change the URL. In this case, it isn't, so I did.",
+            "datepublished": "2011-06-09T20:02:43.213Z+00:00"
+          },
+          {
+            "text": "With C++17 use #include \u003cfilesystem\u003e, namespace fs = std::filesystem;. With C++14 use #include \u003cexperimental/filesystem\u003e, namespace fs = std::experimental::filesystem;.",
+            "datepublished": "2017-04-07T15:27:38.77Z+00:00"
+          },
+          {
+            "text": "As of C++17, this was merged into the (non-experimental) \u003cfilesystem\u003e header. See en.cppreference.com/w/cpp/filesystem.",
+            "datepublished": "2018-08-25T15:23:44.07Z+00:00"
+          },
+          {
+            "text": "Thank you so much, this answer is a way to go in case if c++ 17 is available on the project.",
+            "datepublished": "2021-03-11T06:45:54.5Z+00:00"
+          },
+          {
+            "text": "in my case its just joining them directly (and not putting a / or \\ between them)",
+            "datepublished": "2021-04-14T16:10:24.78Z+00:00"
+          },
+          {
+            "text": "@0xB00B just use A + B, fs::path override the operator / / + to append/concat. see reference en.cppreference.com/w/cpp/filesystem/path/concat",
+            "datepublished": "2022-10-20T03:07:00.27Z+00:00"
+          },
+          {
+            "text": "@Kevin Chan i was already talking about that, it wasn't working properly due to some implementation bug.",
+            "datepublished": "2022-10-20T14:23:48.37Z+00:00"
+          },
+          {
+            "text": "Beware that Qt is GPL. Might be a deal breaker for many uses.",
+            "datepublished": "2017-07-09T15:15:21.32Z+00:00"
+          },
+          {
+            "text": "@RustyX it is LGPL, to be precise.",
+            "datepublished": "2017-08-02T11:54:31.103Z+00:00"
+          },
+          {
+            "text": "i love this answer, no futzing with strings and concatenation, let the framework figure it out.",
+            "datepublished": "2022-02-21T17:53:48.667Z+00:00"
+          },
+          {
+            "text": "QT is agnostic to path separator. If you print absolute path of a file on Windows the output is \"C:/Users/Name/MyFile.txt\" with the / (unix) separator. boost::filesystem is great but, in my...",
+            "datepublished": "2011-06-09T19:19:03.28Z+00:00"
+          },
+          {
+            "text": "Did you test the code? It should be p1[p1.length() - 1] != sep instead of p1[p1.length()] != sep. We may also consider that Windows accepts both '\\\\' and '/'",
+            "datepublished": "2023-05-10T11:26:56.517Z+00:00"
+          },
+          {
+            "text": "@Rotem: Thank you for pointing out, I fixed the length problem in my answer.",
+            "datepublished": "2023-05-11T10:40:27.607Z+00:00"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "concat, std::filesystem::path::operator+= - cppreference.com",
+      "htmlTitle": "concat, \u003cb\u003estd\u003c/b\u003e::filesystem::\u003cb\u003epath\u003c/b\u003e::operator+= - cppreference.com",
+      "link": "https://en.cppreference.com/w/cpp/filesystem/path/concat.html",
+      "displayLink": "en.cppreference.com",
+      "snippet": "Sep 5, 2023 ... str, -, string or string view to append ; ptr, -, pointer to the beginning of a null-terminated string to append ; x, -, single character to ...",
+      "htmlSnippet": "Sep 5, 2023 \u003cb\u003e...\u003c/b\u003e str, -, \u003cb\u003estring\u003c/b\u003e or \u003cb\u003estring\u003c/b\u003e view to append ; ptr, -, pointer to the beginning of a null-terminated \u003cb\u003estring\u003c/b\u003e to append ; x, -, single character to&nbsp;...",
+      "formattedUrl": "https://en.cppreference.com/w/cpp/filesystem/path/concat.html",
+      "htmlFormattedUrl": "https://en.cppreference.com/w/cpp/filesystem/\u003cb\u003epath\u003c/b\u003e/concat.html"
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "c++ - How to implode a vector of strings into a string (the elegant way)",
+      "htmlTitle": "\u003cb\u003ec++\u003c/b\u003e - How to implode a vector of \u003cb\u003estrings\u003c/b\u003e into a \u003cb\u003estring\u003c/b\u003e (the elegant \u003cb\u003eway\u003c/b\u003e)",
+      "link": "https://stackoverflow.com/questions/5689003/how-to-implode-a-vector-of-strings-into-a-string-the-elegant-way",
+      "displayLink": "stackoverflow.com",
+      "snippet": "Apr 16, 2011 ... Use boost::algorithm::join(..) : #include \u003cboost/algorithm/string/join.hpp\u003e ... std::string joinedString = boost::algorithm::join(elems, ...",
+      "htmlSnippet": "Apr 16, 2011 \u003cb\u003e...\u003c/b\u003e Use boost::algorithm::\u003cb\u003ejoin\u003c/b\u003e(..) : #include &lt;boost/algorithm/\u003cb\u003estring\u003c/b\u003e/\u003cb\u003ejoin\u003c/b\u003e.hpp&gt; ... \u003cb\u003estd\u003c/b\u003e::\u003cb\u003estring\u003c/b\u003e joinedString = boost::algorithm::\u003cb\u003ejoin\u003c/b\u003e(elems,&nbsp;...",
+      "formattedUrl": "https://stackoverflow.com/.../how-to-implode-a-vector-of-strings-into-a-stri...",
+      "htmlFormattedUrl": "https://stackoverflow.com/.../how-to-implode-a-vector-of-\u003cb\u003estring\u003c/b\u003es-into-a-\u003cb\u003estri\u003c/b\u003e...",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYl7zuT3cw_BBRAyhdQEbQuBgqdNHXKHIYKL8S8ly8x9L_XA9sdwSmiHs&s",
+            "width": "225",
+            "height": "225"
+          }
+        ],
+        "qapage": [
+          {
+            "image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "primaryimageofpage": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "name": "How to implode a vector of strings into a string (the elegant way)",
+            "description": "I'm looking for the most elegant way to implode a vector of strings into a string. Below is the solution I'm using now: static std::string& implode(const std::vector\u003cstd::string\u003e& el..."
+          }
+        ],
+        "question": [
+          {
+            "image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a",
+            "upvotecount": "136",
+            "commentcount": "4",
+            "answercount": "26",
+            "name": "How to implode a vector of strings into a string (the elegant way)",
+            "datecreated": "2011-04-16 19:29:02Z",
+            "text": "I'm looking for the most elegant way to implode a vector of strings into a string. Below is the solution I'm using now: static std::string& implode(const std::vector\u003cstd::string\u003e& elems, char...",
+            "url": "Share"
+          }
+        ],
+        "answer": [
+          {
+            "upvotecount": "149",
+            "text": "Use boost::algorithm::join(..): #include \u003cboost/algorithm/string/join.hpp\u003e ... std::string joinedString = boost::algorithm::join(elems, delim); See also this question.",
+            "datecreated": "2011-06-13 17:52:00Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "50",
+            "text": "std::vector\u003cstd::string\u003e strings; const char* const delim = \", \"; std::ostringstream imploded; std::copy(strings.begin(), strings.end(), std::ostream_iterator\u003cstd::string\u003e(imploded, delim));...",
+            "datecreated": "2011-04-16 19:36:44Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "36",
+            "text": "I like to use this one-liner accumulate (no trailing delimiter): (std::accumulate defined in \u003cnumeric\u003e) std::accumulate( std::next(elems.begin()), elems.end(), elems[0], [](std::string a, std::stri...",
+            "datecreated": "2019-10-19 23:34:34Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "28",
+            "text": "You should use std::ostringstream rather than std::string to build the output (then you can call its str() method at the end to get a string, so your interface need not change, only the temporary...",
+            "datecreated": "2011-04-16 19:33:33Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "27",
+            "text": "Because I love one-liners (they are very useful for all kinds of weird stuff, as you'll see at the end), here's a solution using std::accumulate and C++11 lambda: std::accumulate(alist.begin(),...",
+            "datecreated": "2012-08-28 08:38:07Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "23",
+            "text": "With fmt you can do. #include \u003cfmt/format.h\u003e auto s = fmt::format(\"{}\",fmt::join(elems,delim)); But I don't know if join will make it to std::format. https://godbolt.org/z/P4rj3xeKG",
+            "datecreated": "2021-01-05 21:43:10Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "21",
+            "text": "what about simple stupid solution? std::string String::join(const std::vector\u003cstd::string\u003e &lst, const std::string &delim) { std::string ret; for(const auto &s : lst) { if(!ret.empty()) ret...",
+            "datecreated": "2018-01-18 12:57:48Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "13",
+            "text": "Especially with bigger collections, you want to avoid having to check if youre still adding the first element or not to ensure no trailing separator... So for the empty or single-element list,...",
+            "datecreated": "2016-09-13 10:16:48Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "12",
+            "text": "string join(const vector\u003cstring\u003e& vec, const char* delim) { stringstream res; copy(vec.begin(), vec.end(), ostream_iterator\u003cstring\u003e(res, delim)); return res.str(); }",
+            "datecreated": "2013-08-25 08:52:02Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "12",
+            "text": "This gets a handy one-liner in C++23: auto str = std::ranges::fold_left(elems | std::views::join_with(delim), std::string{}, std::plus\u003c\u003e{}); or alternatively: auto str = elems | std::views::join_wi...",
+            "datecreated": "2023-04-30 08:44:11Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "8",
+            "text": "While I would normally recommend using Boost as per the top answer, I recognise that in some projects that's not desired. The STL solutions suggested using std::ostream_iterator will not work...",
+            "datecreated": "2021-12-26 18:52:24Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "5",
+            "text": "Another simple and good solution is using ranges v3. The current version is C++14 or greater, but there are older versions that are C++11 or greater. Unfortunately, C++20 ranges don't have...",
+            "datecreated": "2021-05-08 17:33:26Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "4",
+            "text": "A version that uses std::accumulate: #include \u003cnumeric\u003e #include \u003ciostream\u003e #include \u003cstring\u003e struct infix { std::string sep; infix(const std::string& sep) : sep(sep) {} std::string operator()(cons...",
+            "datecreated": "2011-04-18 19:37:08Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "4",
+            "text": "A possible solution with ternary operator ?:. std::string join(const std::vector\u003cstd::string\u003e & v, const std::string & delimiter = \", \") { std::string result; for (size_t i = 0; i \u003c v.size();...",
+            "datecreated": "2020-12-17 02:40:50Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "3",
+            "text": "Here's what I use, simple and flexible string joinList(vector\u003cstring\u003e arr, string delimiter) { if (arr.empty()) return \"\"; string str; for (auto i : arr) str += i + delimiter; str = str.substr(0,...",
+            "datecreated": "2016-03-29 09:51:29Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "3",
+            "text": "Here is another one that doesn't add the delimiter after the last element: std::string concat_strings(const std::vector\u003cstd::string\u003e &elements, const std::string &separator) { if (!elements.empty()...",
+            "datecreated": "2014-09-02 23:18:56Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "2",
+            "text": "Using part of this answer to another question gives you a joined this, based on a separator without a trailing comma, Usage: std::vector\u003cstd::string\u003e input_str = std::vector\u003cstd::string\u003e({\"a\",...",
+            "datecreated": "2018-06-18 16:09:31Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "2",
+            "text": "If you are already using a C++ base library (for commonly used tools), string-processing features are typically included. Besides Boost mentioned above, Abseil provides: std::vector\u003cstd::string\u003e...",
+            "datecreated": "2022-09-09 02:12:18Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "0",
+            "text": "Slightly long solution, but doesn't use std::ostringstream, and doesn't require a hack to remove the last delimiter. http://www.ideone.com/hW1M9 And the code: struct appender { appender(char...",
+            "datecreated": "2011-04-16 20:16:25Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "0",
+            "text": "This can be solved using boost #include \u003cboost/range/adaptor/filtered.hpp\u003e #include \u003cboost/algorithm/string/join.hpp\u003e #include \u003cboost/algorithm/algorithm.hpp\u003e std::vector\u003cstd::string\u003e win {\"Stack\",...",
+            "datecreated": "2021-02-15 12:37:55Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "0",
+            "text": "I'm using the following approach that works fine in C++17. The function starts checking if the given vector is empty, in which case returns an empty string. If that's not the case, it takes...",
+            "datecreated": "2023-01-22 01:10:54Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "0",
+            "text": "Another std::accumulate solution, as a function, templated, along with error trapping. Downsides, unsuitable for large sets of strings (potentially O(n^2)), and ugly usage: join\u003cstd::vector\u003cstd::st...",
+            "datecreated": "2023-06-09 03:09:04Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "0",
+            "text": "The solution I have been using for now is to manually iterate over the vector and put the items into an ostringstream. Finally, at the end just return the underlying string in the stream. #include...",
+            "datecreated": "2023-09-28 07:58:30Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "0",
+            "text": "not very impressed with any of the answers her as im not a fan of one liners that are so complicated they make no sense, or one liners that call includes you can never find at compile time....",
+            "datecreated": "2024-10-09 19:19:59Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "0",
+            "text": "Simply: elems.empty() ? \"\" : std::accumulate(std::next(elems.begin()), elems.end(), elems.front(), [&delim](std::string a, const std::string &b) { return std::move(a) + delim + b; }); Avoids...",
+            "datecreated": "2025-03-06 18:26:29Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "0",
+            "text": "Joining a vector of strings with a delimiter can be done by materialising the range to a string. #include \u003ciostream\u003e #include \u003cprint\u003e #include \u003cranges\u003e #include \u003cstring\u003e #include \u003cvector\u003e using...",
+            "datecreated": "2025-06-02 20:07:31Z",
+            "url": "Share"
+          }
+        ],
+        "person": [
+          {
+            "name": "ezpresso",
+            "url": "ezpresso"
+          },
+          {
+            "name": "ezpresso",
+            "url": "ezpresso"
+          },
+          {
+            "name": "Colonel Panic",
+            "url": "Colonel Panic"
+          },
+          {
+            "name": "ezpresso",
+            "url": "ezpresso"
+          },
+          {
+            "name": "Johannes Overmann",
+            "url": "Johannes Overmann"
+          },
+          {
+            "name": "TylerH",
+            "url": "TylerH"
+          },
+          {
+            "name": "Andre Holzner",
+            "url": "Andre Holzner"
+          },
+          {
+            "name": "Julian",
+            "url": "Julian"
+          },
+          {
+            "name": "River Tam",
+            "url": "River Tam"
+          },
+          {
+            "name": "Azeroth2b",
+            "url": "Azeroth2b"
+          },
+          {
+            "name": "jbruni",
+            "url": "jbruni"
+          },
+          {
+            "name": "Kiruahxh",
+            "url": "Kiruahxh"
+          },
+          {
+            "name": "sehe",
+            "url": "sehe"
+          },
+          {
+            "name": "Michael Krelin - hacker",
+            "url": "Michael Krelin - hacker"
+          },
+          {
+            "name": "Jonny",
+            "url": "Jonny"
+          },
+          {
+            "name": "Константин Ван",
+            "url": "Константин Ван"
+          },
+          {
+            "name": "rayryeng",
+            "url": "rayryeng"
+          },
+          {
+            "name": "Sasa Milenkovic",
+            "url": "Sasa Milenkovic"
+          },
+          {
+            "name": "Carlos Pinzón",
+            "url": "Carlos Pinzón"
+          },
+          {
+            "name": "OrangeDog",
+            "url": "OrangeDog"
+          },
+          {
+            "name": "ed__",
+            "url": "ed__"
+          },
+          {
+            "name": "John Zwinck",
+            "url": "John Zwinck"
+          },
+          {
+            "name": "Jerry Coffin",
+            "url": "Jerry Coffin"
+          },
+          {
+            "name": "Guss",
+            "url": "Guss"
+          },
+          {
+            "name": "Oktalist",
+            "url": "Oktalist"
+          },
+          {
+            "name": "Guss",
+            "url": "Guss"
+          },
+          {
+            "name": "Oktalist",
+            "url": "Oktalist"
+          },
+          {
+            "name": "kirbyfan64sos",
+            "url": "kirbyfan64sos"
+          },
+          {
+            "name": "plexando",
+            "url": "plexando"
+          },
+          {
+            "name": "andreas777",
+            "url": "andreas777"
+          },
+          {
+            "name": "Franklin Yu",
+            "url": "Franklin Yu"
+          },
+          {
+            "name": "paoloose",
+            "url": "paoloose"
+          },
+          {
+            "name": "Franklin Yu",
+            "url": "Franklin Yu"
+          },
+          {
+            "name": "andreas777",
+            "url": "andreas777"
+          },
+          {
+            "name": "Ciro Santilli OurBigBook.com",
+            "url": "Ciro Santilli OurBigBook.com"
+          },
+          {
+            "name": "user3545770",
+            "url": "user3545770"
+          },
+          {
+            "name": "xtofl",
+            "url": "xtofl"
+          },
+          {
+            "name": "c z",
+            "url": "c z"
+          },
+          {
+            "name": "xtofl",
+            "url": "xtofl"
+          },
+          {
+            "name": "Bruce Nielsen",
+            "url": "Bruce Nielsen"
+          },
+          {
+            "name": "rodrigocfd",
+            "url": "rodrigocfd"
+          },
+          {
+            "name": "xtofl",
+            "url": "xtofl"
+          },
+          {
+            "name": "Jason C",
+            "url": "Jason C"
+          },
+          {
+            "name": "xtofl",
+            "url": "xtofl"
+          },
+          {
+            "name": "Jason C",
+            "url": "Jason C"
+          },
+          {
+            "name": "xtofl",
+            "url": "xtofl"
+          },
+          {
+            "name": "BlackMamba",
+            "url": "BlackMamba"
+          },
+          {
+            "name": "Carsten",
+            "url": "Carsten"
+          },
+          {
+            "name": "Jean-Didier",
+            "url": "Jean-Didier"
+          },
+          {
+            "name": "Carsten",
+            "url": "Carsten"
+          },
+          {
+            "name": "David G",
+            "url": "David G"
+          },
+          {
+            "name": "Carsten",
+            "url": "Carsten"
+          },
+          {
+            "name": "Riot",
+            "url": "Riot"
+          },
+          {
+            "name": "sdbbs",
+            "url": "sdbbs"
+          },
+          {
+            "name": "Riot",
+            "url": "Riot"
+          },
+          {
+            "name": "Augusto Icaro",
+            "url": "Augusto Icaro"
+          },
+          {
+            "name": "Franklin Yu",
+            "url": "Franklin Yu"
+          },
+          {
+            "name": "Augusto Icaro",
+            "url": "Augusto Icaro"
+          },
+          {
+            "name": "Robᵩ",
+            "url": "Robᵩ"
+          },
+          {
+            "name": "Ynjxsjmh",
+            "url": "Ynjxsjmh"
+          },
+          {
+            "name": "user1438233",
+            "url": "user1438233"
+          },
+          {
+            "name": "Some Guy",
+            "url": "Some Guy"
+          },
+          {
+            "name": "Darien Pardinas",
+            "url": "Darien Pardinas"
+          },
+          {
+            "name": "TankorSmash",
+            "url": "TankorSmash"
+          },
+          {
+            "name": "Franklin Yu",
+            "url": "Franklin Yu"
+          },
+          {
+            "name": "Nim",
+            "url": "Nim"
+          },
+          {
+            "name": "BHANU PRAKASH",
+            "url": "BHANU PRAKASH"
+          },
+          {
+            "name": "alberto",
+            "url": "alberto"
+          },
+          {
+            "name": "oPless",
+            "url": "oPless"
+          },
+          {
+            "name": "sjking",
+            "url": "sjking"
+          },
+          {
+            "name": "Jay Dee",
+            "url": "Jay Dee"
+          },
+          {
+            "name": "smac89",
+            "url": "smac89"
+          },
+          {
+            "name": "David G",
+            "url": "David G"
+          }
+        ],
+        "metatags": [
+          {
+            "og:image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "og:type": "website",
+            "twitter:card": "summary",
+            "twitter:title": "How to implode a vector of strings into a string (the elegant way)",
+            "og:site_name": "Stack Overflow",
+            "twitter:domain": "stackoverflow.com",
+            "viewport": "width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0",
+            "twitter:description": "I'm looking for the most elegant way to implode a vector of strings into a string. Below is the solution I'm using now:\n\nstatic std::string&amp; implode(const std::vector&lt;std::string&gt;&amp; el...",
+            "og:url": "https://stackoverflow.com/questions/5689003/how-to-implode-a-vector-of-strings-into-a-string-the-elegant-way"
+          }
+        ],
+        "comment": [
+          {
+            "text": "Why do you call this function implode?",
+            "datepublished": "2019-04-11 20:33:35 +00:00"
+          },
+          {
+            "text": "@ColonelPanic, by analogy with PHP's implode() method, which joins array elements and outputs them as a single string. I wonder why are you asking this question:)",
+            "datepublished": "2019-04-13 00:35:45 +00:00"
+          },
+          {
+            "text": "In Python: 'delim.join(elems)'. Sorry, could not resist. C++ still does not have batteries included. :-) Question is 10 years old in 2021 and not a single working and elegant answer (trailing...",
+            "datepublished": "2021-11-02 17:51:21 +00:00"
+          },
+          {
+            "text": "If you have a working solution and want to improve it without a specific, objective target metric for improvement, CodeReview.SE is the appropriate site. As phrased your question is a matter...",
+            "datepublished": "2025-06-03 15:00:26 +00:00"
+          },
+          {
+            "text": "Suggesting to include and link against the massive boost library to create a simple string is absurd.",
+            "datepublished": "2017-10-06T21:24:07.737Z+00:00"
+          },
+          {
+            "text": "@Julian most projects already do this. I agree that it is absurd that the STL does not include a way to do this already, however. I might also agree that this should not be the top answer,...",
+            "datepublished": "2017-11-24T00:23:51.957Z+00:00"
+          },
+          {
+            "text": "I concur with @Julian. Boost may be elegant in use but is no way the \"most elegant way\" in terms of overhead. In this case, it's a workaround to the OP's algorithm and not a resolution to the...",
+            "datepublished": "2018-11-21T13:49:07.26Z+00:00"
+          },
+          {
+            "text": "Most Boost libraries are header-only, so there is nothing to link. Some even make their way into the standard.",
+            "datepublished": "2019-04-27T02:25:01.58Z+00:00"
+          },
+          {
+            "text": "Not having this basic feature in stdlib is absurd.",
+            "datepublished": "2021-03-19T07:11:03.037Z+00:00"
+          },
+          {
+            "text": "keep in mind, though, that it will add extra delimiter (the second parameter to the std::ostream_iterator constructor at the end of the stream.",
+            "datepublished": "2011-04-16T19:38:26.75Z+00:00"
+          },
+          {
+            "text": "The point of \"implode\" is that a delimiter should not be added last. This answer unfortunately adds that delimiter last.",
+            "datepublished": "2015-10-28T01:13:29.95Z+00:00"
+          },
+          {
+            "text": "And fortunately I need to add the token last as well! Thanks for the solution.",
+            "datepublished": "2020-12-24T01:57:08.553Z+00:00"
+          },
+          {
+            "text": "I needed the actual string representation after the implode, so I used imploded.str() to get a std::string. Also, for those who don't want the delimiter as the last part of the string, use...",
+            "datepublished": "2023-01-16T22:10:35.713Z+00:00"
+          },
+          {
+            "text": "Be careful when it's empty.",
+            "datepublished": "2020-04-12T04:04:16.403Z+00:00"
+          },
+          {
+            "text": "You'll want those to be const std::string & too.",
+            "datepublished": "2024-07-17T15:48:23.033Z+00:00"
+          },
+          {
+            "text": "This will create way more allocations than necessary (1).",
+            "datepublished": "2025-04-14T16:51:58.83Z+00:00"
+          },
+          {
+            "text": "Or use one that's already written: stackoverflow.com/questions/3496982/…",
+            "datepublished": "2011-04-16T20:03:00.963Z+00:00"
+          },
+          {
+            "text": "Don't use accumulate for strings. Most of the other answers are O(n) but accumulate is O(n^2) because it makes a temporary copy of the accumulator before appending each element. And no, move...",
+            "datepublished": "2013-09-09T20:31:05.447Z+00:00"
+          },
+          {
+            "text": "@Oktalist, I'm not sure why you say that - cplusplus.com/reference/numeric/accumulate says \"Complexity is linear in the distance between first and last\".",
+            "datepublished": "2013-09-10T06:43:54.6Z+00:00"
+          },
+          {
+            "text": "That's assuming that each individual addition takes constant time. If T has an overloaded operator+ (like string does) or if you provide your own functor then all bets are off. Although I may...",
+            "datepublished": "2013-09-10T23:43:03.47Z+00:00"
+          },
+          {
+            "text": "I did a benchmark, and accumulate was actually faster than an O(n) string stream.",
+            "datepublished": "2015-03-06T22:22:55.403Z+00:00"
+          },
+          {
+            "text": "A questionable algorithmic design. You know upfront that a comma needs to be prepended to every element except the first one, then why do you do all those useless runtime checks? In addition...",
+            "datepublished": "2020-10-29T08:49:04.9Z+00:00"
+          },
+          {
+            "text": "At least not in C++20. 😞",
+            "datepublished": "2023-01-27T02:32:03.52Z+00:00"
+          },
+          {
+            "text": "@FranklinYu He is talking about this fmt library, not a standard C++ library",
+            "datepublished": "2023-03-01T22:48:53.01Z+00:00"
+          },
+          {
+            "text": "@perrocallcenter I know that. My comment above was referring to the part “if join will make it to std::format”, which was referring to the fact that a big portion of the fmt library has...",
+            "datepublished": "2023-03-03T05:24:26.857Z+00:00"
+          },
+          {
+            "text": "@perrocallcenter as FranklinY said, std::format (en.cppreference.com/w/cpp/header/format) and std::print (en.cppreference.com/w/cpp/io/print, C++ 23) are based on fmt library. I was hoping...",
+            "datepublished": "2023-03-03T07:34:10.763Z+00:00"
+          },
+          {
+            "text": "@andreas777 let's all put our positive thoughts and prayers together so that this feature may make it into C++26 amen",
+            "datepublished": "2025-05-26T04:02:42.33Z+00:00"
+          },
+          {
+            "text": "I hope the compiler is smart enough to remove the check for the ret to be empty on every iteration.",
+            "datepublished": "2021-05-05T06:50:53.417Z+00:00"
+          },
+          {
+            "text": "@xtofl You're overestimating the cost of that check.",
+            "datepublished": "2022-01-25T16:06:43.833Z+00:00"
+          },
+          {
+            "text": "I'm just following the \"Don't pay for what you don't use\" rule. You're right in most cases, where lst is not enormous.",
+            "datepublished": "2022-01-26T11:25:22.427Z+00:00"
+          },
+          {
+            "text": "Besides the fact that ret.empty() is a trivial check, this is a use case that is perfect for branch predictors, since after the first test it will always evaluate to false.",
+            "datepublished": "2022-04-25T08:25:19.983Z+00:00"
+          },
+          {
+            "text": "This will fail if lst contains empty strings as the first elements.",
+            "datepublished": "2024-07-10T14:03:50.76Z+00:00"
+          },
+          {
+            "text": "You'd never need to check every time though. Just add the first element outside the loop, and start the loop at the second...",
+            "datepublished": "2021-05-04T03:07:55.213Z+00:00"
+          },
+          {
+            "text": "I don't see why you'd add that. There isn't a loop in this function, and accumulate does receive the first element and is told to start at the second...",
+            "datepublished": "2021-05-05T06:54:51.427Z+00:00"
+          },
+          {
+            "text": "What I mean is: \"Especially with bigger collections, you want to avoid having to check if youre still adding the first element or not to ensure no trailing separator.\" -- You can avoid having...",
+            "datepublished": "2021-05-05T15:14:36.323Z+00:00"
+          },
+          {
+            "text": "I share your idea. Related: stackoverflow.com/questions/156650/….",
+            "datepublished": "2021-05-06T05:48:52.047Z+00:00"
+          },
+          {
+            "text": "The need for fold_left is not obvious, you could explain why it's here.",
+            "datepublished": "2023-10-30T12:48:45.347Z+00:00"
+          },
+          {
+            "text": "fold_left is the generalized ranges-version of accumulate introduced with C++23. C++20 introduced ranges, but missed out on some crucial parts, such as some algorithm implementations. C++23...",
+            "datepublished": "2023-11-01T08:39:07.463Z+00:00"
+          },
+          {
+            "text": "Instead of fold_left, why not just materialise the range with std::ranges::to\u003cstd::string\u003e?",
+            "datepublished": "2025-06-02T19:48:21.553Z+00:00"
+          },
+          {
+            "text": "Also valid, good catch! I'll upate the answer accordingly. :-)",
+            "datepublished": "2025-06-03T11:26:36.52Z+00:00"
+          },
+          {
+            "text": "How modern does C++ need to be? I tried this with set(CMAKE_CXX_STANDARD 11) and #include \u003cexperimental/iterator\u003e, and got \"error: 'std::experimental' has not been declared\"",
+            "datepublished": "2023-06-05T09:32:39.817Z+00:00"
+          },
+          {
+            "text": "Your compiler needs to support library fundamentals TS v2. At the time of writing, parts of this have been merged into C++17 and C++20, but ostream_joiner is not yet part of any modern standard...",
+            "datepublished": "2023-06-06T10:07:24.157Z+00:00"
+          },
+          {
+            "text": "C++20 do have std::ranges::views::join_with, which might help?",
+            "datepublished": "2022-09-08T15:30:25.603Z+00:00"
+          },
+          {
+            "text": "@FranklinYu. Yes std::ranges::views::join_with it's the equivalent function but is only available for c++23.",
+            "datepublished": "2023-08-15T11:13:24.99Z+00:00"
+          },
+          {
+            "text": "You should probably use \"for (const auto& i : arr)\" so you don't unnecessarily create a copy of each string as you iterate over the vector.",
+            "datepublished": "2024-09-19T11:19:03.383Z+00:00"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "c++ - how to convert filesystem path to string - Stack Overflow",
+      "htmlTitle": "\u003cb\u003ec++\u003c/b\u003e - how to convert filesystem \u003cb\u003epath\u003c/b\u003e to \u003cb\u003estring\u003c/b\u003e - Stack Overflow",
+      "link": "https://stackoverflow.com/questions/45401822/how-to-convert-filesystem-path-to-string",
+      "displayLink": "stackoverflow.com",
+      "snippet": "Jul 30, 2017 ... To convert a std::filesystem::path to a natively-encoded string (whose type is std::filesystem::path::value_type ), use the string() method.",
+      "htmlSnippet": "Jul 30, 2017 \u003cb\u003e...\u003c/b\u003e To convert a \u003cb\u003estd\u003c/b\u003e::filesystem::\u003cb\u003epath\u003c/b\u003e to a natively-encoded \u003cb\u003estring\u003c/b\u003e (whose type is \u003cb\u003estd\u003c/b\u003e::filesystem::\u003cb\u003epath\u003c/b\u003e::value_type ), use the \u003cb\u003estring\u003c/b\u003e() method.",
+      "formattedUrl": "https://stackoverflow.com/.../how-to-convert-filesystem-path-to-string",
+      "htmlFormattedUrl": "https://stackoverflow.com/.../how-to-convert-filesystem-\u003cb\u003epath\u003c/b\u003e-to-\u003cb\u003estring\u003c/b\u003e",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYl7zuT3cw_BBRAyhdQEbQuBgqdNHXKHIYKL8S8ly8x9L_XA9sdwSmiHs&s",
+            "width": "225",
+            "height": "225"
+          }
+        ],
+        "qapage": [
+          {
+            "image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "primaryimageofpage": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "name": "how to convert filesystem path to string",
+            "description": "I am iterating through all the files in a folder and just want their names in a string. I want to get a string from a std::filesystem::path. How do I do that? My code: #include \u003cstring\u003e #incl..."
+          }
+        ],
+        "question": [
+          {
+            "image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a",
+            "upvotecount": "84",
+            "commentcount": "2",
+            "answercount": "3",
+            "name": "how to convert filesystem path to string",
+            "datecreated": "2017-07-30 16:01:02Z",
+            "text": "I am iterating through all the files in a folder and just want their names in a string. I want to get a string from a std::filesystem::path. How do I do that? My code: #include \u003cstring\u003e #include...",
+            "url": "Share"
+          }
+        ],
+        "answer": [
+          {
+            "upvotecount": "107",
+            "commentcount": "3",
+            "text": "To convert a std::filesystem::path to a natively-encoded string (whose type is std::filesystem::path::value_type), use the string() method. Note the other *string() methods, which enable you...",
+            "datecreated": "2017-07-30 16:06:09Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "16",
+            "commentcount": "2",
+            "text": "In C++ 17 and above, you can use .generic_string() or .string() to convert the path to a string: https://en.cppreference.com/w/cpp/filesystem/path/generic_string or https://en.cppreference.com/w/cp...",
+            "datecreated": "2022-10-04 01:56:46Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "12",
+            "commentcount": "3",
+            "text": "The examples given in the accepted answer, using the UTF-8 operations, are fine and a good guideline. There is just one error in the introductory explanation given in the answer, which Windows/MSVC...",
+            "datecreated": "2022-09-12 13:50:53Z",
+            "url": "Share"
+          }
+        ],
+        "person": [
+          {
+            "name": "anonymous noob",
+            "url": "anonymous noob"
+          },
+          {
+            "name": "n. m. could be an AI",
+            "url": "n. m. could be an AI"
+          },
+          {
+            "name": "anonymous noob",
+            "url": "anonymous noob"
+          },
+          {
+            "name": "tambre",
+            "url": "tambre"
+          },
+          {
+            "name": "jstar",
+            "url": "jstar"
+          },
+          {
+            "name": "Quentin",
+            "url": "Quentin"
+          },
+          {
+            "name": "starriet 차주녕",
+            "url": "starriet 차주녕"
+          },
+          {
+            "name": "voluntier",
+            "url": "voluntier"
+          },
+          {
+            "name": "Kristo",
+            "url": "Kristo"
+          },
+          {
+            "name": "voluntier",
+            "url": "voluntier"
+          },
+          {
+            "name": "sbricklayer",
+            "url": "sbricklayer"
+          },
+          {
+            "name": "Martin",
+            "url": "Martin"
+          },
+          {
+            "name": "Martin",
+            "url": "Martin"
+          },
+          {
+            "name": "André Lehto",
+            "url": "André Lehto"
+          }
+        ],
+        "metatags": [
+          {
+            "og:image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "og:type": "website",
+            "twitter:card": "summary",
+            "twitter:title": "how to convert filesystem path to string",
+            "og:site_name": "Stack Overflow",
+            "twitter:domain": "stackoverflow.com",
+            "viewport": "width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0",
+            "twitter:description": "I am iterating through all the files in a folder and just want their names in a string. I want to get a string from a std::filesystem::path. How do I do that?\nMy code:\n#include &lt;string&gt;\n#incl...",
+            "og:url": "https://stackoverflow.com/questions/45401822/how-to-convert-filesystem-path-to-string"
+          }
+        ],
+        "comment": [
+          {
+            "text": "p.path is a member function, you cannot use it without (). Try std::string fileName = p.path();",
+            "datepublished": "07/30/2017 16:18:34"
+          },
+          {
+            "text": "ya plus a .string() at the end so: std::string fName = p.path().string();",
+            "datepublished": "07/30/2017 16:39:26"
+          },
+          {
+            "text": "if #include \u003cfilesystem\u003e and namespace fs = std::filesystem; doesn't work try this one: #include \u003cexperimental/filesystem\u003e namespace fs = std::experimental::filesystem;",
+            "datepublished": "11/09/2017 08:09:28"
+          },
+          {
+            "text": "@jstar that's because your standard library is out of date -- time to upgrade :)",
+            "datepublished": "04/16/2018 12:01:44"
+          },
+          {
+            "text": "(FYI for newbies like me) *string() means, there are string(), wstring(), u8string(), u16string(), u32string() if you have a look at the source code.",
+            "datepublished": "07/22/2022 14:19:17"
+          },
+          {
+            "text": "The generic_string() function is not only about converting, it is doing formatting as well. Just using the string() function does the trick.",
+            "datepublished": "11/23/2024 04:34:44"
+          },
+          {
+            "text": "@Kristo thanks for pointing that out. This is a basic example. The generic_string formatting converts any backslashes to forward slashes, ensuring more general compatibility since it works...",
+            "datepublished": "12/13/2024 02:34:35"
+          },
+          {
+            "text": "could you show an example that throws on Windows? The cppreference docs don't indicate what happens with the string method there.",
+            "datepublished": "11/21/2022 11:10:34"
+          },
+          {
+            "text": "Nevermind, just managed to reproduce it myself. The exception's what() text explicitly says No mapping for the Unicode character exists in the target multi-byte code page. I wonder if this...",
+            "datepublished": "11/21/2022 11:46:47"
+          },
+          {
+            "text": "This is the real right answer to be honest.",
+            "datepublished": "07/22/2024 09:23:58"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "No operator+ for std::filesystem::path? - Stack Overflow",
+      "htmlTitle": "No operator+ for \u003cb\u003estd\u003c/b\u003e::filesystem::\u003cb\u003epath\u003c/b\u003e? - Stack Overflow",
+      "link": "https://stackoverflow.com/questions/65917812/no-operator-for-stdfilesystempath",
+      "displayLink": "stackoverflow.com",
+      "snippet": "Jan 27, 2021 ... Join Stack Overflow. By clicking ... I though maybe it was because std::string and const char * implicitly convert to std::filesystem::path.",
+      "htmlSnippet": "Jan 27, 2021 \u003cb\u003e...\u003c/b\u003e \u003cb\u003eJoin\u003c/b\u003e Stack Overflow. By clicking ... I though maybe it was because \u003cb\u003estd\u003c/b\u003e::\u003cb\u003estring\u003c/b\u003e and const char * implicitly convert to \u003cb\u003estd\u003c/b\u003e::filesystem::\u003cb\u003epath\u003c/b\u003e.",
+      "formattedUrl": "https://stackoverflow.com/questions/.../no-operator-for-stdfilesystempath",
+      "htmlFormattedUrl": "https://stackoverflow.com/questions/.../no-operator-for-stdfilesystem\u003cb\u003epath\u003c/b\u003e",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYl7zuT3cw_BBRAyhdQEbQuBgqdNHXKHIYKL8S8ly8x9L_XA9sdwSmiHs&s",
+            "width": "225",
+            "height": "225"
+          }
+        ],
+        "qapage": [
+          {
+            "image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "primaryimageofpage": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "name": "No operator+ for std::filesystem::path?",
+            "description": "It is possible to append multiple paths in a row using the / operator: std::filesystem::path p1{\"A\"}; auto p2 = p1 / \"B\" / \"C\"; which is rather convenient. However,"
+          }
+        ],
+        "question": [
+          {
+            "image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a",
+            "upvotecount": "14",
+            "commentcount": "8",
+            "answercount": "4",
+            "name": "No operator+ for std::filesystem::path?",
+            "datecreated": "2021-01-27 11:03:03Z",
+            "text": "It is possible to append multiple paths in a row using the / operator: std::filesystem::path p1{\"A\"}; auto p2 = p1 / \"B\" / \"C\"; which is rather convenient. However, concat only offers +=: std::file...",
+            "url": "Share"
+          }
+        ],
+        "answer": [
+          {
+            "upvotecount": "4",
+            "text": "This is a bit speculative, but I think the reason for this is that an operator+ could be easily confused with operator/. This would then lead to bugs if used as follows path p2{\"/\"}; auto p1...",
+            "datecreated": "2021-01-27 15:10:06Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "2",
+            "text": "There's no such operator, but actually it's pretty easy to add such one on one's own; below is the quick and dirty variant coming along as a template (safer might be individual overloads matching...",
+            "datecreated": "2023-09-27 17:37:39Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "1",
+            "text": "If all what you need is to add extensions, you can also do this: std::filesystem::path p1{\"A\"}; auto p2 = (p1 / \"B\" / \"C\").replace_extension(\".d\");",
+            "datecreated": "2022-03-09 10:07:50Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "0",
+            "text": "I though maybe it was because std::string and const char * implicitly convert to std::filesystem::path. Here is some c++20 being very careful to avoid unwanted implicit conversions. #include...",
+            "datecreated": "2021-11-08 05:41:10Z",
+            "url": "Share"
+          }
+        ],
+        "person": [
+          {
+            "name": "Touloudou",
+            "url": "Touloudou"
+          },
+          {
+            "name": "Raildex",
+            "url": "Raildex"
+          },
+          {
+            "name": "PeterT",
+            "url": "PeterT"
+          },
+          {
+            "name": "Caleth",
+            "url": "Caleth"
+          },
+          {
+            "name": "PeterT",
+            "url": "PeterT"
+          },
+          {
+            "name": "KamilCuk",
+            "url": "KamilCuk"
+          },
+          {
+            "name": "n314159",
+            "url": "n314159"
+          },
+          {
+            "name": "klaus triendl",
+            "url": "klaus triendl"
+          },
+          {
+            "name": "Aconcagua",
+            "url": "Aconcagua"
+          },
+          {
+            "name": "steph643",
+            "url": "steph643"
+          },
+          {
+            "name": "Robert Russell",
+            "url": "Robert Russell"
+          }
+        ],
+        "metatags": [
+          {
+            "og:image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "og:type": "website",
+            "twitter:card": "summary",
+            "twitter:title": "No operator+ for std::filesystem::path?",
+            "og:site_name": "Stack Overflow",
+            "twitter:domain": "stackoverflow.com",
+            "viewport": "width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0",
+            "twitter:description": "It is possible to append multiple paths in a row using the / operator:\n  std::filesystem::path p1{&quot;A&quot;};\n  auto p2 = p1 / &quot;B&quot; / &quot;C&quot;;\n\nwhich is rather convenient. However,",
+            "og:url": "https://stackoverflow.com/questions/65917812/no-operator-for-stdfilesystempath"
+          }
+        ],
+        "comment": [
+          {
+            "text": "Nope. There is no other way",
+            "datepublished": "2021-01-27 11:07:29 +00:00"
+          },
+          {
+            "text": "@KamilCuk not possible with const char[N], that would be auto p2 = p1 / \"B\" / (std::string(\"C\") + \".d\");",
+            "datepublished": "2021-01-27 11:16:17 +00:00"
+          },
+          {
+            "text": "(\"C\" + \".d\") adds two const char[2]s",
+            "datepublished": "2021-01-27 11:17:27 +00:00"
+          },
+          {
+            "text": "@KamilCuk a string literal like \"A\" is of type \"const char[N]\" and will be converted to \"const char*\" when using operator +, so you're adding two pointers with \"A\"+\"B\"",
+            "datepublished": "2021-01-27 11:17:49 +00:00"
+          },
+          {
+            "text": "sooo. auto p2 = p1 / \"B\" / \"C\" += \".d\"; or auto p2 = p1 / \"B\" / (std::string() + \"C\" + \".d\"); :D . Both of the these work in godbolt. note that in practice, \"C\" will most likely Not in practice,...",
+            "datepublished": "2021-01-27 11:21:26 +00:00"
+          },
+          {
+            "text": "You can simply auto p2 = p1 / \"B\" / \"C\" += \".d\"; No parentheses necessary due to operator precedence.",
+            "datepublished": "2024-01-16T09:10:12.2Z+00:00"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Is it bad to always use filesystem::path instead of std::string? : r ...",
+      "htmlTitle": "Is it bad to always use filesystem::\u003cb\u003epath\u003c/b\u003e instead of \u003cb\u003estd\u003c/b\u003e::\u003cb\u003estring\u003c/b\u003e? : r ...",
+      "link": "https://www.reddit.com/r/cpp_questions/comments/18wkzjr/is_it_bad_to_always_use_filesystempath_instead_of/",
+      "displayLink": "www.reddit.com",
+      "snippet": "Jan 2, 2024 ... Join. Options. Report. Is it bad to always use ... You end up copying the string around, which is more overhead than just using a std::string or ...",
+      "htmlSnippet": "Jan 2, 2024 \u003cb\u003e...\u003c/b\u003e \u003cb\u003eJoin\u003c/b\u003e. Options. Report. Is it bad to always use ... You end up copying the \u003cb\u003estring\u003c/b\u003e around, which is more overhead than just using a \u003cb\u003estd\u003c/b\u003e::\u003cb\u003estring\u003c/b\u003e or&nbsp;...",
+      "formattedUrl": "https://www.reddit.com/.../is_it_bad_to_always_use_filesystempath_instead...",
+      "htmlFormattedUrl": "https://www.reddit.com/.../is_it_bad_to_always_use_filesystem\u003cb\u003epath\u003c/b\u003e_instead...",
+      "pagemap": {
+        "metatags": [
+          {
+            "og:image": "https://share.redd.it/preview/post/18wkzjr",
+            "theme-color": "#000000",
+            "og:image:width": "1200",
+            "og:type": "website",
+            "og:image:alt": "An image containing a preview of the post",
+            "twitter:card": "summary_large_image",
+            "twitter:title": "r/cpp_questions on Reddit: Is it bad to always use filesystem::path instead of std::string?",
+            "og:site_name": "Reddit",
+            "og:title": "r/cpp_questions on Reddit: Is it bad to always use filesystem::path instead of std::string?",
+            "og:image:height": "630",
+            "msapplication-navbutton-color": "#000000",
+            "og:description": "Posted by u/better_life_please - 31 votes and 21 comments",
+            "twitter:image": "https://share.redd.it/preview/post/18wkzjr",
+            "apple-mobile-web-app-status-bar-style": "black",
+            "twitter:site": "@reddit",
+            "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
+            "apple-mobile-web-app-capable": "yes",
+            "og:ttl": "600",
+            "og:url": "https://www.reddit.com/r/cpp_questions/comments/18wkzjr/is_it_bad_to_always_use_filesystempath_instead_of/?seeker-session=true"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "How to concatenate two strings in C++? - Stack Overflow",
+      "htmlTitle": "How to \u003cb\u003econcatenate\u003c/b\u003e two \u003cb\u003estrings\u003c/b\u003e in \u003cb\u003eC++\u003c/b\u003e? - Stack Overflow",
+      "link": "https://stackoverflow.com/questions/15319859/how-to-concatenate-two-strings-in-c",
+      "displayLink": "stackoverflow.com",
+      "snippet": "Mar 10, 2013 ... I do think this is relevant since \"the guy\" is using char instead of std::string. Furthermore, it shows an explicit way of concatenating that ...",
+      "htmlSnippet": "Mar 10, 2013 \u003cb\u003e...\u003c/b\u003e I do think this is relevant since &quot;the guy&quot; is using char instead of \u003cb\u003estd\u003c/b\u003e::\u003cb\u003estring\u003c/b\u003e. Furthermore, it shows an explicit \u003cb\u003eway\u003c/b\u003e of concatenating that&nbsp;...",
+      "formattedUrl": "https://stackoverflow.com/questions/.../how-to-concatenate-two-strings-in-c",
+      "htmlFormattedUrl": "https://stackoverflow.com/questions/.../how-to-concatenate-two-\u003cb\u003estring\u003c/b\u003es-in-c",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYl7zuT3cw_BBRAyhdQEbQuBgqdNHXKHIYKL8S8ly8x9L_XA9sdwSmiHs&s",
+            "width": "225",
+            "height": "225"
+          }
+        ],
+        "qapage": [
+          {
+            "image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "primaryimageofpage": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "name": "How to concatenate two strings in C++?",
+            "description": "I have a private class variable char name[10] to which I would like to add the .txt extension so that I can open the file present in the directory. How do I go about this? It would be preferable..."
+          }
+        ],
+        "question": [
+          {
+            "image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a",
+            "upvotecount": "153",
+            "answercount": "8",
+            "name": "How to concatenate two strings in C++?",
+            "datecreated": "2013-03-10 07:13:51Z",
+            "text": "I have a private class variable char name[10] to which I would like to add the .txt extension so that I can open the file present in the directory. How do I go about this? It would be preferable...",
+            "url": "Share"
+          }
+        ],
+        "answer": [
+          {
+            "upvotecount": "232",
+            "text": "First of all, don't use char* or char[N]. Use std::string, then everything else becomes so easy! Examples, std::string s = \"Hello\"; std::string greet = s + \" World\"; //concatenation easy! Easy,...",
+            "datecreated": "2013-03-10 07:15:04Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "42",
+            "text": "Since it's C++ why not to use std::string instead of char*? Concatenation will be trivial: std::string str = \"abc\"; str += \"another\";",
+            "datecreated": "2013-03-10 07:15:00Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "25",
+            "text": "If you were programming in C, then assuming name really is a fixed-length array like you say, you have to do something like the following: char filename[sizeof(name) + 4]; strcpy (filename,...",
+            "datecreated": "2013-03-10 07:29:37Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "9",
+            "text": "There is a strcat() function from the ported C library that will do \"C style string\" concatenation for you. BTW even though C++ has a bunch of functions to deal with C-style strings, it could...",
+            "datecreated": "2013-03-10 07:18:43Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "5",
+            "text": "C++14 using namespace std::string_literals; std::string great = \"Hello\"s + \" World\"; // concatenation easy! Answer to the question: auto fname = name + \".txt\"s; If you have more than a single...",
+            "datecreated": "2020-05-01 20:35:11Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "0",
+            "text": "It is better to use C++ string class instead of old style C string, life would be much easier. if you have existing old style string, you can covert to string class char greeting[6] = {'H',...",
+            "datecreated": "2017-10-25 12:37:00Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "-1",
+            "text": "strcat(destination,source) can be used to concatenate two strings in c++. To have a deep understanding you can lookup in the following link- http://www.cplusplus.com/reference/cstring/strcat/",
+            "datecreated": "2017-02-10 17:02:31Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "-3",
+            "text": "//String appending #include \u003ciostream\u003e using namespace std; void stringconcat(char *str1, char *str2){ while (*str1 != '\\0'){ str1++; } while(*str2 != '\\0'){ *str1 = *str2; str1++; str2++;...",
+            "datecreated": "2015-06-23 19:22:15Z",
+            "url": "Share"
+          }
+        ],
+        "person": [
+          {
+            "name": "Slashr",
+            "url": "Slashr"
+          },
+          {
+            "name": "Sarfaraz Nawaz",
+            "url": "Sarfaraz Nawaz"
+          },
+          {
+            "name": "d34th4ck3r",
+            "url": "d34th4ck3r"
+          },
+          {
+            "name": "Sarfaraz Nawaz",
+            "url": "Sarfaraz Nawaz"
+          },
+          {
+            "name": "Epic Speedy",
+            "url": "Epic Speedy"
+          },
+          {
+            "name": "MSalters",
+            "url": "MSalters"
+          },
+          {
+            "name": "nogard",
+            "url": "nogard"
+          },
+          {
+            "name": "IInspectable",
+            "url": "IInspectable"
+          },
+          {
+            "name": "TonyK",
+            "url": "TonyK"
+          },
+          {
+            "name": "icyflame",
+            "url": "icyflame"
+          },
+          {
+            "name": "gvegayon",
+            "url": "gvegayon"
+          },
+          {
+            "name": "Ashley Duncan",
+            "url": "Ashley Duncan"
+          },
+          {
+            "name": "Ed Graham",
+            "url": "Ed Graham"
+          },
+          {
+            "name": "dtech",
+            "url": "dtech"
+          },
+          {
+            "name": "TonyK",
+            "url": "TonyK"
+          },
+          {
+            "name": "nogard",
+            "url": "nogard"
+          },
+          {
+            "name": "TonyK",
+            "url": "TonyK"
+          },
+          {
+            "name": "3CEZVQ",
+            "url": "3CEZVQ"
+          },
+          {
+            "name": "Anchith Acharya",
+            "url": "Anchith Acharya"
+          },
+          {
+            "name": "masher",
+            "url": "masher"
+          },
+          {
+            "name": "john k",
+            "url": "john k"
+          },
+          {
+            "name": "3CEZVQ",
+            "url": "3CEZVQ"
+          },
+          {
+            "name": "i.AsifNoor",
+            "url": "i.AsifNoor"
+          },
+          {
+            "name": "Madhurya Gandi",
+            "url": "Madhurya Gandi"
+          },
+          {
+            "name": "3CEZVQ",
+            "url": "3CEZVQ"
+          },
+          {
+            "name": "Kartik",
+            "url": "Kartik"
+          },
+          {
+            "name": "Scheff's Cat",
+            "url": "Scheff's Cat"
+          },
+          {
+            "name": "JAYD3V",
+            "url": "JAYD3V"
+          }
+        ],
+        "metatags": [
+          {
+            "og:image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "og:type": "website",
+            "twitter:card": "summary",
+            "twitter:title": "How to concatenate two strings in C++?",
+            "og:site_name": "Stack Overflow",
+            "twitter:domain": "stackoverflow.com",
+            "viewport": "width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0",
+            "twitter:description": "I have a private class variable char name[10] to which I would like to add the .txt extension so that I can open the file present in the directory. \n\nHow do I go about this?\n\nIt would be preferable...",
+            "og:url": "https://stackoverflow.com/questions/15319859/how-to-concatenate-two-strings-in-c"
+          }
+        ],
+        "comment": [
+          {
+            "text": "What is the time complexity of this string concatenation ?",
+            "datepublished": "2016-12-17T13:46:21.397Z+00:00"
+          },
+          {
+            "text": "@d34th4ck3r: It is linear.",
+            "datepublished": "2016-12-17T14:19:01.637Z+00:00"
+          },
+          {
+            "text": "Becomes easy at the cost of memory and performance. Don't overuse strings!",
+            "datepublished": "2022-04-14T22:57:20.88Z+00:00"
+          },
+          {
+            "text": "@EpicSpeedy: You're going to be hard-pressed to concatenate O(n) characters in less than O(n) time !",
+            "datepublished": "2023-11-21T15:03:53.73Z+00:00"
+          },
+          {
+            "text": "Worth noting, the trivial use comes with a non-trivial price tag with respect to runtime performance. Worst case is, that operator+= performs both a deallocation and an allocation. Heap allocations...",
+            "datepublished": "2020-02-07T12:17:20.19Z+00:00"
+          },
+          {
+            "text": "Don't you think this answer is irrelevant for this question?",
+            "datepublished": "2013-03-10T07:33:26.133Z+00:00"
+          },
+          {
+            "text": "I do think this is relevant since \"the guy\" is using char instead of std::string. Furthermore, it shows an explicit way of concatenating that was not showed in the most voted answer. At least...",
+            "datepublished": "2017-08-30T21:55:29.48Z+00:00"
+          },
+          {
+            "text": "This also shows a method of doing a string concatenation without dynamic memory allocation. Unless I am wrong, std::string operator += requires a possible reallocation.",
+            "datepublished": "2019-05-19T22:11:55.727Z+00:00"
+          },
+          {
+            "text": "As of 9th March 2023, this answer is absolutely relevant. Thanks @TonyK! (I am working on an old project that primarily uses C.)",
+            "datepublished": "2023-03-09T12:05:26.9Z+00:00"
+          },
+          {
+            "text": "See my comment to IcyFlame's answer.",
+            "datepublished": "2013-03-10T07:25:22.687Z+00:00"
+          },
+          {
+            "text": "There is also strncat() function that is usually better alternative",
+            "datepublished": "2013-03-10T07:25:29.88Z+00:00"
+          },
+          {
+            "text": "@nogard: strncat is irrelevant here, because we already know the length of the second parameter \".txt\". So it would just be strncat(name, \".txt\", 4), which doesn't gain us anything.",
+            "datepublished": "2013-03-10T07:44:31.71Z+00:00"
+          },
+          {
+            "text": "Thanks! I didn't know about the 's' at the end for making a literal sting into an object-type string. This is quite handy! Reminds me of python too.",
+            "datepublished": "2021-05-08T13:01:25.01Z+00:00"
+          },
+          {
+            "text": "but only if you declare using namespace std::string_literals;",
+            "datepublished": "2022-02-20T08:05:42.767Z+00:00"
+          },
+          {
+            "text": "@masher I get error std has no member string_literals",
+            "datepublished": "2022-07-08T20:34:36.153Z+00:00"
+          },
+          {
+            "text": "@johnktejik Remember to ensure that you're compiling the source according to C++14.",
+            "datepublished": "2022-07-08T21:25:27.75Z+00:00"
+          },
+          {
+            "text": "Low quality, link only answer.",
+            "datepublished": "2024-09-09T22:32:51.167Z+00:00"
+          },
+          {
+            "text": "std::strcat()?",
+            "datepublished": "2023-06-17T05:16:47.583Z+00:00"
+          },
+          {
+            "text": "You get the funniest answers to C++ questions because its often taken as a class in high school and community college.",
+            "datepublished": "2024-08-24T09:39:49.377Z+00:00"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "split - c++ - Splitting an absolute file path - Stack Overflow",
+      "htmlTitle": "split - \u003cb\u003ec++\u003c/b\u003e - Splitting an absolute file \u003cb\u003epath\u003c/b\u003e - Stack Overflow",
+      "link": "https://stackoverflow.com/questions/35530092/c-splitting-an-absolute-file-path",
+      "displayLink": "stackoverflow.com",
+      "snippet": "Feb 20, 2016 ... Every other answer to this question finds \"/\" (Unix) or \"\\\" (Windows), and chops up the string manually; this is verbose and subject to user ...",
+      "htmlSnippet": "Feb 20, 2016 \u003cb\u003e...\u003c/b\u003e Every other answer to this question finds &quot;/&quot; (Unix) or &quot;\\&quot; (Windows), and chops up the \u003cb\u003estring\u003c/b\u003e manually; this is verbose and subject to user&nbsp;...",
+      "formattedUrl": "https://stackoverflow.com/questions/.../c-splitting-an-absolute-file-path",
+      "htmlFormattedUrl": "https://stackoverflow.com/questions/.../c-splitting-an-absolute-file-\u003cb\u003epath\u003c/b\u003e",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYl7zuT3cw_BBRAyhdQEbQuBgqdNHXKHIYKL8S8ly8x9L_XA9sdwSmiHs&s",
+            "width": "225",
+            "height": "225"
+          }
+        ],
+        "qapage": [
+          {
+            "image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "primaryimageofpage": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "name": "c++ - Splitting an absolute file path",
+            "description": "I'm writing a C++ program for a school assignment. At some point, the question requires me to change directories, which I know how to do. However, the user will provide the program with the absolut..."
+          }
+        ],
+        "question": [
+          {
+            "image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a",
+            "upvotecount": "5",
+            "commentcount": "3",
+            "answercount": "7",
+            "name": "c++ - Splitting an absolute file path",
+            "datecreated": "2016-02-20 22:51:27Z",
+            "text": "I'm writing a C++ program for a school assignment. At some point, the question requires me to change directories, which I know how to do. However, the user will provide the program with the...",
+            "url": "Share"
+          }
+        ],
+        "answer": [
+          {
+            "upvotecount": "12",
+            "text": "Every other answer to this question finds \"/\" (Unix) or \"\\\" (Windows), and chops up the string manually; this is verbose and subject to user error. C++17 now has the std::filesystem package,...",
+            "datecreated": "2021-11-16 14:28:57Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "6",
+            "text": "Put your path into an std::string and then you can do something like the below. std::string path = \"/home/person/dir/file\"; std::size_t botDirPos = path.find_last_of(\"/\"); // get directory...",
+            "datecreated": "2016-02-20 23:07:31Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "4",
+            "text": "Simply get the last index of the \"/\" character in the file path, and snip the file with it's extension from the string. 1) Check that the directory listing has a \"/\". If not - throw an error....",
+            "datecreated": "2016-02-20 22:58:41Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "3",
+            "text": "you can use std::string dir_str = \"path/file\"; auto pos = dir_str.rfind(\"/\"); if (pos!= std::string::npos) { chdir(\"newpath\"+dir_str.substr(pos)); //... } else { //do something; } there may...",
+            "datecreated": "2016-02-20 23:11:05Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "1",
+            "commentcount": "0",
+            "text": "You can use strtok function from \u003cstring.h\u003e to split path components and by the way keep track of each dir in the hierarchy. #include \u003cstdio.h\u003e #include \u003cstring.h\u003e int main () { char str[]...",
+            "datecreated": "2016-02-20 23:02:29Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "1",
+            "commentcount": "1",
+            "text": "This might help. What it does, it splits the file path with corresponding directories/files and store the names in a vector. #include \u003ciostream\u003e #include \u003cstring\u003e #include \u003cvector\u003e using namespace...",
+            "datecreated": "2021-10-03 15:17:13Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "0",
+            "text": "To add to plethora of answers, I devised this after looking up stat struct and function: struct ab_path{ int delimiter = 0; int extension = 0; int length = 0; char separator = '\\0'; ab_path(){}...",
+            "datecreated": "2019-08-30 18:21:59Z",
+            "url": "Share"
+          }
+        ],
+        "person": [
+          {
+            "name": "The_Questioner"
+          },
+          {
+            "name": "The_Questioner",
+            "url": "The_Questioner"
+          },
+          {
+            "name": "Sam Varshavchik",
+            "url": "Sam Varshavchik"
+          },
+          {
+            "name": "The_Questioner",
+            "url": "The_Questioner"
+          },
+          {
+            "name": "Sam Varshavchik",
+            "url": "Sam Varshavchik"
+          },
+          {
+            "name": "Huw Walters",
+            "url": "Huw Walters"
+          },
+          {
+            "name": "HSchmale",
+            "url": "HSchmale"
+          },
+          {
+            "name": "Berni",
+            "url": "Berni"
+          },
+          {
+            "name": "yurlungurrr",
+            "url": "yurlungurrr"
+          },
+          {
+            "name": "Juan Je García",
+            "url": "Juan Je García"
+          },
+          {
+            "name": "Mayank Joshi",
+            "url": "Mayank Joshi"
+          },
+          {
+            "name": "Adrian Mole",
+            "url": "Adrian Mole"
+          },
+          {
+            "name": "Danilo",
+            "url": "Danilo"
+          }
+        ],
+        "metatags": [
+          {
+            "og:image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "og:type": "website",
+            "twitter:card": "summary",
+            "twitter:title": "c++ - Splitting an absolute file path",
+            "og:site_name": "Stack Overflow",
+            "twitter:domain": "stackoverflow.com",
+            "viewport": "width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0",
+            "twitter:description": "I'm writing a C++ program for a school assignment. At some point, the question requires me to change directories, which I know how to do. However, the user will provide the program with the absolut...",
+            "og:url": "https://stackoverflow.com/questions/35530092/c-splitting-an-absolute-file-path"
+          }
+        ],
+        "comment": [
+          {
+            "text": "Place your rubber duck -- en.wikipedia.org/wiki/Rubber_duck_debugging -- next to your keyboard, and explain to your rubber duck, in plain English, your logical, step by step, algorithm that...",
+            "datepublished": "2016-02-20 22:54:17 +00:00"
+          },
+          {
+            "text": "I'm not quite sure what options I have to split strings this way.. I know that I can split it based on whitespace using stringstreams. But this is a different delimiter. I'd like to split it...",
+            "datepublished": "2016-02-20 22:56:14 +00:00"
+          },
+          {
+            "text": "The std::string class has methods to split, and chop up the string, in any way that pleases you. If you want to extract parts of the string before or after position #n, std::string offers several...",
+            "datepublished": "2016-02-20 23:00:24 +00:00"
+          },
+          {
+            "text": "You need to improve your code snippet: Add the required standard library headers, for example. Also, using an int for what should be a size_t (return value of find_first_of) is poor practice.",
+            "datepublished": "2021-10-03 15:35:18 +00:00"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "c++ variadic parameter join path - Stack Overflow",
+      "htmlTitle": "\u003cb\u003ec++\u003c/b\u003e variadic parameter \u003cb\u003ejoin path\u003c/b\u003e - Stack Overflow",
+      "link": "https://stackoverflow.com/questions/64841681/c-variadic-parameter-join-path",
+      "displayLink": "stackoverflow.com",
+      "snippet": "Nov 15, 2020 ... You might use std::string_view since C++17: std::string join_path(std::initializer_list\u003cstd::string_view\u003e paths) { std::string res; ...",
+      "htmlSnippet": "Nov 15, 2020 \u003cb\u003e...\u003c/b\u003e You might use \u003cb\u003estd\u003c/b\u003e::string_view since C++17: \u003cb\u003estd\u003c/b\u003e::\u003cb\u003estring\u003c/b\u003e join_path(\u003cb\u003estd\u003c/b\u003e::initializer_list&lt;\u003cb\u003estd\u003c/b\u003e::string_view&gt; \u003cb\u003epaths\u003c/b\u003e) { \u003cb\u003estd\u003c/b\u003e::\u003cb\u003estring\u003c/b\u003e res;&nbsp;...",
+      "formattedUrl": "https://stackoverflow.com/questions/.../c-variadic-parameter-join-path",
+      "htmlFormattedUrl": "https://stackoverflow.com/questions/.../c-variadic-parameter-\u003cb\u003ejoin\u003c/b\u003e-\u003cb\u003epath\u003c/b\u003e",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYl7zuT3cw_BBRAyhdQEbQuBgqdNHXKHIYKL8S8ly8x9L_XA9sdwSmiHs&s",
+            "width": "225",
+            "height": "225"
+          }
+        ],
+        "qapage": [
+          {
+            "image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "primaryimageofpage": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "name": "c++ variadic parameter join path",
+            "description": "I try to write a join path function with variadic template. Here's how i do it: template\u003ctypename T\u003e T&& join_path (T&& path) { return path; } template\u003ctypename T, typ..."
+          }
+        ],
+        "question": [
+          {
+            "image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a",
+            "upvotecount": "3",
+            "commentcount": "2",
+            "answercount": "3",
+            "name": "c++ variadic parameter join path",
+            "datecreated": "2020-11-15 06:09:52Z",
+            "text": "I try to write a join path function with variadic template. Here's how i do it: template\u003ctypename T\u003e T&& join_path (T&& path) { return path; } template\u003ctypename T, typename ... Args\u003e std::string...",
+            "url": "Share"
+          }
+        ],
+        "answer": [
+          {
+            "upvotecount": "4",
+            "commentcount": "6",
+            "text": "You might use std::string_view since C++17: std::string join_path(std::initializer_list\u003cstd::string_view\u003e paths) { std::string res; const char* sep = \"\"; for (auto p : paths) { res += (!p.empty()...",
+            "datecreated": "2020-11-15 08:36:34Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "3",
+            "commentcount": "1",
+            "text": "To avoid std::string(std::string) situation, take a look at this solution by Simple. It works faster than your solution and solution by Kostas. Here is the solution modified for your use case:...",
+            "datecreated": "2020-11-15 08:29:48Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "2",
+            "text": "You can explicitly cast the first parameter to std::string. You can make sure that's not repeated by using a fold expression(C++17): template\u003cclass ... Strings\u003e std::string join_path (std::string...",
+            "datecreated": "2020-11-15 07:25:12Z",
+            "url": "Share"
+          }
+        ],
+        "person": [
+          {
+            "name": "xubury",
+            "url": "xubury"
+          },
+          {
+            "name": "Jarod42",
+            "url": "Jarod42"
+          },
+          {
+            "name": "Jarod42",
+            "url": "Jarod42"
+          },
+          {
+            "name": "Jarod42",
+            "url": "Jarod42"
+          },
+          {
+            "name": "Andriy Makukha",
+            "url": "Andriy Makukha"
+          },
+          {
+            "name": "Jarod42",
+            "url": "Jarod42"
+          },
+          {
+            "name": "Andriy Makukha",
+            "url": "Andriy Makukha"
+          },
+          {
+            "name": "xubury",
+            "url": "xubury"
+          },
+          {
+            "name": "Jarod42",
+            "url": "Jarod42"
+          },
+          {
+            "name": "Andriy Makukha",
+            "url": "Andriy Makukha"
+          },
+          {
+            "name": "Jarod42",
+            "url": "Jarod42"
+          },
+          {
+            "name": "Kostas",
+            "url": "Kostas"
+          }
+        ],
+        "metatags": [
+          {
+            "og:image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "og:type": "website",
+            "twitter:card": "summary",
+            "twitter:title": "c++ variadic parameter join path",
+            "og:site_name": "Stack Overflow",
+            "twitter:domain": "stackoverflow.com",
+            "viewport": "width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0",
+            "twitter:description": "I try to write a join path function with variadic template. Here's how i do it:\ntemplate&lt;typename T&gt;\nT&amp;&amp; join_path (T&amp;&amp; path) {\n    return path;\n}\n\ntemplate&lt;typename T, typ...",
+            "og:url": "https://stackoverflow.com/questions/64841681/c-variadic-parameter-join-path"
+          }
+        ],
+        "comment": [
+          {
+            "text": "path1 + ('/' + p2) would avoid one copying.",
+            "datepublished": "11/15/2020 08:46:06"
+          },
+          {
+            "text": "Notice that C++17 introduces std::filesystem::path",
+            "datepublished": "11/15/2020 08:51:49"
+          },
+          {
+            "text": "You might want to replace res += sep with res += (!p.empty() && p[0]=='/') ? \"\" : sep. Other than that, excellent fast solution! Much faster than the one I posted.",
+            "datepublished": "11/15/2020 08:46:12"
+          },
+          {
+            "text": "Done, not sure what OP wants to handle with that, there are no checks for end of path1.",
+            "datepublished": "11/15/2020 08:53:44"
+          },
+          {
+            "text": "Good, observation! I think, it's a mistake (that I missed as well...). But it seems like functionality needs to be similar to path.join in Python.",
+            "datepublished": "11/15/2020 08:56:00"
+          },
+          {
+            "text": "Thanks, this works great! One question though, does it help to use for (auto &p : paths) or are they the same?",
+            "datepublished": "11/15/2020 10:06:40"
+          },
+          {
+            "text": "std::string_view is a small object (2 pointers), so by value is fine.",
+            "datepublished": "11/15/2020 10:27:25"
+          },
+          {
+            "text": "fold expression of C++17 might replace unpack trick.",
+            "datepublished": "11/15/2020 08:38:48"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "c++ - String concatenation for include path - Stack Overflow",
+      "htmlTitle": "\u003cb\u003ec++\u003c/b\u003e - \u003cb\u003eString\u003c/b\u003e concatenation for include \u003cb\u003epath\u003c/b\u003e - Stack Overflow",
+      "link": "https://stackoverflow.com/questions/39038867/string-concatenation-for-include-path",
+      "displayLink": "stackoverflow.com",
+      "snippet": "Aug 19, 2016 ... Is there a way to concatenate 2 strings literals to form an include path? Code stub: #define INCLUDE_DIR \"/include\" #include INCLUDE_DIR ...",
+      "htmlSnippet": "Aug 19, 2016 \u003cb\u003e...\u003c/b\u003e Is there a \u003cb\u003eway\u003c/b\u003e to \u003cb\u003econcatenate\u003c/b\u003e 2 \u003cb\u003estrings\u003c/b\u003e literals to form an include \u003cb\u003epath\u003c/b\u003e? Code stub: #define INCLUDE_DIR &quot;/include&quot; #include INCLUDE_DIR&nbsp;...",
+      "formattedUrl": "https://stackoverflow.com/questions/.../string-concatenation-for-include-pat...",
+      "htmlFormattedUrl": "https://stackoverflow.com/questions/.../\u003cb\u003estring\u003c/b\u003e-concatenation-for-include-\u003cb\u003epat\u003c/b\u003e...",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYl7zuT3cw_BBRAyhdQEbQuBgqdNHXKHIYKL8S8ly8x9L_XA9sdwSmiHs&s",
+            "width": "225",
+            "height": "225"
+          }
+        ],
+        "qapage": [
+          {
+            "image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "primaryimageofpage": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "name": "String concatenation for include path",
+            "description": "Is there a way to concatenate 2 strings literals to form an include path? Code stub: #define INCLUDE_DIR \"/include\" #include INCLUDE_DIR \"/dummy.h\" Looking at this question, the answers point in a"
+          }
+        ],
+        "question": [
+          {
+            "image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a",
+            "upvotecount": "13",
+            "commentcount": "7",
+            "answercount": "4",
+            "name": "String concatenation for include path",
+            "datecreated": "2016-08-19 12:16:33Z",
+            "text": "Is there a way to concatenate 2 strings literals to form an include path? Code stub: #define INCLUDE_DIR \"/include\" #include INCLUDE_DIR \"/dummy.h\" Looking at this question, the answers point...",
+            "url": "Share"
+          }
+        ],
+        "answer": [
+          {
+            "upvotecount": "1",
+            "text": "It really seems this is not possible. I will report here the relevant section from Eric Postpischil's answer (he doesn't seem to be active anymore). The compiler will do macro replacement on...",
+            "datecreated": "2016-08-22 08:47:20Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "0",
+            "commentcount": "8",
+            "text": "I'm not sure that this is exactly what you want but anyway. #define DECORATE(x) \u003cx\u003e #define MAKE_PATH(root, file) DECORATE(root file) #define SYS_DIR(file) MAKE_PATH(sys/, file) #define ARPA_DIR(fi...",
+            "datecreated": "2016-08-19 12:43:22Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "0",
+            "commentcount": "1",
+            "text": "Simply avoid the space and the concatenation (##) and use the \u003c \u003e it makes all simplier: #include \u003cQtCore/QtGlobal\u003e #define QT_VERSION_PREFIX QT_VERSION_MAJOR.QT_VERSION_MINOR.QT_VERSION_PATCH...",
+            "datecreated": "2017-11-15 18:02:32Z",
+            "url": "Share"
+          },
+          {
+            "upvotecount": "0",
+            "text": "CONFIRMED SOLUTION ON GCC & MSVC Despite claims out there about how this is impossible - it can be done! And it's not all that painful when you see the solution... This is what I'm doing from...",
+            "datecreated": "2024-04-18 01:32:44Z",
+            "url": "Share"
+          }
+        ],
+        "person": [
+          {
+            "name": "Antonio",
+            "url": "Antonio"
+          },
+          {
+            "name": "Antonio",
+            "url": "Antonio"
+          },
+          {
+            "name": "Sergio",
+            "url": "Sergio"
+          },
+          {
+            "name": "BilbonSacquet",
+            "url": "BilbonSacquet"
+          },
+          {
+            "name": "BuvinJ",
+            "url": "BuvinJ"
+          }
+        ],
+        "metatags": [
+          {
+            "og:image": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded",
+            "og:type": "website",
+            "twitter:card": "summary",
+            "twitter:title": "String concatenation for include path",
+            "og:site_name": "Stack Overflow",
+            "twitter:domain": "stackoverflow.com",
+            "viewport": "width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0",
+            "twitter:description": "Is there a way to concatenate 2 strings literals to form an include path?\n\nCode stub:\n\n#define INCLUDE_DIR \"/include\"\n#include INCLUDE_DIR \"/dummy.h\"\nLooking at this question, the answers point in a",
+            "og:url": "https://stackoverflow.com/questions/39038867/string-concatenation-for-include-path"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded"
+          }
+        ]
+      }
+    }
+]
+}
